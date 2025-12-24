@@ -5,48 +5,38 @@
     <title>روان للحلول التقنية | Garuda Edition</title>
     <style>
         body {
-            margin: 0;
-            padding: 0;
+            margin: 0; padding: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* خلفية نسر جارودا الرسمية الفخمة */
             background: #0f0f12 url('https://garudalinux.org/img/garuda/dr460nized.webp') no-repeat center center fixed;
             background-size: cover;
             color: #ffffff;
         }
         .overlay {
-            background: rgba(0, 0, 0, 0.75);
+            background: rgba(0, 0, 0, 0.7); /* طبقة تعطي فخامة للموقع */
             min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 50px 20px;
+            display: flex; flex-direction: column; align-items: center; padding: 50px 20px;
         }
         .container {
             background: rgba(26, 26, 30, 0.9);
-            padding: 35px;
-            border-radius: 20px;
-            border: 2px solid #ff0055;
-            box-shadow: 0 0 30px rgba(255, 0, 85, 0.4);
-            text-align: center;
-            max-width: 700px;
-            backdrop-filter: blur(8px);
+            padding: 40px; border-radius: 20px;
+            border: 2px solid #ff0055; /* لون جارودا المتوهج */
+            box-shadow: 0 0 30px rgba(255, 0, 85, 0.5);
+            text-align: center; max-width: 700px; backdrop-filter: blur(10px);
         }
-        h1 { color: #00d4ff; text-shadow: 0 0 15px #00d4ff; font-size: 2.8em; }
-        .service-card {
+        h1 { color: #00d4ff; text-shadow: 0 0 15px #00d4ff; font-size: 3em; margin-bottom: 20px; }
+        .service-box {
             background: rgba(45, 45, 50, 0.8);
-            margin: 15px 0;
-            padding: 20px;
-            border-radius: 12px;
-            border-right: 6px solid #ff0055;
+            margin: 15px 0; padding: 20px;
+            border-radius: 15px; border-right: 8px solid #ff0055;
+            text-align: right; transition: 0.3s;
         }
+        .service-box:hover { transform: scale(1.03); background: #32323a; }
         .btn {
             background: linear-gradient(45deg, #ff0055, #ff5500);
-            color: white;
-            padding: 15px 40px;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: bold;
-            display: inline-block;
-            margin-top: 20px;
+            color: white; padding: 18px 50px; text-decoration: none;
+            border-radius: 50px; font-weight: bold; display: inline-block;
+            margin-top: 30px; box-shadow: 0 5px 20px rgba(255, 0, 85, 0.4);
         }
     </style>
 </head>
@@ -54,17 +44,21 @@
     <div class="overlay">
         <div class="container">
             <h1>روان للحلول التقنية 🦅</h1>
-            <p style="font-size: 1.3em; color: #00d4ff;">قوة النسر في عالم الحلول الرقمية</p>
-            <div class="service-card">
-                <h3>🖥 صيانة وتخصيص Garuda Linux</h3>
-                <p>تجهيز الأنظمة، وحل مشاكل التعريفات، وتخصيص واجهات Dr460nized.</p>
+            <p style="font-size: 1.4em; color: #00d4ff;">قوة النسر.. احترافية لا حدود لها</p>
+            
+            <div class="service-box">
+                <h3>🛠 صيانة أنظمة Linux Mapped</h3>
+                <p>تثبيت وتخصيص توزيعات Garuda و Arch مع حل المشاكل البرمجية المعقدة.</p>
             </div>
-            <div class="service-card">
-                <h3>📜 برمجة سكربتات Bash/Python</h3>
-                <p>أتمتة المهام وبناء أدوات مخصصة لمستخدمي لينكس.</p>
+
+            <div class="service-box">
+                <h3>📜 سكربتات Bash & Python</h3>
+                <p>أتمتة المهام اليومية وحماية الأنظمة عبر برمجيات مخصصة.</p>
             </div>
-            <a href="mailto:contact@rawantech.com" class="btn">اطلب خدمتك الآن</a>
+
+            <a href="mailto:contact@rawantech.com" class="btn">تواصل مع الخبيرة الآن</a>
         </div>
+        <p style="margin-top: 50px; opacity: 0.6;">© 2025 Rawan Tech - Garuda Linux Expert</p>
     </div>
 </body>
 </html>
