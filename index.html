@@ -2,83 +2,69 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rawan Tech | حلول البرمجة ولينكس</title>
+    <title>روان للحلول التقنية | Garuda Edition</title>
     <style>
         body {
-            background-color: #0d1117;
-            color: #c9d1d9;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #0f0f12 url('https://garudalinux.org/img/garuda/dr460nized.webp') no-repeat center center fixed;
+            background-size: cover;
+            color: #ffffff;
+        }
+        .overlay {
+            background: rgba(0, 0, 0, 0.75);
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
             align-items: center;
+            padding: 50px 20px;
         }
-        header {
-            background-color: #161b22;
-            width: 100%;
-            padding: 40px 0;
+        .container {
+            background: rgba(26, 26, 30, 0.9);
+            padding: 35px;
+            border-radius: 20px;
+            border: 2px solid #ff0055;
+            box-shadow: 0 0 30px rgba(255, 0, 85, 0.4);
             text-align: center;
-            border-bottom: 2px solid #58a6ff;
+            max-width: 700px;
+            backdrop-filter: blur(8px);
         }
-        h1 { color: #58a6ff; margin: 0; font-size: 2.5em; }
-        .container { max-width: 800px; padding: 20px; text-align: center; }
+        h1 { color: #00d4ff; text-shadow: 0 0 15px #00d4ff; font-size: 2.8em; }
         .service-card {
-            background: #21262d;
-            border: 1px solid #30363d;
-            border-radius: 10px;
+            background: rgba(45, 45, 50, 0.8);
+            margin: 15px 0;
             padding: 20px;
-            margin: 20px 0;
-            transition: 0.3s;
+            border-radius: 12px;
+            border-right: 6px solid #ff0055;
         }
-        .service-card:hover { border-color: #58a6ff; transform: translateY(-5px); }
         .btn {
-            background-color: #238636;
+            background: linear-gradient(45deg, #ff0055, #ff5500);
             color: white;
-            padding: 15px 30px;
+            padding: 15px 40px;
             text-decoration: none;
-            border-radius: 6px;
+            border-radius: 50px;
             font-weight: bold;
             display: inline-block;
             margin-top: 20px;
         }
-        .btn:hover { background-color: #2ea043; }
-        .footer { margin-top: 50px; font-size: 0.8em; color: #8b949e; }
     </style>
 </head>
 <body>
-
-<header>
-    <h1>روان للحلول التقنية</h1>
-    <p>Rawan Programming & Linux Services</p>
-</header>
-
-<div class="container">
-    <h2>مرحباً بك في موقعي الرسمي</h2>
-    <p>أقدم حلولاً احترافية في عالم التقنية، مبنية على خبرة في التعامل مع أصعب التحديات البرمجية وأنظمة التشغيل.</p>
-
-    <div class="service-card">
-        <h3>💻 صيانة أنظمة Linux</h3>
-        <p>إعداد، تحديث، وتحسين أداء توزيعات لينكس وحل مشاكل العرض والإضاءة برمجياً.</p>
+    <div class="overlay">
+        <div class="container">
+            <h1>روان للحلول التقنية 🦅</h1>
+            <p style="font-size: 1.3em; color: #00d4ff;">قوة النسر في عالم الحلول الرقمية</p>
+            <div class="service-card">
+                <h3>🖥 صيانة وتخصيص Garuda Linux</h3>
+                <p>تجهيز الأنظمة، وحل مشاكل التعريفات، وتخصيص واجهات Dr460nized.</p>
+            </div>
+            <div class="service-card">
+                <h3>📜 برمجة سكربتات Bash/Python</h3>
+                <p>أتمتة المهام وبناء أدوات مخصصة لمستخدمي لينكس.</p>
+            </div>
+            <a href="mailto:contact@rawantech.com" class="btn">اطلب خدمتك الآن</a>
+        </div>
     </div>
-
-    <div class="service-card">
-        <h3>📜 برمجة السكربتات (Bash/Python)</h3>
-        <p>أتمتة المهام المتكررة وتوفير الوقت عبر سكربتات مخصصة وعالية الكفاءة.</p>
-    </div>
-
-    <div class="service-card">
-        <h3>🛡️ استشارات تقنية</h3>
-        <p>دعم فني وحلول تقنية متكاملة للأجهزة والبرامج.</p>
-    </div>
-
-    <a href="mailto:rrawan764@gmail.com" class="btn">اطلب خدمتك الآن</a>
-</div>
-
-<div class="footer">
-    © 2025 جميع الحقوق محفوظة لـ Rawan Tech
-</div>
-
 </body>
 </html>
