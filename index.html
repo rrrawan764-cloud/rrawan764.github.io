@@ -1,34 +1,38 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>روان للحلول التقنية | Rawan Tech</title>
+    <title>Rawan | Cyber Security & Linux Expert</title>
     <style>
         :root {
-            --primary: #00d4ff;
-            --secondary: #ff0055;
-            --bg: #020205;
+            --neon-red: #ff003c;
+            --neon-blue: #00d4ff;
+            --dark-bg: #050505;
         }
 
         body {
             margin: 0;
             padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--bg);
-            color: #fff;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--dark-bg);
+            color: #ffffff;
             overflow-x: hidden;
+            text-align: left;
         }
 
-        /* خلفية الذكاء الاصطناعي والأمن السيبراني */
-        .cyber-bg {
+        /* Cyberpunk Background with Neon Glow */
+        body::before {
+            content: "";
             position: fixed;
             top: 0; left: 0; width: 100%; height: 100%;
             background: 
-                linear-gradient(rgba(2, 2, 5, 0.8), rgba(2, 2, 5, 0.8)),
+                radial-gradient(circle at 10% 10%, rgba(255, 0, 60, 0.2) 0%, transparent 40%),
+                radial-gradient(circle at 90% 90%, rgba(255, 0, 60, 0.1) 0%, transparent 40%),
                 url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=2070');
             background-size: cover;
             background-position: center;
+            opacity: 0.4;
             z-index: -1;
         }
 
@@ -38,150 +42,160 @@
             flex-direction: column;
             align-items: center;
             padding: 60px 20px;
-            backdrop-filter: blur(5px);
-        }
-
-        header h1 {
-            font-size: 3.5rem;
-            color: var(--primary);
-            text-shadow: 0 0 20px var(--primary);
-            margin-bottom: 0;
-        }
-
-        header p {
-            font-size: 1.2rem;
-            opacity: 0.8;
-            letter-spacing: 2px;
+            background: linear-gradient(to bottom, rgba(5, 5, 5, 0.8), rgba(5, 5, 5, 0.95));
         }
 
         .container {
             max-width: 900px;
             width: 100%;
-            margin-top: 40px;
         }
 
-        .about-section {
-            background: rgba(255, 255, 255, 0.05);
-            padding: 30px;
-            border-radius: 20px;
-            border: 1px solid rgba(0, 212, 255, 0.3);
+        header {
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 50px;
         }
 
-        .grid {
+        h1 {
+            font-size: 4rem;
+            color: var(--neon-red);
+            text-shadow: 0 0 10px var(--neon-red), 0 0 20px var(--neon-red), 0 0 40px var(--neon-red);
+            margin: 0;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+        }
+
+        .tagline {
+            color: var(--neon-blue);
+            text-shadow: 0 0 5px var(--neon-blue);
+            font-size: 1.2rem;
+            letter-spacing: 3px;
+            margin-top: 10px;
+        }
+
+        .about-box {
+            background: rgba(20, 20, 25, 0.8);
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 0, 60, 0.3);
+            margin-bottom: 40px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 0 20px rgba(255, 0, 60, 0.1);
+        }
+
+        .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 25px;
         }
 
         .card {
-            background: rgba(15, 15, 25, 0.8);
-            padding: 30px;
-            border-radius: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: 0.4s;
-            text-align: right;
-            position: relative;
-            overflow: hidden;
+            background: rgba(10, 10, 10, 0.9);
+            padding: 25px;
+            border-radius: 12px;
+            border-left: 4px solid var(--neon-red);
+            transition: 0.3s ease;
+            cursor: default;
         }
 
         .card:hover {
             transform: translateY(-10px);
-            border-color: var(--primary);
-            box-shadow: 0 0 30px rgba(0, 212, 255, 0.2);
+            box-shadow: 0 0 25px rgba(255, 0, 60, 0.4);
+            border-color: var(--neon-blue);
         }
 
         .card h3 {
-            color: var(--primary);
+            color: var(--neon-red);
             margin-top: 0;
-            font-size: 1.5rem;
+            font-size: 1.4rem;
+        }
+
+        .card p {
+            color: #ccc;
+            line-height: 1.6;
         }
 
         .price-badge {
-            background: var(--secondary);
-            color: #fff;
-            padding: 5px 12px;
-            border-radius: 50px;
-            font-size: 0.8rem;
+            background: var(--neon-red);
+            color: white;
+            padding: 3px 10px;
+            font-size: 0.7rem;
+            border-radius: 4px;
             font-weight: bold;
-            display: inline-block;
             margin-bottom: 10px;
+            display: inline-block;
         }
 
-        .cta-button {
-            background: linear-gradient(45deg, #25d366, #128c7e);
+        .whatsapp-btn {
+            background: #25d366;
             color: white;
-            padding: 18px 45px;
-            border-radius: 50px;
+            padding: 20px 50px;
             text-decoration: none;
+            border-radius: 50px;
             font-weight: bold;
-            font-size: 1.3rem;
+            font-size: 1.4rem;
             margin-top: 50px;
             display: inline-flex;
             align-items: center;
-            gap: 10px;
-            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.3);
+            gap: 15px;
+            box-shadow: 0 0 20px rgba(37, 211, 102, 0.4);
             transition: 0.3s;
         }
 
-        .cta-button:hover {
-            transform: scale(1.05) rotate(-1deg);
-            box-shadow: 0 15px 40px rgba(37, 211, 102, 0.5);
+        .whatsapp-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 40px rgba(37, 211, 102, 0.7);
         }
 
         footer {
             margin-top: 80px;
-            opacity: 0.5;
-            font-size: 0.9rem;
+            opacity: 0.4;
+            font-size: 0.8rem;
+            text-align: center;
         }
     </style>
 </head>
 <body>
-    <div class="cyber-bg"></div>
     <div class="overlay">
-        <header>
-            <h1>روان 🦅</h1>
-            <p>Cyber Security & Linux Expert</p>
-        </header>
-
         <div class="container">
-            <div class="about-section">
-                <h3>عن الخبيرة</h3>
-                <p>متخصصة في حماية البيانات، إدارة أنظمة Linux المتقدمة، وتقديم حلول تقنية مبتكرة للأفراد والشركات. شغفي هو جعل العالم الرقمي مكاناً أكثر أماناً.</p>
+            <header>
+                <h1>RAWAN 🦅</h1>
+                <div class="tagline">CYBER SECURITY & LINUX ARCHITECT</div>
+            </header>
+
+            <div class="about-box">
+                <p>I am a specialist in <b>Cyber Security</b> and <b>Advanced Linux Systems</b>. My mission is to provide high-performance environments and secure digital infrastructures. Expert in Arch, Garuda, and Shell Automation.</p>
             </div>
 
-            <div class="grid">
+            <div class="services-grid">
                 <div class="card">
-                    <h3>🛡️ الأمن السيبراني</h3>
-                    <p>فحص ثغرات، حماية الشبكات، وتأمين الحسابات والبيانات الحساسة من الاختراق.</p>
+                    <h3>🔐 Cyber Security</h3>
+                    <p>Vulnerability assessment, network hardening, and securing sensitive data against modern digital threats.</p>
                 </div>
 
                 <div class="card">
-                    <span class="price-badge">مبلغ رمزي</span>
-                    <h3>💡 استشارات تقنية</h3>
-                    <p>دعم فني مباشر لحل مشاكل النظام والبرمجيات وتوجيهك لأفضل الأدوات التقنية.</p>
+                    <span class="price-badge">SYMBOLIC FEE</span>
+                    <h3>💡 Tech Consultation</h3>
+                    <p>Direct technical support to solve system issues and guide you through the best security tools.</p>
                 </div>
 
                 <div class="card">
-                    <h3>🖥️ أنظمة Linux</h3>
-                    <p>تثبيت وتخصيص توزيعات Arch و Garuda Linux بأعلى معايير الأداء والجمالية.</p>
+                    <h3>🖥️ Linux Administration</h3>
+                    <p>Full installation and customization of Linux distributions (Arch, Garuda) with extreme Kernel tuning.</p>
                 </div>
 
                 <div class="card">
-                    <h3>📜 برمجة السكربتات</h3>
-                    <p>أتمتة المهام المتكررة وبناء أدوات مخصصة باستخدام Bash و Python.</p>
+                    <h3>📜 Automation Scripts</h3>
+                    <p>Building advanced automation tools using Bash and Python to streamline complex workflows.</p>
                 </div>
             </div>
 
-            <center>
-                <a href="https://wa.me/966549690896" target="_blank" class="cta-button">
-                    💬 اطلب خدمتك الآن (واتساب)
+            <div style="text-align: center;">
+                <a href="https://wa.me/966549690896" target="_blank" class="whatsapp-btn">
+                    💬 CONTACT VIA WHATSAPP
                 </a>
-            </center>
+            </div>
         </div>
-
-        <footer>© 2025 Rawan Tech | Cyber Security Excellence</footer>
+        <footer>© 2025 RAWAN TECH | SECURING THE FUTURE</footer>
     </div>
 </body>
 </html>
