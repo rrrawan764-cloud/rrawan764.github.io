@@ -2,41 +2,134 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <title>روان للحلول التقنية | Garuda Edition</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>روان للحلول التقنية | Rawan Tech</title>
     <style>
         body {
-            margin: 0; padding: 0;
+            margin: 0;
+            padding: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            /* خلفية نسر جارودا الرسمية الفخمة */
-            background: #0f0f12 url('https://garudalinux.org/img/garuda/dr460nized.webp') no-repeat center center fixed;
-            background-size: cover;
+            background: #050505; /* أسود عميق */
             color: #ffffff;
+            overflow-x: hidden;
         }
+
+        /* تأثير الخلفية النيون الحمراء */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(255, 0, 0, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(255, 0, 85, 0.15) 0%, transparent 50%);
+            z-index: -1;
+        }
+
         .overlay {
-            background: rgba(0, 0, 0, 0.7); /* طبقة تعطي فخامة للموقع */
             min-height: 100vh;
-            display: flex; flex-direction: column; align-items: center; padding: 50px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
         }
+
         .container {
-            background: rgba(26, 26, 30, 0.9);
-            padding: 40px; border-radius: 20px;
-            border: 2px solid #ff0055; /* لون جارودا المتوهج */
-            box-shadow: 0 0 30px rgba(255, 0, 85, 0.5);
-            text-align: center; max-width: 700px; backdrop-filter: blur(10px);
+            background: rgba(15, 15, 15, 0.8);
+            padding: 40px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 0, 60, 0.3);
+            box-shadow: 0 0 40px rgba(255, 0, 60, 0.2), inset 0 0 20px rgba(255, 0, 60, 0.1);
+            text-align: center;
+            max-width: 600px;
+            width: 100%;
+            backdrop-filter: blur(10px);
         }
-        h1 { color: #00d4ff; text-shadow: 0 0 15px #00d4ff; font-size: 3em; margin-bottom: 20px; }
-        .service-box {
-            background: rgba(45, 45, 50, 0.8);
-            margin: 15px 0; padding: 20px;
-            border-radius: 15px; border-right: 8px solid #ff0055;
-            text-align: right; transition: 0.3s;
+
+        h1 {
+            color: #ff003c;
+            text-shadow: 0 0 10px #ff003c, 0 0 20px #ff003c;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
         }
-        .service-box:hover { transform: scale(1.03); background: #32323a; }
+
+        p.subtitle {
+            color: #00d4ff;
+            text-shadow: 0 0 5px #00d4ff;
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+
+        .service-card {
+            background: rgba(30, 30, 35, 0.6);
+            margin: 15px 0;
+            padding: 20px;
+            border-radius: 12px;
+            border-right: 4px solid #ff003c;
+            text-align: right;
+            transition: 0.4s;
+        }
+
+        .service-card:hover {
+            transform: translateX(-10px);
+            background: rgba(255, 0, 60, 0.1);
+            box-shadow: 0 0 15px rgba(255, 0, 60, 0.3);
+        }
+
+        .service-card h3 {
+            margin: 0 0 10px 0;
+            color: #ff003c;
+        }
+
+        /* أزرار التواصل */
+        .buttons-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
         .btn {
-            background: linear-gradient(45deg, #ff0055, #ff5500);
-            color: white; padding: 18px 50px; text-decoration: none;
-            border-radius: 50px; font-weight: bold; display: inline-block;
-            margin-top: 30px; box-shadow: 0 5px 20px rgba(255, 0, 85, 0.4);
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .btn-whatsapp {
+            background: #25d366;
+            color: white;
+            box-shadow: 0 0 15px rgba(37, 211, 102, 0.4);
+        }
+
+        .btn-whatsapp:hover {
+            background: #1ebe57;
+            transform: scale(1.05);
+            box-shadow: 0 0 25px rgba(37, 211, 102, 0.6);
+        }
+
+        .btn-email {
+            background: transparent;
+            color: #ff003c;
+            border: 1px solid #ff003c;
+        }
+
+        .btn-email:hover {
+            background: #ff003c;
+            color: white;
+        }
+
+        footer {
+            margin-top: 40px;
+            font-size: 0.8em;
+            color: #555;
+            letter-spacing: 1px;
         }
     </style>
 </head>
@@ -44,21 +137,29 @@
     <div class="overlay">
         <div class="container">
             <h1>روان للحلول التقنية 🦅</h1>
-            <p style="font-size: 1.4em; color: #00d4ff;">قوة النسر.. احترافية لا حدود لها</p>
+            <p class="subtitle">Next-Gen Linux & Programming Solutions</p>
             
-            <div class="service-box">
-                <h3>🛠 صيانة أنظمة Linux Mapped</h3>
-                <p>تثبيت وتخصيص توزيعات Garuda و Arch مع حل المشاكل البرمجية المعقدة.</p>
+            <div class="service-card">
+                <h3>🖥️ صيانة أنظمة Linux</h3>
+                <p>إعداد وتخصيص توزيعات Arch و Garuda بأداء خارق وتصميم نيون متطور.</p>
             </div>
 
-            <div class="service-box">
-                <h3>📜 سكربتات Bash & Python</h3>
-                <p>أتمتة المهام اليومية وحماية الأنظمة عبر برمجيات مخصصة.</p>
+            <div class="service-card">
+                <h3>📜 البرمجة والأتمتة</h3>
+                <p>بناء سكربتات ذكية وأدوات مخصصة لتسهيل وحماية بيئة عملك.</p>
             </div>
 
-            <a href="mailto:contact@rawantech.com" class="btn">تواصل مع الخبيرة الآن</a>
+            <div class="buttons-container">
+                <a href="https://wa.me/966549690896" target="_blank" class="btn btn-whatsapp">
+                   💬 تواصل عبر الواتساب
+                </a>
+                
+                <a href="mailto:contact@rawantech.com" class="btn btn-email">
+                    📧 إرسال إيميل
+                </a>
+            </div>
         </div>
-        <p style="margin-top: 50px; opacity: 0.6;">© 2025 Rawan Tech - Garuda Linux Expert</p>
+        <footer>© 2025 RAWAN TECH | DESIGNED FOR PERFORMANCE</footer>
     </div>
 </body>
 </html>
