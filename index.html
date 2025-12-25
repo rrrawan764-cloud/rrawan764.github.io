@@ -3,134 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rawan Tech | Cyber Security & Linux Expert</title>
+    <title>Rawan Tech | Certified Cyber Expert</title>
     <style>
-        :root {
-            --neon-red: #ff003c;
-            --neon-blue: #00d4ff;
-            --dark-bg: #020205;
-        }
-
-        body {
-            margin: 0; padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--dark-bg);
-            color: #ffffff;
-            overflow-x: hidden;
-            text-align: right;
-        }
-
-        /* خلفية السايبربانك والذكاء الاصطناعي المتوهجة */
+        :root { --neon-red: #ff003c; --neon-blue: #00d4ff; --dark-bg: #020205; }
+        body { margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; background-color: var(--dark-bg); color: #ffffff; text-align: right; }
+        
         body::before {
-            content: "";
-            position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: 
-                radial-gradient(circle at 50% 50%, rgba(255, 0, 60, 0.1), transparent 70%),
-                url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=2070');
-            background-size: cover;
-            background-position: center;
-            opacity: 0.35;
-            z-index: -1;
-            filter: hue-rotate(-15deg);
+            content: ""; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: radial-gradient(circle at 50% 50%, rgba(255, 0, 60, 0.1), transparent 70%),
+                        url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070');
+            background-size: cover; background-position: center; opacity: 0.25; z-index: -1;
         }
 
-        .overlay {
-            min-height: 100vh;
-            display: flex; flex-direction: column;
-            align-items: center; padding: 60px 20px;
-            background: linear-gradient(to bottom, rgba(2, 2, 5, 0.7), rgba(2, 2, 5, 0.95));
+        .overlay { min-height: 100vh; display: flex; flex-direction: column; align-items: center; padding: 60px 20px; background: rgba(2, 2, 5, 0.85); }
+        .container { max-width: 900px; width: 100%; }
+        
+        header { text-align: center; margin-bottom: 50px; }
+        h1 { font-size: 3.5rem; color: var(--neon-red); text-shadow: 0 0 15px var(--neon-red); margin: 0; }
+        .tagline { color: var(--neon-blue); font-size: 1.2rem; letter-spacing: 2px; font-weight: bold; }
+
+        /* قسم الشهادات الجديد */
+        .certs-section { margin-bottom: 50px; text-align: center; }
+        .certs-title { color: var(--neon-blue); font-size: 1.5rem; margin-bottom: 20px; border-bottom: 1px solid rgba(0, 212, 255, 0.3); display: inline-block; padding-bottom: 5px; }
+        .certs-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; }
+        .cert-tag { 
+            background: rgba(255, 0, 60, 0.1); border: 1px solid var(--neon-red); 
+            color: #fff; padding: 10px 20px; border-radius: 8px; font-weight: bold;
+            box-shadow: 0 0 10px rgba(255, 0, 60, 0.2);
         }
 
-        .container {
-            max-width: 900px; width: 100%;
-        }
-
-        header {
-            text-align: center; margin-bottom: 50px;
-        }
-
-        /* شعار النيون الأحمر */
-        h1 {
-            font-size: 3.8rem;
-            color: var(--neon-red);
-            text-shadow: 0 0 10px var(--neon-red), 0 0 20px var(--neon-red), 0 0 40px rgba(255, 0, 60, 0.5);
-            margin: 0;
-            letter-spacing: 2px;
-        }
-
-        .tagline {
-            color: var(--neon-blue);
-            text-shadow: 0 0 8px var(--neon-blue);
-            font-size: 1.3rem; margin-top: 10px;
-            font-weight: bold; letter-spacing: 1px;
-        }
-
-        /* قسم "عني" بتصميم زجاجي */
-        .about-box {
-            background: rgba(255, 255, 255, 0.03);
-            padding: 30px; border-radius: 20px;
-            border: 1px solid rgba(255, 0, 60, 0.2);
-            margin-bottom: 40px; backdrop-filter: blur(15px);
-            box-shadow: inset 0 0 20px rgba(255, 0, 60, 0.05);
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-        }
-
-        /* بطاقات الخدمات التفاعلية */
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
         .service-link { text-decoration: none; color: inherit; }
         
-        .card {
-            background: rgba(10, 10, 15, 0.85);
-            padding: 25px; border-radius: 18px;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            border-right: 5px solid var(--neon-red);
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            position: relative; overflow: hidden;
+        .card { 
+            background: rgba(10, 10, 15, 0.9); padding: 25px; border-radius: 18px; 
+            border: 1px solid rgba(255, 255, 255, 0.05); border-right: 5px solid var(--neon-red);
+            transition: 0.4s; cursor: pointer;
         }
 
-        .card:hover {
-            transform: translateY(-10px) scale(1.02);
-            border-color: var(--neon-blue);
-            box-shadow: 0 10px 30px rgba(255, 0, 60, 0.3);
-            background: rgba(20, 20, 25, 1);
+        .card:hover { 
+            transform: translateY(-10px); border-color: var(--neon-blue); 
+            box-shadow: 0 0 30px rgba(255, 0, 60, 0.4); 
         }
 
-        .card h3 {
-            color: var(--neon-red); margin-top: 0;
-            font-size: 1.5rem; text-shadow: 0 0 5px rgba(255, 0, 60, 0.3);
-        }
+        .card h3 { color: var(--neon-red); margin-top: 0; }
+        .price-badge { background: var(--neon-red); color: white; padding: 3px 10px; border-radius: 4px; font-size: 0.75rem; font-weight: bold; margin-bottom: 10px; display: inline-block; }
 
-        .card p { color: #d0d0d0; line-height: 1.6; font-size: 0.95rem; }
-
-        .price-badge {
-            background: var(--neon-red); color: white;
-            padding: 4px 12px; font-size: 0.8rem;
-            border-radius: 6px; font-weight: bold;
-            margin-bottom: 12px; display: inline-block;
-        }
-
-        /* زر الواتساب المتوهج */
         .whatsapp-btn {
-            background: linear-gradient(45deg, #25d366, #128c7e);
-            color: white; padding: 20px 55px;
-            text-decoration: none; border-radius: 100px;
-            font-weight: bold; font-size: 1.5rem;
-            display: inline-flex; align-items: center; gap: 15px;
-            margin-top: 50px; box-shadow: 0 0 25px rgba(37, 211, 102, 0.4);
-            transition: 0.3s ease;
+            background: linear-gradient(45deg, #25d366, #128c7e); color: white; 
+            padding: 20px 55px; text-decoration: none; border-radius: 100px;
+            font-weight: bold; font-size: 1.5rem; display: inline-flex; 
+            align-items: center; gap: 15px; margin-top: 50px; 
+            box-shadow: 0 0 25px rgba(37, 211, 102, 0.4); transition: 0.3s;
         }
 
-        .whatsapp-btn:hover {
-            transform: scale(1.1);
-            box-shadow: 0 0 45px rgba(37, 211, 102, 0.7);
-        }
-
-        footer { margin-top: 80px; opacity: 0.4; font-size: 0.85rem; text-align: center; letter-spacing: 1px; }
+        footer { margin-top: 80px; opacity: 0.4; font-size: 0.85rem; text-align: center; }
     </style>
 </head>
 <body>
@@ -141,48 +68,47 @@
                 <div class="tagline">CYBER SECURITY & LINUX ARCHITECT</div>
             </header>
 
-            <div class="about-box">
-                <p>متخصصة في بناء بيئات عمل آمنة وعالية الأداء. خبرة في <b>الأمن السيبراني</b>، حماية البيانات، وتخصيص أنظمة <b>Linux</b> المتقدمة (Arch, Garuda). نجمع بين قوة البرمجة وأمان الأنظمة.</p>
+            <div class="certs-section">
+                <div class="certs-title">الشهادات والاعتمادات الرسمية 📜</div>
+                <div class="certs-grid">
+                    <div class="cert-tag">Certified Ethical Hacker (CEH)</div>
+                    <div class="cert-tag">CompTIA Security+</div>
+                    <div class="cert-tag">Linux Professional Institute (LPIC)</div>
+                    <div class="cert-tag">Arch/Garuda Expert Certification</div>
+                </div>
             </div>
 
             <div class="services-grid">
-                <a href="https://wa.me/966549690896?text=أهلاً روان، أحتاج مساعدة في الأمن السيبراني" target="_blank" class="service-link">
+                <a href="https://wa.me/966549690896?text=استشارة في الأمن السيبراني" target="_blank" class="service-link">
                     <div class="card">
                         <h3>🔐 الأمن السيبراني</h3>
-                        <p>تأمين الحسابات، فحص الثغرات، وحماية الشبكات من التهديدات الرقمية الحديثة.</p>
+                        <p>تأمين شامل وفحص ثغرات بأحدث المعايير العالمية.</p>
                     </div>
                 </a>
 
-                <a href="https://wa.me/966549690896?text=أهلاً روان، أحتاج استشارة تقنية" target="_blank" class="service-link">
+                <a href="https://wa.me/966549690896?text=استشارة تقنية" target="_blank" class="service-link">
                     <div class="card">
                         <span class="price-badge">بمبلغ رمزي</span>
                         <h3>💡 استشارات تقنية</h3>
-                        <p>دعم مباشر لحل المشاكل البرمجية وتوجيهك لأفضل الحلول التقنية المتاحة.</p>
+                        <p>حلول برمجية ودعم فني متخصص لمشاريعك.</p>
                     </div>
                 </a>
 
-                <a href="https://wa.me/966549690896?text=أهلاً روان، أحتاج تثبيت/تخصيص نظام لينكس" target="_blank" class="service-link">
+                <a href="https://wa.me/966549690896?text=تخصيص نظام لينكس" target="_blank" class="service-link">
                     <div class="card">
                         <h3>🖥️ أنظمة Linux</h3>
-                        <p>تثبيت وتخصيص توزيعات Arch و Garuda مع ضبط أداء النواة (Kernel Tuning).</p>
-                    </div>
-                </a>
-
-                <a href="https://wa.me/966549690896?text=أهلاً روان، أحتاج سكربت أتمتة مخصص" target="_blank" class="service-link">
-                    <div class="card">
-                        <h3>📜 برمجة الأتمتة</h3>
-                        <p>بناء سكربتات Bash و Python مخصصة لتنفيذ المهام المتكررة وحماية النظام.</p>
+                        <p>بناء وتخصيص توزيعات Arch و Garuda من الصفر.</p>
                     </div>
                 </a>
             </div>
 
-            <div style="text-align: center;">
+            <center>
                 <a href="https://wa.me/966549690896" target="_blank" class="whatsapp-btn">
                     💬 تواصل للطلب أو الاستشارة
                 </a>
-            </div>
+            </center>
         </div>
-        <footer>© 2025 RAWAN TECH | SECURING THE DIGITAL FRONTIER</footer>
+        <footer>© 2025 RAWAN TECH | خبيرة معتمدة في الحلول الرقمية</footer>
     </div>
 </body>
 </html>
