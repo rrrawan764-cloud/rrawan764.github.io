@@ -1,170 +1,126 @@
-
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rawan Tech | Certified Expert</title>
+    <title>Rawan Tech | Full System & Certificates</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400&family=Cairo:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --neon-pink: #ff0055;
-            --neon-blue: #00e5ff;
-            --bg-dark: #121212;
-            --card-bg: #1a1a1a;
-            --text-main: #ffffff;
-            --text-sub: #b3b3b3;
-        }
+        :root { --neon-red: #ff003c; --neon-blue: #00d4ff; --dark-bg: #050505; }
+        body { margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; background: var(--dark-bg); color: #fff; overflow-x: hidden; }
 
-        * { box-sizing: border-box; margin: 0; padding: 0; }
+        .overlay { min-height: 100vh; padding: 50px 20px; display: flex; flex-direction: column; align-items: center; }
+        
+        header { text-align: center; margin-bottom: 50px; }
+        h1 { font-size: 3.5rem; color: var(--neon-red); text-shadow: 0 0 20px var(--neon-red); margin: 0; font-family: 'Orbitron', sans-serif; }
+        .tagline { color: var(--neon-blue); text-shadow: 0 0 10px var(--neon-blue); letter-spacing: 3px; font-weight: bold; }
 
-        body {
-            background: linear-gradient(135deg, #1f1f1f, #000000);
-            color: var(--text-main);
-            font-family: 'Roboto', sans-serif;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding-bottom: 50px;
-        }
+        .container { display: flex; gap: 2rem; max-width: 1200px; width: 100%; flex-wrap: wrap; justify-content: center; }
+        
+        /* Side Panel */
+        .side-panel { display: flex; flex-direction: column; align-items: center; gap: 1rem; width: 280px; }
+        .side-panel h3 { color: white; font-size: 1.2rem; margin-bottom: 10px; }
 
-        /* Header */
-        header { width: 100%; max-width: 1200px; padding: 2rem; display: flex; justify-content: space-between; align-items: flex-start; }
-        .logo-section h1 {
-            font-family: 'Orbitron', sans-serif;
-            color: var(--neon-pink);
-            font-size: 3rem;
-            text-shadow: 0 0 10px var(--neon-pink), 0 0 20px var(--neon-pink);
-            margin-bottom: 0.5rem;
-        }
-        .subtitle {
-            color: var(--text-sub); font-size: 1rem; letter-spacing: 1px;
-            text-transform: uppercase; border-top: 1px solid var(--text-sub);
-            display: inline-block; padding-top: 5px;
-        }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; flex: 1; }
+        .service-link { text-decoration: none; color: inherit; }
 
-        /* Container & Grids */
-        .container { display: flex; gap: 2rem; max-width: 1200px; width: 95%; flex-wrap: wrap; justify-content: center; }
-        .main-title { text-align: center; margin: 2rem 0; width: 100%; }
-        .main-title h2 { font-family: 'Cairo', sans-serif; font-size: 2rem; color: white; border-bottom: 2px solid var(--neon-pink); display: inline-block; padding-bottom: 10px; }
-
-        .cards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; width: 100%; }
-
-        /* Card Styles */
+        /* تصميم كرت النيون البرمجي */
         .card {
-            background: var(--card-bg); border-radius: 20px; padding: 1.5rem;
-            display: flex; flex-direction: column; align-items: center; text-align: center;
-            position: relative; transition: transform 0.3s ease; border: 2px solid transparent;
+            background: rgba(10, 10, 10, 0.9); border: 2px solid var(--neon-red);
+            border-radius: 20px; padding: 35px 25px; text-align: center;
+            transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 0 15px rgba(255, 0, 60, 0.2); height: 100%; box-sizing: border-box;
         }
-        .card:hover { transform: translateY(-5px); }
-        .card.neon-pink { box-shadow: 0 0 10px rgba(255, 0, 85, 0.2); border-color: rgba(255, 0, 85, 0.5); }
-        .card.neon-blue { box-shadow: 0 0 10px rgba(0, 229, 255, 0.2); border-color: rgba(0, 229, 255, 0.5); }
-        .card i { font-size: 2.5rem; margin-bottom: 1rem; }
-        .card.neon-pink i { color: var(--neon-pink); filter: drop-shadow(0 0 5px var(--neon-pink)); }
-        .card.neon-blue i { color: var(--neon-blue); filter: drop-shadow(0 0 5px var(--neon-blue)); }
 
-        .card h3 { font-size: 1.3rem; margin-bottom: 1rem; font-weight: 700; color: #fff; }
-        .card p { font-size: 0.9rem; color: #aaa; line-height: 1.5; }
+        .card:hover {
+            transform: translateY(-15px); border-color: var(--neon-blue);
+            box-shadow: 0 0 40px var(--neon-blue), inset 0 0 20px var(--neon-blue);
+            background: rgba(20, 20, 20, 1);
+        }
 
-        /* Certification Section Specifics */
-        .certs-container { margin-top: 50px; width: 100%; max-width: 1200px; padding: 0 20px; }
-        .cert-card { background: #111; border: 1px solid #333; padding: 20px; border-radius: 15px; text-align: center; transition: 0.3s; }
-        .cert-card:hover { border-color: var(--neon-blue); box-shadow: 0 0 15px var(--neon-blue); }
-        .cert-card h4 { color: var(--neon-blue); font-size: 1.1rem; margin-bottom: 5px; }
-        .cert-card span { color: #666; font-size: 0.8rem; display: block; }
+        .card i { font-size: 2.5rem; color: var(--neon-red); margin-bottom: 15px; filter: drop-shadow(0 0 5px var(--neon-red)); }
+        .card:hover i { color: var(--neon-blue); filter: drop-shadow(0 0 10px var(--neon-blue)); }
 
-        /* CTA */
-        .bottom-cta { margin-top: 4rem; text-align: center; }
+        .card h3 { font-size: 1.5rem; color: #fff; text-shadow: 0 0 10px var(--neon-red); margin-bottom: 15px; }
+        .card:hover h3 { color: var(--neon-blue); text-shadow: 0 0 20px var(--neon-blue); }
+
+        .card p { font-size: 0.9rem; color: #bbb; line-height: 1.6; }
+
+        /* قسم الشهادات المدمج */
+        .certs-section { width: 100%; max-width: 1200px; margin-top: 80px; }
+        .section-title { color: var(--neon-blue); text-align: center; font-size: 2rem; margin-bottom: 40px; text-shadow: 0 0 10px var(--neon-blue); border-bottom: 1px solid var(--neon-blue); display: table; margin: 40px auto; padding-bottom: 10px; }
+        .certs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+        .cert-tag { 
+            background: rgba(0, 212, 255, 0.05); border: 1px solid var(--neon-blue); 
+            padding: 20px; border-radius: 15px; text-align: center; transition: 0.3s;
+        }
+        .cert-tag:hover { box-shadow: 0 0 20px var(--neon-blue); transform: scale(1.05); }
+        .cert-tag h4 { margin: 0; font-size: 1.1rem; color: #fff; }
+        .cert-tag p { margin: 10px 0 0; font-size: 0.8rem; color: #888; }
+
         .whatsapp-btn {
-            background: #25d366; border: none; color: white; padding: 15px 40px;
-            border-radius: 50px; font-size: 1.2rem; font-weight: bold; cursor: pointer;
-            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4); display: inline-flex; align-items: center; gap: 10px;
+            background: transparent; border: 2px solid var(--neon-red); color: var(--neon-red);
+            padding: 20px 60px; border-radius: 100px; font-weight: bold; font-size: 1.4rem;
+            margin-top: 60px; transition: 0.4s; text-decoration: none;
+            box-shadow: 0 0 20px var(--neon-red); display: inline-flex; align-items: center; gap: 15px;
         }
 
-        @media (max-width: 768px) { .logo-section h1 { font-size: 2rem; } }
+        .whatsapp-btn:hover { background: var(--neon-red); color: #fff; box-shadow: 0 0 60px var(--neon-red); transform: scale(1.05); }
+
+        footer { margin-top: 100px; padding: 40px; opacity: 0.4; text-align: center; border-top: 1px solid #222; width: 100%; font-size: 0.8rem; }
     </style>
 </head>
 <body>
+    <div class="overlay">
+        <header>
+            <h1>RAWAN TECH 🦅</h1>
+            <div class="tagline">CYBER SECURITY & NEON ARCHITECT</div>
+        </header>
 
-    <header>
-        <div class="logo-section">
-            <h1>RAWAN TECH</h1>
-            <div class="subtitle">CYBER SECURITY & NEON ARCHITECT</div>
-        </div>
-    </header>
+        <div class="container">
+            <div class="side-panel">
+                <h3>_CORE_SYSTEM_</h3>
+                <a href="https://wa.me/966549690896?text=أحتاج برمجة سكربتات أتمتة" class="service-link" style="width:100%">
+                    <div class="card">
+                        <i class="fa-solid fa-terminal"></i>
+                        <h3>📜 الأتمتة والسكربتات</h3>
+                        <p>تطوير أدوات ذكية باستخدام Bash و Python لتسريع العمليات وتوفير الوقت.</p>
+                    </div>
+                </a>
+            </div>
 
-    <div class="main-title">
-        <h2>الخدمات التقنية الاحترافية</h2> 
-    </div>
+            <div class="services-grid">
+                <a href="https://wa.me/966549690896?text=أحتاج خدمة الأمن السيبراني" class="service-link">
+                    <div class="card">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <h3>🔐 الأمن السيبراني</h3>
+                        <p>اختبار الاختراق، تأمين الشبكات، وفحص الثغرات المتقدم بناءً على معايير Google.</p>
+                    </div>
+                </a>
 
-    <div class="container">
-        <div class="cards-grid">
-            <div class="card neon-pink">
-                <i class="fa-solid fa-shield-halved"></i>
-                <h3>Cyber Security</h3>
-                <p>فحص ثغرات وتأمين أنظمة شاملة بمعايير عالمية لحماية بياناتك من التهديدات السيبرانية.</p>
-            </div>
-            <div class="card neon-blue">
-                <i class="fa-brands fa-linux"></i>
-                <h3>Linux Engineering</h3>
-                <p>بناء وتخصيص أنظمة Arch و Garuda وضبط أداء النواة Kernel لتحقيق أقصى استقرار.</p>
-            </div>
-            <div class="card neon-pink">
-                <i class="fa-solid fa-brain"></i>
-                <h3>Tech Consulting</h3>
-                <p>استشارات تقنية في الأمن السيبراني والذكاء الاصطناعي لمساعدتك في اتخاذ قراراتك.</p>
-            </div>
-            <div class="card neon-blue">
-                <i class="fa-solid fa-terminal"></i>
-                <h3>Automation</h3>
-                <p>برمجة سكربتات Python و Bash مخصصة لأتمتة المهام المتكررة وتوفير الوقت والجهد.</p>
-            </div>
-        </div>
-    </div>
+                <a href="https://wa.me/966549690896?text=أحتاج هندسة أنظمة لينكس" class="service-link">
+                    <div class="card">
+                        <i class="fa-brands fa-linux"></i>
+                        <h3>🖥️ أنظمة LINUX</h3>
+                        <p>بناء وتخصيص توزيعات Arch و Garuda مع ضبط أداء النواة Kernel.</p>
+                    </div>
+                </a>
 
-    <div class="certs-container">
-        <div class="main-title">
-            <h2>الاعتمادات والشهادات الموثقة 📜</h2>
-        </div>
-        <div class="cards-grid">
-            <div class="cert-card">
-                <h4>Google Cybersecurity Professional</h4>
-                <span>سبتمبر 2025 | Google via Coursera</span>
-            </div>
-            <div class="cert-card">
-                <h4>Hack The Box: Rastalabs</h4>
-                <span>أكتوبر 2025 | HTB Pro Labs</span>
-            </div>
-            <div class="cert-card">
-                <h4>Cybersecurity Attack & Defense</h4>
-                <span>سبتمبر 2025 | EC-Council Essentials</span>
-            </div>
-            <div class="cert-card">
-                <h4>Fundamentals of AI</h4>
-                <span>سبتمبر 2025 | SDAIA Initiative</span>
-            </div>
-            <div class="cert-card">
-                <h4>IBM Cybersecurity Careers</h4>
-                <span>سبتمبر 2025 | IBM via Coursera</span>
-            </div>
-            <div class="cert-card">
-                <h4>تخصص الأمن السيبراني</h4>
-                <span>سبتمبر 2025 | منصة إدراك</span>
-            </div>
-        </div>
-    </div>
+                <a href="https://wa.me/966549690896?text=أحتاج استشارة تقنية" class="service-link">
+                    <div class="card">
+                        <i class="fa-solid fa-lightbulb"></i>
+                        <h3>💡 استشارات تقنية</h3>
+                        <p>دعم فني وحلول برمجية لمشاكلك التقنية وتوجيهك في المسارات المهنية.</p>
+                    </div>
+                </a>
 
-    <div class="bottom-cta">
-        <button class="whatsapp-btn" onclick="window.open('https://wa.me/966549690896')">
-            تواصل عبر الواتساب <i class="fa-brands fa-whatsapp"></i>
-        </button>
-    </div>
+                <a href="https://wa.me/966549690896?text=أحتاج خدمة حماية وتشفير البيانات" class="service-link">
+                    <div class="card">
+                        <i class="fa-solid fa-lock"></i>
+                        <h3>🛡️ حماية البيانات</h3>
+                        <p>إعداد أنظمة تشفير قوية لضمان الخصوصية القصوى لملفاتك الحساسة.</p>
+                    </div>
+                </a>
 
-    <footer style="margin-top: 50px; opacity: 0.3; font-size: 0.8rem;">
-        © 2025 // RAWAN TECH // ALL RIGHTS RESERVED
-    </footer>
-
-</body>
-</html>
+                <a href="
