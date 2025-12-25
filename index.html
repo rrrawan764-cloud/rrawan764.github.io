@@ -3,72 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rawan Tech | Muted Neon Services</title>
+    <title>Rawan Tech | Neon Matrix</title>
     <style>
         :root { --neon-red: #ff003c; --neon-blue: #00d4ff; --dark-bg: #010103; }
-        body { margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; background-color: var(--dark-bg); color: #ffffff; text-align: right; overflow-x: hidden; }
+        body { margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, sans-serif; background-color: var(--dark-bg); color: #ffffff; text-align: right; overflow-x: hidden; }
         
+        /* خلفية نيون خفيفة */
         body::before {
             content: ""; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-            background: radial-gradient(circle at 10% 10%, rgba(255, 0, 60, 0.05), transparent 50%),
-                        url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070');
-            background-size: cover; background-position: center; opacity: 0.1; z-index: -1;
+            background: radial-gradient(circle at 50% 50%, rgba(255, 0, 60, 0.1), transparent 80%);
+            z-index: -1;
         }
 
-        .overlay { min-height: 100vh; padding: 60px 20px; background: rgba(1, 1, 3, 0.94); display: flex; flex-direction: column; align-items: center; }
+        .overlay { min-height: 100vh; padding: 60px 20px; background: rgba(1, 1, 3, 0.95); display: flex; flex-direction: column; align-items: center; }
         .container { max-width: 1200px; width: 100%; }
         
         header { text-align: center; margin-bottom: 60px; }
-        h1 { font-size: 3.5rem; color: var(--neon-red); text-shadow: 0 0 20px var(--neon-red); margin: 0; letter-spacing: 5px; }
-        .tagline { color: var(--neon-blue); font-size: 1.1rem; letter-spacing: 3px; opacity: 0.8; }
+        h1 { font-size: 4rem; color: var(--neon-red); text-shadow: 0 0 20px var(--neon-red), 0 0 40px var(--neon-red); margin: 0; }
+        .tagline { color: var(--neon-blue); font-size: 1.2rem; letter-spacing: 3px; text-shadow: 0 0 10px var(--neon-blue); }
 
         .section-title {
-            color: #fff; font-size: 1.8rem; text-align: center; margin: 40px 0;
-            border-bottom: 2px solid var(--neon-red); display: table; margin: 40px auto; padding-bottom: 10px;
+            color: #fff; font-size: 2rem; text-align: center; margin: 50px 0;
+            border-bottom: 2px solid var(--neon-red); display: table; margin: 40px auto; padding-bottom: 15px;
         }
 
         .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
         .service-link { text-decoration: none; color: inherit; }
         
         .card { 
-            background: rgba(10, 10, 15, 0.8); border-radius: 15px; 
-            border: 1px solid rgba(255, 0, 60, 0.1); overflow: hidden; 
+            background: rgba(15, 15, 25, 0.8); border-radius: 20px; 
+            border: 1px solid rgba(255, 0, 60, 0.3); overflow: hidden; 
             transition: 0.5s ease; height: 100%; position: relative;
         }
 
         .card:hover { 
-            transform: translateY(-10px); border-color: var(--neon-blue); 
-            box-shadow: 0 0 40px rgba(255, 0, 60, 0.2);
+            transform: translateY(-15px); border-color: var(--neon-blue); 
+            box-shadow: 0 0 50px rgba(0, 212, 255, 0.3);
         }
 
-        /* صور نيون غير اعتيادية (Abstract & Muted) */
+        /* صور نيون كاملة ومبهرة لكل خدمة */
         .card-image {
-            width: 100%; height: 200px; background-size: cover; background-position: center;
-            filter: grayscale(80%) brightness(0.6) contrast(1.2); transition: 0.5s ease;
-            border-bottom: 2px solid var(--neon-red);
+            width: 100%; height: 230px; background-size: cover; background-position: center;
+            border-bottom: 2px solid var(--neon-red); filter: saturate(1.5) contrast(1.1);
         }
 
-        .card:hover .card-image { filter: grayscale(0%) brightness(0.8) contrast(1.3); }
+        .card-content { padding: 25px; background: linear-gradient(to bottom, transparent, rgba(255, 0, 60, 0.05)); }
+        .card h3 { color: var(--neon-blue); margin-top: 0; font-size: 1.6rem; text-shadow: 0 0 10px var(--neon-blue); }
+        .card p { font-size: 1rem; color: #e0e0e0; line-height: 1.7; }
 
-        .card-content { padding: 25px; }
-        .card h3 { color: var(--neon-red); margin-top: 0; font-size: 1.4rem; text-shadow: 0 0 5px var(--neon-red); }
-        .card p { font-size: 0.9rem; color: #888; line-height: 1.7; transition: 0.3s; }
-        .card:hover p { color: #eee; }
-
-        .price-badge { background: var(--neon-red); color: white; padding: 2px 10px; border-radius: 4px; font-size: 0.75rem; font-weight: bold; margin-bottom: 10px; display: inline-block; }
+        .price-badge { background: var(--neon-red); color: white; padding: 4px 12px; border-radius: 5px; font-size: 0.8rem; font-weight: bold; margin-bottom: 15px; display: inline-block; box-shadow: 0 0 10px var(--neon-red); }
 
         .whatsapp-btn {
-            background: transparent; color: var(--neon-blue); 
-            padding: 18px 50px; text-decoration: none; border: 1px solid var(--neon-blue);
-            border-radius: 50px; font-weight: bold; font-size: 1.3rem; display: inline-flex; 
-            align-items: center; gap: 15px; margin-top: 60px; transition: 0.4s;
+            background: linear-gradient(45deg, var(--neon-red), #b3002b); color: white; 
+            padding: 22px 70px; text-decoration: none; border-radius: 100px;
+            font-weight: bold; font-size: 1.5rem; display: inline-flex; 
+            align-items: center; gap: 15px; margin-top: 80px; transition: 0.4s;
+            box-shadow: 0 0 30px rgba(255, 0, 60, 0.4);
         }
 
         .whatsapp-btn:hover {
-            background: var(--neon-blue); color: #000; box-shadow: 0 0 30px var(--neon-blue);
+            transform: scale(1.1); box-shadow: 0 0 60px var(--neon-red);
         }
 
-        footer { margin-top: 100px; padding: 40px; opacity: 0.3; text-align: center; border-top: 1px solid #111; }
+        footer { margin-top: 120px; padding: 40px; opacity: 0.5; text-align: center; border-top: 1px solid #222; letter-spacing: 2px; }
     </style>
 </head>
 <body>
@@ -76,69 +73,69 @@
         <div class="container">
             <header>
                 <h1>RAWAN 🦅</h1>
-                <div class="tagline">CYBER SECURITY & ARCHITECT</div>
+                <div class="tagline">CYBER SECURITY & NEON ARCHITECT</div>
             </header>
 
-            <h2 class="section-title">قائمة الخدمات التقنية</h2>
+            <h2 class="section-title">الخدمات التقنية بنمط النيون</h2>
 
             <div class="services-grid">
                 <a href="https://wa.me/966549690896?text=أحتاج خدمة الأمن السيبراني" target="_blank" class="service-link">
                     <div class="card">
-                        <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1558494949-ef010cbdcc51?q=80&w=600');"></div>
+                        <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=600');"></div>
                         <div class="card-content">
                             <h3>🔐 الأمن السيبراني</h3>
-                            <p>اختبار الاختراق وتأمين الشبكات بأحدث تقنيات التشفير الرقمي.</p>
+                            <p>تأمين شامل وحماية من الاختراق باستخدام بروتوكولات مشفرة نيونية متطورة.</p>
                         </div>
                     </div>
                 </a>
 
-                <a href="https://wa.me/966549690896?text=أحتاج هندسة أنظمة لينكس" target="_blank" class="service-link">
+                <a href="https://wa.me/966549690896?text=أحتاج هندسة لينكس" target="_blank" class="service-link">
                     <div class="card">
-                        <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1614850523296-d8c1af93d400?q=80&w=600');"></div>
+                        <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=600');"></div>
                         <div class="card-content">
                             <h3>🖥️ أنظمة LINUX</h3>
-                            <p>بناء وتخصيص توزيعات Arch و Garuda مع ضبط أداء النواة Kernel.</p>
+                            <p>بناء وتخصيص توزيعات Arch و Garuda مع واجهات نيون احترافية (Ricing).</p>
                         </div>
                     </div>
                 </a>
 
                 <a href="https://wa.me/966549690896?text=أحتاج استشارة تقنية" target="_blank" class="service-link">
                     <div class="card">
-                        <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1451187534669-4e5bdad444ff?q=80&w=600');"></div>
+                        <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=600');"></div>
                         <div class="card-content">
                             <span class="price-badge">بمبلغ رمزي</span>
                             <h3>💡 استشارات تقنية</h3>
-                            <p>حلول برمجية ودعم فني متخصص لمشاريعك ومشاكل نظامك.</p>
+                            <p>حلول ذكية ودعم فني مباشر لكل تساؤلاتك في العالم الرقمي.</p>
                         </div>
                     </div>
                 </a>
 
-                <a href="https://wa.me/966549690896?text=أحتاج برمجة سكربتات أتمتة" target="_blank" class="service-link">
+                <a href="https://wa.me/966549690896?text=أحتاج برمجة أتمتة" target="_blank" class="service-link">
                     <div class="card">
                         <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1544197150-b99a580bb7a8?q=80&w=600');"></div>
                         <div class="card-content">
                             <h3>📜 الأتمتة والسكربتات</h3>
-                            <p>تطوير أدوات ذكية (Bash/Python) لتسريع العمليات المتكررة.</p>
+                            <p>تطوير أدوات أتمتة ذكية بلغة Python و Bash لتسريع مهامك اليومية.</p>
                         </div>
                     </div>
                 </a>
 
-                <a href="https://wa.me/966549690896?text=أحتاج خدمة حماية البيانات" target="_blank" class="service-link">
+                <a href="https://wa.me/966549690896?text=أحتاج حماية البيانات" target="_blank" class="service-link">
                     <div class="card">
                         <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=600');"></div>
                         <div class="card-content">
                             <h3>🛡️ حماية البيانات</h3>
-                            <p>إعداد أنظمة تشفير قوية لضمان الخصوصية القصوى لملفاتك الحساسة.</p>
+                            <p>إعداد جدران حماية وأنظمة تشفير لا يمكن اختراقها لخصوصيتك المطلقة.</p>
                         </div>
                     </div>
                 </a>
 
-                <a href="https://wa.me/966549690896?text=أحتاج تدريب تقني خاص" target="_blank" class="service-link">
+                <a href="https://wa.me/966549690896?text=أحتاج تدريب خاص" target="_blank" class="service-link">
                     <div class="card">
                         <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1504639725590-34d0984388bd?q=80&w=600');"></div>
                         <div class="card-content">
                             <h3>🎓 تدريب تقني خاص</h3>
-                            <p>حصص تدريبية في سطر الأوامر وأساسيات الأمن السيبراني للمبتدئين.</p>
+                            <p>دروس خصوصية مكثفة لتعلم فنون سطر الأوامر وأسرار الهاكر الأخلاقي.</p>
                         </div>
                     </div>
                 </a>
@@ -146,11 +143,11 @@
 
             <center>
                 <a href="https://wa.me/966549690896" target="_blank" class="whatsapp-btn">
-                    _INITIATE_CONTACT_
+                    💬 تواصل مع روان الآن
                 </a>
             </center>
         </div>
-        <footer>© 2025 // RAWAN_TECH // SYSTEM_ACTIVE</footer>
+        <footer>© 2025 // RAWAN_NEON_TECH // SYSTEM_ONLINE</footer>
     </div>
 </body>
 </html>
