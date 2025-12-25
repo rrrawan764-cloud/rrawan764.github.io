@@ -3,65 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rawan Tech | Certified Cyber Expert</title>
+    <title>Rawan Tech | The Matrix System</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400&family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Cairo:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        :root { --neon-red: #ff003c; --neon-blue: #00d4ff; --dark-bg: #050505; }
-        body { margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; background: var(--dark-bg); color: #fff; overflow-x: hidden; }
-
-        .overlay { min-height: 100vh; padding: 50px 20px; display: flex; flex-direction: column; align-items: center; }
+        /* الألوان الأساسية */
+        :root { --neon-red: #ff003c; --neon-blue: #00d4ff; --matrix-green: #0F0; }
         
+        /* إعدادات الصفحة الأساسية */
+        body { margin: 0; padding: 0; font-family: 'Cairo', sans-serif; overflow-x: hidden; background: #000; }
+
+        /* كانفاس الماتریکس (الخلفية المتحركة) */
+        #matrix {
+            position: fixed; top: 0; left: 0; z-index: -1; /* خلف كل شيء */
+            display: block; width: 100%; height: 100%;
+        }
+
+        /* طبقة شفافة فوق الخلفية لتوضيح المحتوى */
+        .overlay { 
+            min-height: 100vh; padding: 50px 20px; 
+            display: flex; flex-direction: column; align-items: center; 
+            background: rgba(5, 5, 10, 0.85); /* خلفية سوداء شفافة لرؤية المطر */
+            color: #fff;
+        }
+        
+        /* الهيدر والعناوين */
         header { text-align: center; margin-bottom: 50px; }
-        h1 { font-size: 3.5rem; color: var(--neon-red); text-shadow: 0 0 20px var(--neon-red); margin: 0; font-family: 'Orbitron', sans-serif; }
-        .tagline { color: var(--neon-blue); text-shadow: 0 0 10px var(--neon-blue); letter-spacing: 3px; font-weight: bold; }
+        h1 { font-size: 3.5rem; color: var(--neon-red); text-shadow: 0 0 20px var(--neon-red); margin: 0; font-family: 'Orbitron', sans-serif; letter-spacing: 4px; }
+        .tagline { color: var(--neon-blue); text-shadow: 0 0 10px var(--neon-blue); letter-spacing: 3px; font-weight: bold; margin-top: 10px; }
+        .section-title { color: var(--neon-blue); text-align: center; font-size: 2rem; margin: 60px 0 40px; text-shadow: 0 0 10px var(--neon-blue); border-bottom: 2px solid var(--neon-red); display: table; padding-bottom: 10px; }
 
-        .section-title { color: var(--neon-blue); text-align: center; font-size: 2rem; margin: 50px 0 30px; text-shadow: 0 0 10px var(--neon-blue); border-bottom: 2px solid var(--neon-red); display: table; padding-bottom: 10px; }
-
+        /* شبكة الخدمات */
         .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; width: 100%; max-width: 1200px; }
         .service-link { text-decoration: none; color: inherit; }
 
+        /* كرت الخدمة النيون */
         .card {
-            background: rgba(10, 10, 10, 0.9); border: 2px solid var(--neon-red);
+            background: rgba(15, 15, 20, 0.9); border: 2px solid var(--neon-red);
             border-radius: 20px; padding: 35px 25px; text-align: center;
-            transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: 0 0 15px rgba(255, 0, 60, 0.2); height: 100%; box-sizing: border-box;
+            transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 0 20px rgba(255, 0, 60, 0.3); height: 100%; box-sizing: border-box;
+            backdrop-filter: blur(5px); /* تأثير ضبابي خفيف */
         }
-
-        .card:hover { transform: translateY(-15px); border-color: var(--neon-blue); box-shadow: 0 0 40px var(--neon-blue), inset 0 0 20px var(--neon-blue); background: rgba(20, 20, 20, 1); }
-        .card i { font-size: 2.5rem; color: var(--neon-red); margin-bottom: 15px; filter: drop-shadow(0 0 5px var(--neon-red)); }
+        .card:hover { transform: translateY(-10px) scale(1.02); border-color: var(--neon-blue); box-shadow: 0 0 40px var(--neon-blue), inset 0 0 20px var(--neon-blue); background: rgba(20, 20, 30, 1); }
+        .card i { font-size: 2.5rem; color: var(--neon-red); margin-bottom: 15px; filter: drop-shadow(0 0 5px var(--neon-red)); transition: 0.4s; }
+        .card:hover i { color: var(--neon-blue); filter: drop-shadow(0 0 10px var(--neon-blue)); transform: rotateY(360deg); }
         .card h3 { font-size: 1.5rem; color: #fff; text-shadow: 0 0 10px var(--neon-red); margin-bottom: 15px; }
-        .card p { font-size: 0.9rem; color: #bbb; line-height: 1.6; }
+        .card p { font-size: 0.9rem; color: #ccc; line-height: 1.7; }
 
-        /* قسم الشهادات المدمج */
+        /* شبكة الشهادات */
         .certs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; width: 100%; max-width: 1100px; }
         .cert-card { 
-            background: rgba(0, 212, 255, 0.05); border: 1px solid var(--neon-blue); 
+            background: rgba(0, 50, 70, 0.3); border: 1px solid var(--neon-blue); 
             padding: 20px; border-radius: 15px; text-align: center; transition: 0.3s;
+            box-shadow: 0 0 15px rgba(0, 212, 255, 0.2); backdrop-filter: blur(5px);
         }
-        .cert-card:hover { box-shadow: 0 0 25px var(--neon-blue); transform: scale(1.03); }
+        .cert-card:hover { box-shadow: 0 0 30px var(--neon-blue); transform: scale(1.05); background: rgba(0, 50, 70, 0.5); }
         .cert-card h4 { margin: 0; font-size: 1.1rem; color: #fff; text-shadow: 0 0 5px var(--neon-blue); }
-        .cert-card p { margin: 10px 0 0; font-size: 0.8rem; color: #888; }
+        .cert-card p { margin: 10px 0 0; font-size: 0.8rem; color: var(--neon-blue); opacity: 0.8; }
 
+        /* زر الواتساب */
         .whatsapp-btn {
             background: transparent; border: 2px solid #25d366; color: #25d366;
             padding: 22px 70px; border-radius: 100px; font-weight: bold; font-size: 1.5rem;
-            margin-top: 60px; transition: 0.4s; text-decoration: none;
+            margin-top: 80px; transition: 0.4s; text-decoration: none;
             box-shadow: 0 0 20px rgba(37, 211, 102, 0.3); display: inline-flex; align-items: center; gap: 15px;
+            text-shadow: 0 0 5px #25d366;
         }
-        .whatsapp-btn:hover { background: #25d366; color: #fff; box-shadow: 0 0 60px #25d366; }
+        .whatsapp-btn:hover { background: #25d366; color: #000; box-shadow: 0 0 60px #25d366; transform: scale(1.05); }
 
-        footer { margin-top: 100px; padding: 40px; opacity: 0.4; text-align: center; border-top: 1px solid #222; width: 100%; font-size: 0.85rem; }
+        footer { margin-top: 100px; padding: 40px; opacity: 0.6; text-align: center; border-top: 1px solid rgba(255, 255, 255, 0.1); width: 100%; font-size: 0.85rem; color: var(--neon-blue); }
     </style>
 </head>
 <body>
+    <canvas id="matrix"></canvas>
+
     <div class="overlay">
         <header>
             <h1>RAWAN TECH 🦅</h1>
-            <div class="tagline">CERTIFIED CYBER SECURITY EXPERT</div>
+            <div class="tagline">SYSTEM HACKED // SECURE OPERATOR</div>
         </header>
 
-        <h2 class="section-title">قائمة الخدمات التقنية الاحترافية</h2>
+        <h2 class="section-title">قائمة الخدمات التقنية</h2>
         <div class="services-grid">
             <a href="https://wa.me/966549690896?text=أحتاج خدمة الأمن السيبراني" class="service-link">
                 <div class="card">
@@ -107,7 +130,7 @@
             </a>
         </div>
 
-        <h2 class="section-title">الشهادات والاعتمادات الموثقة 📜</h2>
+        <h2 class="section-title">الشهادات الموثقة (Verified) 📜</h2>
         <div class="certs-grid">
             <div class="cert-card">
                 <h4>Hack The Box: Rastalabs</h4>
@@ -136,9 +159,61 @@
         </div>
 
         <a href="https://wa.me/966549690896" target="_blank" class="whatsapp-btn">
-            💬 تواصل مع روان: +966549690896
+            <i class="fa-brands fa-whatsapp"></i> تواصل مع روان: +966549690896
         </a>
         <footer>© 2025 // RAWAN ABDALZIZ ALSBHI // SYSTEM_SECURED</footer>
     </div>
+
+    <script>
+        const canvas = document.getElementById('matrix');
+        const ctx = canvas.getContext('2d');
+
+        // جعل الكانفاس يملأ الشاشة
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        // حروف الماتریکس (يمكنك إضافة المزيد)
+        const katakana = 'アァカサタナハマヤャラワガザダバパイィキシチニヒミリヰギジヂビピウゥクスツヌフムユュルグズブヅプエェケセテネヘメレヱゲゼデベペオォコソトノホモヨョロヲゴゾドボポヴッン0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        const letters = katakana.split('');
+
+        const fontSize = 16;
+        const columns = canvas.width / fontSize; // عدد الأعمدة للمطر
+
+        // مصفوفة لتتبع موقع كل قطرة
+        const drops = [];
+        for (let i = 0; i < columns; i++) {
+            drops[i] = 1;
+        }
+
+        // دالة الرسم
+        function draw() {
+            // خلفية سوداء شبه شفافة لخلق تأثير الذيل
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            ctx.fillStyle = '#0F0'; // لون النص الأخضر (يمكن تغييره لنيون آخر)
+            ctx.font = fontSize + 'px monospace';
+
+            for (let i = 0; i < drops.length; i++) {
+                const text = letters[Math.floor(Math.random() * letters.length)];
+                ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+                // إعادة القطرة للأعلى بشكل عشوائي بعد خروجها من الشاشة
+                if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+                    drops[i] = 0;
+                }
+                drops[i]++; // تحريك القطرة للأسفل
+            }
+        }
+
+        // تشغيل الأنيميشن بسرعة 30 إطار في الثانية تقريباً
+        setInterval(draw, 33);
+
+        // تحديث حجم الكانفاس عند تغيير حجم النافذة
+        window.addEventListener('resize', () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        });
+    </script>
 </body>
 </html>
