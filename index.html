@@ -27,7 +27,7 @@
             align-items: center;
         }
 
-        /* الهيدر مع الصقر */
+        /* --- Header Section --- */
         header {
             width: 100%;
             max-width: 1200px;
@@ -58,7 +58,7 @@
             filter: drop-shadow(0 0 10px var(--neon-pink));
         }
 
-        /* شبكة الخدمات */
+        /* --- Global Container & Titles --- */
         .container {
             max-width: 1200px;
             width: 95%;
@@ -73,13 +73,13 @@
             padding-bottom: 1rem;
         }
 
+        /* --- Services Grid (Pink Glow) --- */
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 2rem;
         }
 
-        /* تصميم الكرت النيون */
         .card {
             background: var(--card-bg);
             border-radius: 20px;
@@ -95,7 +95,6 @@
             box-shadow: 0 0 25px rgba(255, 0, 85, 0.3);
         }
 
-        /* صندوق الصور النيون العلوي */
         .neon-image-area {
             height: 220px;
             background-size: cover;
@@ -114,10 +113,7 @@
             background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.8));
         }
 
-        .card-content {
-            padding: 2rem;
-            text-align: right;
-        }
+        .card-content { padding: 2rem; text-align: right; }
 
         .card h3 {
             font-size: 1.4rem;
@@ -126,12 +122,7 @@
             text-shadow: 0 0 5px var(--neon-blue);
         }
 
-        .card p {
-            color: #888;
-            font-size: 0.9rem;
-            line-height: 1.6;
-            margin: 0;
-        }
+        .card p { color: #888; font-size: 0.9rem; line-height: 1.6; margin: 0; }
 
         .badge {
             background: var(--neon-pink);
@@ -143,9 +134,60 @@
             margin-bottom: 10px;
         }
 
-        /* زر الواتساب الأخضر الكبير */
+        /* --- Certificates Section (Blue Glow) --- */
+        .certs-section {
+            width: 100%;
+            max-width: 1200px;
+            margin-top: 80px;
+            padding: 0 20px;
+        }
+
+        .certs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .cert-card {
+            background: rgba(0, 229, 255, 0.03); /* Glassmorphism effect */
+            border: 1px solid rgba(0, 229, 255, 0.2);
+            border-radius: 15px;
+            padding: 30px 20px;
+            text-align: center;
+            transition: 0.4s ease;
+        }
+
+        .cert-card:hover {
+            border-color: var(--neon-blue);
+            box-shadow: 0 0 30px rgba(0, 229, 255, 0.4), inset 0 0 10px rgba(0, 229, 255, 0.1);
+            transform: scale(1.05);
+        }
+
+        .cert-icon {
+            font-size: 2.5rem;
+            color: var(--neon-blue);
+            margin-bottom: 15px;
+            filter: drop-shadow(0 0 10px var(--neon-blue));
+        }
+
+        .cert-card h4 {
+            margin: 10px 0;
+            font-size: 1.2rem;
+            color: #fff;
+        }
+
+        .cert-card span {
+            color: var(--neon-blue);
+            font-size: 0.8rem;
+            font-weight: bold;
+            opacity: 0.8;
+            letter-spacing: 1px;
+        }
+
+        /* --- WhatsApp & Footer Section --- */
         .whatsapp-section {
-            margin: 50px 0;
+            margin: 70px 0;
             text-align: center;
         }
 
@@ -184,7 +226,8 @@
             <div class="subtitle">CYBER SECURITY & NEON ARCHITECT</div>
         </div>
         <div class="logo-icon">
-            <i class="fa-solid fa-kaaba eagle-icon"></i> </div>
+            <i class="fa-solid fa-kaaba eagle-icon"></i> 
+        </div>
     </header>
 
     <div class="container">
@@ -250,6 +293,27 @@
                     <h3>Private Training</h3>
                     <p>حصص تدريبية مكثفة لتعلم أساسيات لينكس وسطر الأوامر والأمن السيبراني.</p>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="certs-section">
+        <div class="main-title" style="color: var(--neon-blue); text-shadow: 0 0 10px var(--neon-blue); border-color: var(--neon-blue);">الشهادات والاعتمادات الرسمية</div>
+        <div class="certs-grid">
+            <div class="cert-card">
+                <i class="fa-solid fa-certificate cert-icon"></i>
+                <h4>Certified Ethical Hacker</h4>
+                <span>EC-COUNCIL</span>
+            </div>
+            <div class="cert-card">
+                <i class="fa-solid fa-award cert-icon"></i>
+                <h4>CompTIA Security+</h4>
+                <span>COMPTIA</span>
+            </div>
+            <div class="cert-card">
+                <i class="fa-solid fa-user-shield cert-icon"></i>
+                <h4>Linux Professional</h4>
+                <span>LPI INSTITUTE</span>
             </div>
         </div>
     </div>
