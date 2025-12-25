@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rawan Tech | Certified Cyber Expert</title>
+    <title>Rawan Cyber Tech | Certified Expert</title>
     <style>
         :root { --neon-red: #ff003c; --neon-blue: #00d4ff; --dark-bg: #050505; }
         body { margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; background: var(--dark-bg); color: #fff; overflow-x: hidden; }
@@ -20,7 +20,7 @@
             text-shadow: 0 0 10px var(--neon-red);
         }
 
-        /* تنسيق قسم الشهادات النيوني */
+        /* تنسيق قسم الشهادات */
         .certs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; width: 100%; max-width: 1100px; margin-bottom: 60px; }
         .cert-card {
             background: rgba(20, 20, 20, 0.8); border: 1px solid var(--neon-blue);
@@ -31,7 +31,7 @@
         .cert-card h4 { color: var(--neon-blue); margin: 0 0 10px 0; font-size: 1.1rem; }
         .cert-card span { color: #888; font-size: 0.85rem; display: block; }
 
-        /* تنسيق الخدمات النيوني */
+        /* تنسيق الخدمات */
         .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; width: 100%; max-width: 1200px; }
         .service-link { text-decoration: none; color: inherit; }
 
@@ -49,6 +49,8 @@
         .card:hover h3 { color: var(--neon-blue); text-shadow: 0 0 20px var(--neon-blue); }
         .card p { font-size: 0.95rem; color: #bbb; line-height: 1.7; }
 
+        .price-badge { background: var(--neon-red); color: white; padding: 4px 12px; border-radius: 5px; font-size: 0.8rem; font-weight: bold; margin-bottom: 15px; display: inline-block; }
+
         .whatsapp-btn {
             background: transparent; border: 2px solid var(--neon-red); color: var(--neon-red);
             padding: 22px 70px; border-radius: 100px; font-weight: bold; font-size: 1.5rem;
@@ -64,67 +66,81 @@
     <div class="overlay">
         <header>
             <h1>روان 🦅</h1>
-            <div class="tagline">CYBER SECURITY & AI ARCHITECT</div>
+            <div class="tagline">CERTIFIED CYBER SECURITY EXPERT</div>
         </header>
 
-        <h2 class="section-title">الشهادات المعتمدة 📜</h2>
+        <h2 class="section-title">الاعتمادات والشهادات الدولية 📜</h2>
         <div class="certs-grid">
             <div class="cert-card">
                 <h4>Google Cybersecurity Professional</h4>
-                <span>سبتمبر 2025 | Coursera</span>
+                <span>سبتمبر 2025 | Google & Coursera</span>
             </div>
             <div class="cert-card">
                 <h4>Hack The Box: Rastalabs</h4>
-                <span>أكتوبر 2025 | Pro Labs</span>
+                <span>أكتوبر 2025 | HTB Pro Labs</span>
             </div>
             <div class="cert-card">
                 <h4>Cybersecurity Attack & Defense</h4>
                 <span>سبتمبر 2025 | EC-Council</span>
             </div>
             <div class="cert-card">
-                <h4>Artificial Intelligence Advanced</h4>
+                <h4>AI Advanced Training</h4>
                 <span>سبتمبر 2025 | SDAIA</span>
             </div>
             <div class="cert-card">
-                <h4>IBM: Cybersecurity Careers</h4>
+                <h4>IBM Cybersecurity Careers</h4>
                 <span>سبتمبر 2025 | IBM</span>
-            </div>
-            <div class="cert-card">
-                <h4>تخصص الأمن السيبراني</h4>
-                <span>سبتمبر 2025 | إدراك (Edraak)</span>
             </div>
         </div>
 
-        <h2 class="section-title">الخدمات التقنية الاحترافية</h2>
+        <h2 class="section-title">قائمة الخدمات التقنية</h2>
         <div class="services-grid">
             <a href="https://wa.me/966549690896?text=أحتاج خدمة الأمن السيبراني" class="service-link">
                 <div class="card">
-                    <h3>🔐 SECURITY</h3>
-                    <p>اختبار الاختراق، تحليل المخاطر، وحماية البيانات بناءً على معايير Google العالمية[cite: 13, 25].</p>
+                    <h3>🔐 الأمن السيبراني</h3>
+                    <p>اختبار الاختراق وتأمين الشبكات بناءً على معايير Google و EC-Council.</p>
                 </div>
             </a>
+
             <a href="https://wa.me/966549690896?text=أحتاج هندسة أنظمة لينكس" class="service-link">
                 <div class="card">
-                    <h3>🖥️ LINUX</h3>
-                    <p>بناء وتخصيص أنظمة Arch و Garuda وضبط الأداء العالي للمحترفين.</p>
+                    <h3>🖥️ أنظمة LINUX</h3>
+                    <p>بناء وتخصيص توزيعات Arch و Garuda وضبط الأداء العالي للمحترفين.</p>
                 </div>
             </a>
-            <a href="https://wa.me/966549690896?text=أحتاج استشارة في الذكاء الاصطناعي" class="service-link">
+
+            <a href="https://wa.me/966549690896?text=أحتاج استشارة تقنية" class="service-link">
                 <div class="card">
-                    <h3>🤖 AI SOLUTIONS</h3>
-                    <p>تطبيقات ومفاهيم الذكاء الاصطناعي المتقدمة بإشراف سدايا.</p>
+                    <span class="price-badge">بمبلغ رمزي</span>
+                    <h3>💡 استشارات تقنية</h3>
+                    <p>دعم فني وحلول برمجية لمشاكلك التقنية وتوجيهك في المسارات المهنية.</p>
                 </div>
             </a>
-            <a href="https://wa.me/966549690896?text=أحتاج برمجة أتمتة" class="service-link">
+
+            <a href="https://wa.me/966549690896?text=أحتاج برمجة سكربتات أتمتة" class="service-link">
                 <div class="card">
-                    <h3>📜 AUTOMATION</h3>
-                    <p>برمجة سكربتات (Python/Bash) لأتمتة المهام المعقدة وحماية الأنظمة[cite: 4, 15].</p>
+                    <h3>📜 الأتمتة والسكربتات</h3>
+                    <p>تطوير أدوات ذكية (Bash/Python) لتسريع العمليات المتكررة وحماية الأنظمة.</p>
+                </div>
+            </a>
+
+            <a href="https://wa.me/966549690896?text=أحتاج خدمة حماية وتشفير البيانات" class="service-link">
+                <div class="card">
+                    <h3>🛡️ حماية البيانات</h3>
+                    <p>إعداد أنظمة تشفير قوية لضمان الخصوصية القصوى لملفاتك وبياناتك الحساسة.</p>
+                </div>
+            </a>
+
+            <a href="https://wa.me/966549690896?text=أحتاج تدريب تقني خاص" class="service-link">
+                <div class="card">
+                    <h3>🎓 تدريب تقني خاص</h3>
+                    <p>حصص تدريبية مكثفة في سطر الأوامر وأساسيات الأمن السيبراني والذكاء الاصطناعي.</p>
                 </div>
             </a>
         </div>
 
         <a href="https://wa.me/966549690896" class="whatsapp-btn">💬 تواصل للطلب الآن</a>
-        <footer>© 2025 // RAWAN TECH // CERTIFIED CYBER OPERATOR</footer>
+        <footer>© 2025 // RAWAN TECH // CERTIFIED SYSTEMS ARCHITECT</footer>
     </div>
 </body>
 </html>
