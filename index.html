@@ -1,31 +1,86 @@
-
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RAWAN TECH | ALL NEON SERVICES</title>
+    <title>RAWAN TECH | الخدمات التقنية النيون</title>
     <style>
         :root { --neon-pink: #ff00ff; --neon-blue: #00e5ff; --dark-bg: #000000; }
-        body { margin: 0; padding: 0; background: var(--dark-bg); color: #fff; font-family: 'Segoe UI', sans-serif; text-align: center; }
+        body { margin: 0; padding: 0; background: var(--dark-bg); color: #fff; font-family: 'Segoe UI', sans-serif; text-align: center; overflow-x: hidden; }
+
         .container { max-width: 1200px; margin: 0 auto; padding: 50px 20px; }
-        header { margin-bottom: 60px; }
-        h1 { font-size: 3rem; color: #fff; margin: 0; letter-spacing: 2px; text-shadow: 0 0 10px rgba(255,255,255,0.3); }
-        .tagline { color: var(--neon-pink); font-size: 1.1rem; text-transform: uppercase; margin-top: 10px; text-shadow: 0 0 5px var(--neon-pink); }
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; margin-top: 40px; }
+        
+        header { text-align: left; margin-bottom: 60px; padding-left: 20px; position: relative; }
+        h1 { font-size: 2.8rem; color: var(--neon-pink); margin: 0; letter-spacing: 2px; text-shadow: 0 0 15px var(--neon-pink); }
+        .tagline { color: #fff; font-size: 0.9rem; opacity: 0.8; letter-spacing: 1px; }
+
+        /* أيقونة الصقر في الهيدر */
+        .eagle-icon { position: absolute; left: 20px; top: 0; width: 60px; filter: drop-shadow(0 0 10px var(--neon-pink)); }
+
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
+
         .service-link { text-decoration: none; color: inherit; }
-        .card { background: #0a0a0a; border: 1px solid #222; border-radius: 15px; overflow: hidden; transition: 0.3s; height: 100%; display: flex; flex-direction: column; }
-        .card:hover { border-color: var(--neon-pink); box-shadow: 0 0 30px rgba(255, 0, 255, 0.2); transform: translateY(-10px); }
-        .icon-box { height: 220px; background-size: cover; background-position: center; border-bottom: 1px solid #1a1a1a; position: relative; }
-        .icon-box::after { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.9)); }
-        .card-content { padding: 25px; text-align: right; flex-grow: 1; }
-        .card h3 { color: #fff; margin: 0 0 12px; font-size: 1.4rem; text-shadow: 0 0 5px var(--neon-blue); }
+
+        /* تصميم الكرت النيون المطابق للصور */
+        .card {
+            background: #080808;
+            border: 1px solid #222;
+            border-radius: 20px;
+            overflow: hidden;
+            transition: 0.4s ease-in-out;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .card:hover {
+            border-color: var(--neon-pink);
+            box-shadow: 0 0 30px rgba(255, 0, 255, 0.3);
+            transform: translateY(-10px);
+        }
+
+        /* حاوية الصور النيون الستة */
+        .neon-image-box {
+            width: 100%;
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+            border-bottom: 2px solid var(--neon-pink);
+            position: relative;
+        }
+
+        /* تأثير التوهج فوق الصورة */
+        .neon-image-box::after {
+            content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.8));
+        }
+
+        .card-content { padding: 25px; text-align: right; }
+        .card h3 { color: #fff; margin: 0 0 12px; font-size: 1.4rem; text-shadow: 0 0 10px var(--neon-blue); }
         .card p { color: #aaa; font-size: 0.95rem; line-height: 1.7; margin: 0; }
+
         .badge { background: var(--neon-pink); color: white; padding: 3px 10px; border-radius: 4px; font-size: 0.7rem; display: inline-block; margin-bottom: 10px; font-weight: bold; }
-        .whatsapp-container { margin-top: 70px; }
-        .whatsapp-btn { background: #25d366; color: white; padding: 18px 50px; border-radius: 100px; text-decoration: none; font-size: 1.6rem; font-weight: bold; display: inline-flex; align-items: center; gap: 15px; box-shadow: 0 5px 20px rgba(37, 211, 102, 0.4); transition: 0.3s; }
+
+        /* زر الواتساب الأخضر الطويل */
+        .whatsapp-section { margin-top: 80px; }
+        .whatsapp-btn {
+            background: #25d366;
+            color: white;
+            padding: 18px 60px;
+            border-radius: 100px;
+            text-decoration: none;
+            font-size: 1.6rem;
+            font-weight: bold;
+            display: inline-flex;
+            align-items: center;
+            gap: 20px;
+            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
+            transition: 0.3s;
+        }
         .whatsapp-btn:hover { transform: scale(1.08); background: #20ba5a; }
-        footer { margin-top: 100px; padding-bottom: 40px; opacity: 0.3; font-size: 0.85rem; border-top: 1px solid #111; padding-top: 20px; }
+
+        footer { margin-top: 100px; padding: 40px; opacity: 0.4; font-size: 0.8rem; border-top: 1px solid #111; letter-spacing: 2px; }
     </style>
 </head>
 <body>
@@ -33,79 +88,81 @@
         <header>
             <h1>RAWAN TECH</h1>
             <div class="tagline">CYBER SECURITY & NEON ARCHITECT</div>
+            <svg class="eagle-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2L4.5 9V22H19.5V9L12 2Z" stroke="#ff00ff" stroke-width="2"/>
+            </svg>
         </header>
 
         <div class="services-grid">
-            <a href="https://wa.me/966549690896?text=أحتاج خدمة الأمن السيبراني" class="service-link">
+            <a href="https://wa.me/966549690896" class="service-link">
                 <div class="card">
-                    <div class="icon-box" style="background-image: url('https://img.freepik.com/premium-photo/cyber-security-shield-neon-light-style_914902-132.jpg');"></div>
+                    <div class="neon-image-box" style="background-image: url('https://img.freepik.com/premium-photo/futuristic-cyber-security-background-with-neon-lights_914902-132.jpg');"></div>
                     <div class="card-content">
                         <h3>Cyber Security</h3>
-                        <p>تأمين الأنظمة وفحص الثغرات المتقدم لحماية بياناتك من التهديدات الرقمية.</p>
+                        <p>تأمين الأنظمة وفحص الثغرات المتقدم بأدوات نيونية مشفرة.</p>
                     </div>
                 </div>
             </a>
 
-            <a href="https://wa.me/966549690896?text=أحتاج هندسة أنظمة لينكس" class="service-link">
+            <a href="https://wa.me/966549690896" class="service-link">
                 <div class="card">
-                    <div class="icon-box" style="background-image: url('https://img.freepik.com/premium-photo/linux-penguin-neon-light-icon_914902-154.jpg');"></div>
+                    <div class="neon-image-box" style="background-image: url('https://img.freepik.com/premium-photo/neon-penguin-linux-operating-system-concept-art_914902-154.jpg');"></div>
                     <div class="card-content">
                         <h3>Linux Engineering</h3>
-                        <p>بناء وتخصيص توزيعات Arch و Garuda مع واجهات نيون احترافية وضبط الأداء.</p>
+                        <p>بناء وتخصيص توزيعات Arch و Garuda بواجهات نيون احترافية.</p>
                     </div>
                 </div>
             </a>
 
-            <a href="https://wa.me/966549690896?text=أحتاج استشارة تقنية" class="service-link">
+            <a href="https://wa.me/966549690896" class="service-link">
                 <div class="card">
-                    <div class="icon-box" style="background-image: url('https://img.freepik.com/premium-photo/artificial-intelligence-brain-neon-style_914902-141.jpg');"></div>
+                    <div class="neon-image-box" style="background-image: url('https://img.freepik.com/premium-photo/neon-ai-brain-technology-concept-art_914902-141.jpg');"></div>
                     <div class="card-content">
                         <span class="badge">بمبلغ رمزي</span>
                         <h3>Tech Consulting</h3>
-                        <p>دعم مباشر وحلول ذكية لمشاكلك التقنية والبرمجية وتوجيهك لأفضل المسارات.</p>
+                        <p>حلول ذكية ودعم فني مباشر لكل تساؤلاتك التقنية والبرمجية.</p>
                     </div>
                 </div>
             </a>
 
-            <a href="https://wa.me/966549690896?text=أحتاج برمجة سكربتات أتمتة" class="service-link">
+            <a href="https://wa.me/966549690896" class="service-link">
                 <div class="card">
-                    <div class="icon-box" style="background-image: url('https://img.freepik.com/premium-photo/coding-software-development-neon-style_914902-162.jpg');"></div>
+                    <div class="neon-image-box" style="background-image: url('https://img.freepik.com/premium-photo/digital-coding-neon-matrix-background_914902-162.jpg');"></div>
                     <div class="card-content">
                         <h3>Scripting & Automation</h3>
-                        <p>تطوير أدوات ذكية باستخدام Bash و Python لتسريع العمليات وتوفير الوقت.</p>
+                        <p>تطوير سكربتات أتمتة ذكية (Bash/Python) لتسريع مهامك اليومية.</p>
                     </div>
                 </div>
             </a>
 
-            <a href="https://wa.me/966549690896?text=أحتاج خدمة حماية وتشفير البيانات" class="service-link">
+            <a href="https://wa.me/966549690896" class="service-link">
                 <div class="card">
-                    <div class="icon-box" style="background-image: url('https://img.freepik.com/premium-photo/data-encryption-lock-neon-style_914902-170.jpg');"></div>
+                    <div class="neon-image-box" style="background-image: url('https://img.freepik.com/premium-photo/neon-data-security-lock-background_914902-170.jpg');"></div>
                     <div class="card-content">
                         <h3>Data Protection</h3>
-                        <p>إعداد أنظمة تشفير قوية لضمان الخصوصية المطلقة لملفاتك وبياناتك الحساسة.</p>
+                        <p>أنظمة تشفير قوية لضمان الخصوصية المطلقة لملفاتك وبياناتك الحساسة.</p>
                     </div>
                 </div>
             </a>
 
-            <a href="https://wa.me/966549690896?text=أحتاج تدريب تقني خاص" class="service-link">
+            <a href="https://wa.me/966549690896" class="service-link">
                 <div class="card">
-                    <div class="icon-box" style="background-image: url('https://img.freepik.com/premium-photo/education-technology-neon-style_914902-180.jpg');"></div>
+                    <div class="neon-image-box" style="background-image: url('https://img.freepik.com/premium-photo/neon-digital-education-learning-technology_914902-180.jpg');"></div>
                     <div class="card-content">
                         <h3>Private Training</h3>
-                        <p>حصص تدريبية مكثفة لتعلم أساسيات لينكس وسطر الأوامر والأمن السيبراني.</p>
+                        <p>حصص تدريبية مكثفة لتعلم أسرار لينكس والهاكر الأخلاقي.</p>
                     </div>
                 </div>
             </a>
         </div>
 
-        <div class="whatsapp-container">
+        <div class="whatsapp-section">
             <a href="https://wa.me/966549690896" class="whatsapp-btn">
-                <span>Whatsapp-btn</span>
-                <span style="font-size: 1.1rem; opacity: 0.9;">966 54 969 0896</span>
+                <span>0896 969 54 966 Whatsapp-btn</span>
             </a>
         </div>
 
-        <footer>© 2025 // RAWAN TECH // NEON SYSTEM ONLINE</footer>
+        <footer>RAWAN TECH // NEON SYSTEM ONLINE // 2025 ©</footer>
     </div>
 </body>
 </html>
