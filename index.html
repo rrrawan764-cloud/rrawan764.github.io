@@ -3,217 +3,392 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rawan Tech | The Matrix System</title>
+    <title>UCYBERS - الأمن السيبراني والاختراق الأخلاقي</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Cairo:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        /* الألوان الأساسية */
-        :root { --neon-red: #ff003c; --neon-blue: #00d4ff; --matrix-green: #0F0; }
-        
-        /* إعدادات الصفحة الأساسية */
-        body { margin: 0; padding: 0; font-family: 'Cairo', sans-serif; overflow-x: hidden; background: #000; }
-
-        /* كانفاس الماتریکس (الخلفية المتحركة) */
-        #matrix {
-            position: fixed; top: 0; left: 0; z-index: -1; /* خلف كل شيء */
-            display: block; width: 100%; height: 100%;
-        }
-
-        /* طبقة شفافة فوق الخلفية لتوضيح المحتوى */
-        .overlay { 
-            min-height: 100vh; padding: 50px 20px; 
-            display: flex; flex-direction: column; align-items: center; 
-            background: rgba(5, 5, 10, 0.85); /* خلفية سوداء شفافة لرؤية المطر */
-            color: #fff;
-        }
-        
-        /* الهيدر والعناوين */
-        header { text-align: center; margin-bottom: 50px; }
-        h1 { font-size: 3.5rem; color: var(--neon-red); text-shadow: 0 0 20px var(--neon-red); margin: 0; font-family: 'Orbitron', sans-serif; letter-spacing: 4px; }
-        .tagline { color: var(--neon-blue); text-shadow: 0 0 10px var(--neon-blue); letter-spacing: 3px; font-weight: bold; margin-top: 10px; }
-        .section-title { color: var(--neon-blue); text-align: center; font-size: 2rem; margin: 60px 0 40px; text-shadow: 0 0 10px var(--neon-blue); border-bottom: 2px solid var(--neon-red); display: table; padding-bottom: 10px; }
-
-        /* شبكة الخدمات */
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; width: 100%; max-width: 1200px; }
-        .service-link { text-decoration: none; color: inherit; }
-
-        /* كرت الخدمة النيون */
-        .card {
-            background: rgba(15, 15, 20, 0.9); border: 2px solid var(--neon-red);
-            border-radius: 20px; padding: 35px 25px; text-align: center;
-            transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            box-shadow: 0 0 20px rgba(255, 0, 60, 0.3); height: 100%; box-sizing: border-box;
-            backdrop-filter: blur(5px); /* تأثير ضبابي خفيف */
-        }
-        .card:hover { transform: translateY(-10px) scale(1.02); border-color: var(--neon-blue); box-shadow: 0 0 40px var(--neon-blue), inset 0 0 20px var(--neon-blue); background: rgba(20, 20, 30, 1); }
-        .card i { font-size: 2.5rem; color: var(--neon-red); margin-bottom: 15px; filter: drop-shadow(0 0 5px var(--neon-red)); transition: 0.4s; }
-        .card:hover i { color: var(--neon-blue); filter: drop-shadow(0 0 10px var(--neon-blue)); transform: rotateY(360deg); }
-        .card h3 { font-size: 1.5rem; color: #fff; text-shadow: 0 0 10px var(--neon-red); margin-bottom: 15px; }
-        .card p { font-size: 0.9rem; color: #ccc; line-height: 1.7; }
-
-        /* شبكة الشهادات */
-        .certs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; width: 100%; max-width: 1100px; }
-        .cert-card { 
-            background: rgba(0, 50, 70, 0.3); border: 1px solid var(--neon-blue); 
-            padding: 20px; border-radius: 15px; text-align: center; transition: 0.3s;
-            box-shadow: 0 0 15px rgba(0, 212, 255, 0.2); backdrop-filter: blur(5px);
-        }
-        .cert-card:hover { box-shadow: 0 0 30px var(--neon-blue); transform: scale(1.05); background: rgba(0, 50, 70, 0.5); }
-        .cert-card h4 { margin: 0; font-size: 1.1rem; color: #fff; text-shadow: 0 0 5px var(--neon-blue); }
-        .cert-card p { margin: 10px 0 0; font-size: 0.8rem; color: var(--neon-blue); opacity: 0.8; }
-
-        /* زر الواتساب */
-        .whatsapp-btn {
-            background: transparent; border: 2px solid #25d366; color: #25d366;
-            padding: 22px 70px; border-radius: 100px; font-weight: bold; font-size: 1.5rem;
-            margin-top: 80px; transition: 0.4s; text-decoration: none;
-            box-shadow: 0 0 20px rgba(37, 211, 102, 0.3); display: inline-flex; align-items: center; gap: 15px;
-            text-shadow: 0 0 5px #25d366;
-        }
-        .whatsapp-btn:hover { background: #25d366; color: #000; box-shadow: 0 0 60px #25d366; transform: scale(1.05); }
-
-        footer { margin-top: 100px; padding: 40px; opacity: 0.6; text-align: center; border-top: 1px solid rgba(255, 255, 255, 0.1); width: 100%; font-size: 0.85rem; color: var(--neon-blue); }
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
-    <canvas id="matrix"></canvas>
-
-    <div class="overlay">
-        <header>
-            <h1>RAWAN TECH 🦅</h1>
-            <div class="tagline">SYSTEM HACKED // SECURE OPERATOR</div>
-        </header>
-
-        <h2 class="section-title">قائمة الخدمات التقنية</h2>
-        <div class="services-grid">
-            <a href="https://wa.me/966549690896?text=أحتاج خدمة الأمن السيبراني" class="service-link">
-                <div class="card">
-                    <i class="fa-solid fa-shield-halved"></i>
-                    <h3>🔐 الأمن السيبراني</h3>
-                    <p>فحص ثغرات، اختبار اختراق، وتأمين أنظمة معقدة بناءً على معايير Google العالمية.</p>
-                </div>
+    <!-- شريط التنقل -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">
+                <span class="logo-text">UCYBERS</span>
+                <span class="logo-dot">.</span>
             </a>
-            <a href="https://wa.me/966549690896?text=أحتاج هندسة أنظمة لينكس" class="service-link">
-                <div class="card">
-                    <i class="fa-brands fa-linux"></i>
-                    <h3>🖥️ أنظمة LINUX</h3>
-                    <p>بناء وتخصيص توزيعات Arch و Garuda مع ضبط أداء النواة Kernel للمحترفين.</p>
-                </div>
-            </a>
-            <a href="https://wa.me/966549690896?text=أحتاج استشارة تقنية" class="service-link">
-                <div class="card">
-                    <i class="fa-solid fa-lightbulb"></i>
-                    <h3>💡 استشارات تقنية</h3>
-                    <p>حلول برمجية ودعم فني متخصص لمشاريعك ومشاكل نظامك بمبلغ رمزي.</p>
-                </div>
-            </a>
-            <a href="https://wa.me/966549690896?text=أحتاج أتمتة وبرمجة سكربتات" class="service-link">
-                <div class="card">
-                    <i class="fa-solid fa-terminal"></i>
-                    <h3>📜 الأتمتة والسكربتات</h3>
-                    <p>تطوير أدوات ذكية (Bash/Python) لتسريع المهام المتكررة وحماية الأنظمة.</p>
-                </div>
-            </a>
-            <a href="https://wa.me/966549690896?text=أحتاج حماية وتشفير بيانات" class="service-link">
-                <div class="card">
-                    <i class="fa-solid fa-lock"></i>
-                    <h3>🛡️ حماية البيانات</h3>
-                    <p>إعداد أنظمة تشفير قوية لضمان الخصوصية القصوى لبياناتك الحساسة.</p>
-                </div>
-            </a>
-            <a href="https://wa.me/966549690896?text=أحتاج تدريب تقني خاص" class="service-link">
-                <div class="card">
-                    <i class="fa-solid fa-user-graduate"></i>
-                    <h3>🎓 التدريب التقني</h3>
-                    <p>حصص تدريبية في سطر الأوامر، الأمن السيبراني، ومفاهيم الذكاء الاصطناعي.</p>
-                </div>
-            </a>
+            
+            <ul class="nav-links">
+                <li><a href="#home" class="active">الرئيسية</a></li>
+                <li><a href="#services">خدماتنا</a></li>
+                <li><a href="#courses">الدورات</a></li>
+                <li><a href="#academy">الأكاديمية</a></li>
+                <li><a href="#certifications">الشهادات</a></li>
+                <li><a href="#blog">المدونة</a></li>
+                <li><a href="#contact">اتصل بنا</a></li>
+            </ul>
+            
+            <button class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
         </div>
+    </nav>
 
-        <h2 class="section-title">الشهادات الموثقة (Verified) 📜</h2>
-        <div class="certs-grid">
-            <div class="cert-card">
-                <h4>Hack The Box: Rastalabs</h4>
-                <p>HTB Pro Labs | 14 Oct 2025</p>
+    <!-- القسم الرئيسي -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h4 class="hero-subtitle">مرحباً بك في عالم الأمن السيبراني</h4>
+                <h1 class="hero-title">
+                    نحن <span class="highlight">UCYBERS</span>
+                    <br>نحمي عالمك الرقمي
+                </h1>
+                <p class="hero-description">
+                    نقدم خدمات استشارات وحلول أمنية متكاملة، دورات تدريبية معتمدة، 
+                    واختبارات اختراق احترافية لحماية أنظمتك من التهديدات الإلكترونية.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#services" class="btn btn-primary">اكتشف خدماتنا</a>
+                    <a href="#courses" class="btn btn-secondary">تصفح الدورات</a>
+                </div>
             </div>
-            <div class="cert-card">
-                <h4>Google Cybersecurity Professional</h4>
-                <p>Google Certificate | 22 Sep 2025</p>
-            </div>
-            <div class="cert-card">
-                <h4>AI Concepts & Applications</h4>
-                <p>SDAIA Authority | 09 Sep 2025</p>
-            </div>
-            <div class="cert-card">
-                <h4>Cybersecurity Attack & Defense</h4>
-                <p>EC-Council | 18 Sep 2025</p>
-            </div>
-            <div class="cert-card">
-                <h4>IBM Cybersecurity Careers</h4>
-                <p>IBM Authorized | 18 Sep 2025</p>
-            </div>
-            <div class="cert-card">
-                <h4>تخصص الأمن السيبراني</h4>
-                <p>منصة إدراك | 08 Sep 2025</p>
+            
+            <div class="hero-image">
+                <div class="cyber-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>حماية متقدمة</h3>
+                    <p>أنظمة حماية من أحدث التهديدات</p>
+                </div>
+                <div class="cyber-card">
+                    <i class="fas fa-user-secret"></i>
+                    <h3>اختبار اختراق</h3>
+                    <p>اختبار ثغرات الأنظمة والشبكات</p>
+                </div>
+                <div class="cyber-card">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>تدريب متخصص</h3>
+                    <p>دورات احترافية مع شهادات معتمدة</p>
+                </div>
             </div>
         </div>
+    </section>
 
-        <a href="https://wa.me/966549690896" target="_blank" class="whatsapp-btn">
-            <i class="fa-brands fa-whatsapp"></i> تواصل مع روان: +966549690896
-        </a>
-        <footer>© 2025 // RAWAN ABDALZIZ ALSBHI // SYSTEM_SECURED</footer>
-    </div>
+    <!-- قسم الخدمات -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">خدماتنا الاحترافية</h2>
+                <p class="section-subtitle">نقدم مجموعة شاملة من خدمات الأمن السيبراني</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-bug"></i>
+                    </div>
+                    <h3>اختبار الاختراق</h3>
+                    <p>فحص الثغرات الأمنية في أنظمتك وتطبيقاتك واكتشاف نقاط الضعف قبل المخترقين.</p>
+                    <a href="#" class="service-link">المزيد <i class="fas fa-arrow-left"></i></a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>استشارات مخصصة</h3>
+                    <p>استشارات أمنية تتناسب مع احتياجات مؤسستك وتقديم حلول حماية مخصصة.</p>
+                    <a href="#" class="service-link">المزيد <i class="fas fa-arrow-left"></i></a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-user-friends"></i>
+                    </div>
+                    <h3>تدريب شخص لشخص</h3>
+                    <p>تدريب مباشر مع خبراء الأمن السيبراني لرفع مستوى فريقك التقني.</p>
+                    <a href="#" class="service-link">المزيد <i class="fas fa-arrow-left"></i></a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-file-contract"></i>
+                    </div>
+                    <h3>تدقيق PCI DSS</h3>
+                    <p>فحص وتدقيق امتثال أنظمتك لمعايير أمن بيانات الدفع العالمية PCI DSS.</p>
+                    <a href="#" class="service-link">المزيد <i class="fas fa-arrow-left"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <script>
-        const canvas = document.getElementById('matrix');
-        const ctx = canvas.getContext('2d');
+    <!-- قسم الدورات -->
+    <section id="courses" class="courses">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">الدورات التدريبية</h2>
+                <p class="section-subtitle">دورات احترافية في الأمن السيبراني والاختراق الأخلاقي</p>
+            </div>
+            
+            <div class="courses-grid">
+                <div class="course-card">
+                    <div class="course-badge">الأكثر طلباً</div>
+                    <h3>أخصائي أمن سيبراني معتمد</h3>
+                    <p>دورة شاملة تغطي أساسيات الأمن السيبراني والتطبيقات العملية.</p>
+                    <div class="course-details">
+                        <span><i class="far fa-clock"></i> 60 ساعة</span>
+                        <span><i class="fas fa-certificate"></i> شهادة معتمدة</span>
+                    </div>
+                    <a href="#" class="btn btn-course">سجل الآن</a>
+                </div>
+                
+                <div class="course-card">
+                    <div class="course-badge">جديد</div>
+                    <h3>اختبار اختراق الويب المتقدم</h3>
+                    <p>تعلم اكتشاف ثغرات الويب واستغلالها بشكل أخلاقي.</p>
+                    <div class="course-details">
+                        <span><i class="far fa-clock"></i> 45 ساعة</span>
+                        <span><i class="fas fa-certificate"></i> شهادة معتمدة</span>
+                    </div>
+                    <a href="#" class="btn btn-course">سجل الآن</a>
+                </div>
+                
+                <div class="course-card">
+                    <h3>كالي لينكس للمحترفين</h3>
+                    <p>إتقان استخدام كالي لينكس في اختبارات الاختراق الأخلاقي.</p>
+                    <div class="course-details">
+                        <span><i class="far fa-clock"></i> 40 ساعة</span>
+                        <span><i class="fas fa-certificate"></i> شهادة معتمدة</span>
+                    </div>
+                    <a href="#" class="btn btn-course">سجل الآن</a>
+                </div>
+                
+                <div class="course-card">
+                    <h3>الهندسة الاجتماعية</h3>
+                    <p>فن اختراق العقل البشري وكيفية الحماية منه.</p>
+                    <div class="course-details">
+                        <span><i class="far fa-clock"></i> 30 ساعة</span>
+                        <span><i class="fas fa-certificate"></i> شهادة معتمدة</span>
+                    </div>
+                    <a href="#" class="btn btn-course">سجل الآن</a>
+                </div>
+            </div>
+            
+            <div class="section-cta">
+                <a href="#academy" class="btn btn-primary">عرض جميع الدورات</a>
+            </div>
+        </div>
+    </section>
 
-        // جعل الكانفاس يملأ الشاشة
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
+    <!-- قسم الأكاديمية -->
+    <section id="academy" class="academy">
+        <div class="container">
+            <div class="academy-content">
+                <h2>الأكاديمية المتخصصة</h2>
+                <p>نقدم برامج تدريبية متكاملة تغطي جميع جوانب الأمن السيبراني، من المبتدئين إلى المحترفين. جميع دوراتنا تشمل تدريب عملي ومشاريع واقعية.</p>
+                
+                <div class="features">
+                    <div class="feature">
+                        <i class="fas fa-laptop-code"></i>
+                        <div>
+                            <h4>تدريب مباشر أونلاين</h4>
+                            <p>جلسات تفاعلية مباشرة مع المدربين</p>
+                        </div>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-tasks"></i>
+                        <div>
+                            <h4>مشاريع عملية</h4>
+                            <p>تطبيق المعرفة على مشاريع واقعية</p>
+                        </div>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-chart-line"></i>
+                        <div>
+                            <h4>متابعة وتقييم</h4>
+                            <p>تقييم مستمر وتقارير تقدم</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="academy-image">
+                <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="التدريب الأمني">
+            </div>
+        </div>
+    </section>
 
-        // حروف الماتریکس (يمكنك إضافة المزيد)
-        const katakana = 'アァカサタナハマヤャラワガザダバパイィキシチニヒミリヰギジヂビピウゥクスツヌフムユュルグズブヅプエェケセテネヘメレヱゲゼデベペオォコソトノホモヨョロヲゴゾドボポヴッン0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-        const letters = katakana.split('');
+    <!-- قسم المدونة -->
+    <section id="blog" class="blog">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">آخر المقالات</h2>
+                <p class="section-subtitle">أحدث الأخبار والتحديثات في عالم الأمن السيبراني</p>
+            </div>
+            
+            <div class="blog-grid">
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="أمن الشبكات">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-category">اختراق الشبكات</span>
+                        <h3>أفضل أدوات اكتشاف الثغرات في الشبكات</h3>
+                        <p>تعرف على أحدث الأدوات المستخدمة في اكتشاف الثغرات الأمنية في الشبكات وكيفية استخدامها.</p>
+                        <div class="blog-meta">
+                            <span><i class="far fa-calendar"></i> 27 يناير 2026</span>
+                            <a href="#">اقرأ المزيد</a>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="كالي لينكس">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-category">كالي لينكس</span>
+                        <h3>كيفية تثبيت كالي لينكس على VMware</h3>
+                        <p>دليل خطوة بخطوة لتثبيت وتكوين كالي لينكس على VMware لأغراض الاختراق الأخلاقي.</p>
+                        <div class="blog-meta">
+                            <span><i class="far fa-calendar"></i> 25 يناير 2026</span>
+                            <a href="#">اقرأ المزيد</a>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="هاكاثون">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-category">فعاليات</span>
+                        <h3>هاكاثون المستقبل: فرصة للعرض مواهبك</h3>
+                        <p>كل ما تحتاج معرفته للمشاركة في هاكاثون المستقبل واستعراض مهاراتك الأمنية.</p>
+                        <div class="blog-meta">
+                            <span><i class="far fa-calendar"></i> 23 يناير 2026</span>
+                            <a href="#">اقرأ المزيد</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
 
-        const fontSize = 16;
-        const columns = canvas.width / fontSize; // عدد الأعمدة للمطر
+    <!-- قسم الاتصال -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-content">
+                <h2>تواصل معنا</h2>
+                <p>إذا كنت تسعى للحصول على استشارات في الأمن السيبراني غير مدرجة هنا، يرجى الاتصال بنا وإخبارنا كيف يمكننا مساعدتك.</p>
+                
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>البريد الإلكتروني</h4>
+                            <p>info@ucybers.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>الهاتف</h4>
+                            <p>+966 55 123 4567</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>المقر</h4>
+                            <p>الرياض، المملكة العربية السعودية</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-form">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <input type="text" placeholder="اسمك الكامل" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="email" placeholder="بريدك الإلكتروني" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="text" placeholder="الموضوع" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <textarea placeholder="رسالتك" rows="5" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">إرسال الرسالة</button>
+                </form>
+            </div>
+        </div>
+    </section>
 
-        // مصفوفة لتتبع موقع كل قطرة
-        const drops = [];
-        for (let i = 0; i < columns; i++) {
-            drops[i] = 1;
-        }
+    <!-- التذييل -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="#" class="footer-logo">
+                        <span class="logo-text">UCYBERS</span>
+                        <span class="logo-dot">.</span>
+                    </a>
+                    <p>شركة متخصصة في تقديم حلول الأمن السيبراني والاستشارات الأمنية والتدريب المعتمد.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>روابط سريعة</h3>
+                    <ul>
+                        <li><a href="#home">الرئيسية</a></li>
+                        <li><a href="#services">خدماتنا</a></li>
+                        <li><a href="#courses">الدورات</a></li>
+                        <li><a href="#academy">الأكاديمية</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>خدماتنا</h3>
+                    <ul>
+                        <li><a href="#">اختبار الاختراق</a></li>
+                        <li><a href="#">استشارات مخصصة</a></li>
+                        <li><a href="#">تدريب شخص لشخص</a></li>
+                        <li><a href="#">تدقيق PCI DSS</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>القائمة البريدية</h3>
+                    <p>اشترك لتصلك آخر التحديثات والعروض</p>
+                    <div class="newsletter">
+                        <input type="email" placeholder="بريدك الإلكتروني">
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 UCYBERS. جميع الحقوق محفوظة.</p>
+                <p>تم التصميم والبرمجة بكل حب ❤️</p>
+            </div>
+        </div>
+    </footer>
 
-        // دالة الرسم
-        function draw() {
-            // خلفية سوداء شبه شفافة لخلق تأثير الذيل
-            ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
-            ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-            ctx.fillStyle = '#0F0'; // لون النص الأخضر (يمكن تغييره لنيون آخر)
-            ctx.font = fontSize + 'px monospace';
-
-            for (let i = 0; i < drops.length; i++) {
-                const text = letters[Math.floor(Math.random() * letters.length)];
-                ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-
-                // إعادة القطرة للأعلى بشكل عشوائي بعد خروجها من الشاشة
-                if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
-                    drops[i] = 0;
-                }
-                drops[i]++; // تحريك القطرة للأسفل
-            }
-        }
-
-        // تشغيل الأنيميشن بسرعة 30 إطار في الثانية تقريباً
-        setInterval(draw, 33);
-
-        // تحديث حجم الكانفاس عند تغيير حجم النافذة
-        window.addEventListener('resize', () => {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
