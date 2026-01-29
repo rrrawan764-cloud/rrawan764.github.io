@@ -7,8 +7,7 @@ function loadComponent(name) {
         if (components[name]) {
             container.innerHTML = components[name];
             container.style.opacity = 1;
-            // تفعيل تأثير التشفير على العناوين الجديدة
-            decodeEffect();
+            decodeTextEffect();
         }
         
         document.querySelectorAll('.nav-btn').forEach(btn => {
@@ -18,9 +17,9 @@ function loadComponent(name) {
     }, 200);
 }
 
-// تأثير التشفير التلقائي (Matrix Effect)
-function decodeEffect() {
-    const elements = document.querySelectorAll('[data-decode], h2, h3');
+// تأثير التشفير الرقمي (Matrix Effect)
+function decodeTextEffect() {
+    const elements = document.querySelectorAll('h2, h3, p');
     const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%&*";
     
     elements.forEach(el => {
@@ -49,5 +48,5 @@ document.onkeydown = function(e) {
 // تشغيل النظام
 document.addEventListener('DOMContentLoaded', () => {
     loadComponent('about');
-    console.log("%c RAWAN TECH SYSTEM: ENCRYPTED & SECURE ", "background: #ff003c; color: white; padding: 10px; border-radius: 5px;");
+    console.log("%c RAWAN TECH SYSTEM: ONLINE & SECURE ", "background: #ff003c; color: white; padding: 10px; border-radius: 5px;");
 });
