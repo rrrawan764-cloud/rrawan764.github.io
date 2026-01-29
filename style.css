@@ -4,6 +4,7 @@
     --bg-dark: #050505;
 }
 
+/* منع تحديد النصوص كجزء من البروتوكول الأمني */
 * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Consolas', monospace; user-select: none; }
 
 body { 
@@ -11,6 +12,21 @@ body {
     color: #e0e0e0; 
     overflow-x: hidden; 
     background-image: radial-gradient(circle at 50% 50%, #1a0505 0%, #050505 100%); 
+}
+
+/* الخلفية المتساقطة (النجوم) */
+.stars-background {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: transparent;
+    z-index: -2; /* لضمان ظهورها خلف كل شيء */
+    animation: stars-fall 200s linear infinite;
+    opacity: 0.5;
+}
+
+@keyframes stars-fall {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 0% 10000%; }
 }
 
 .container { max-width: 1200px; margin: 0 auto; padding: 40px 20px; }

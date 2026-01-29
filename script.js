@@ -40,4 +40,40 @@ document.onkeydown = function(e) {
 
 document.addEventListener('DOMContentLoaded', () => {
     loadComponent('about');
+    // لإنشاء تأثير النجوم المتساقطة ديناميكيا
+    const starsBackground = document.querySelector('.stars-background');
+    for (let i = 0; i < 100; i++) { // عدد النجوم
+        const star = document.createElement('div');
+        star.classList.add('star');
+        star.style.left = `${Math.random() * 100}%`;
+        star.style.top = `${Math.random() * 100}%`;
+        star.style.animationDuration = `${Math.random() * 5 + 5}s`;
+        star.style.animationDelay = `${Math.random() * 5}s`;
+        starsBackground.appendChild(star);
+    }
+    // إضافة نمط النجوم المتساقطة (يحتاج إلى CSS إضافي)
+    const style = document.createElement('style');
+    style.innerHTML = `
+        .star {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            opacity: 0.8;
+            animation: twinkle 1.5s infinite alternate;
+            box-shadow: 0 0 5px white;
+            width: 2px;
+            height: 2px;
+        }
+
+        @keyframes twinkle {
+            0% { opacity: 0.5; transform: scale(0.8); }
+            100% { opacity: 1; transform: scale(1.2); }
+        }
+
+        @keyframes stars-fall {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(2000px); } /* لجعلها تتساقط للأسفل */
+        }
+    `;
+    document.head.appendChild(style);
 });
