@@ -2,6 +2,7 @@
     --neon-red: #ff003c;
     --neon-blue: #00f3ff;
     --bg-dark: #050505;
+    --matrix-green: #00ff41; /* لون الماتريكس */
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Consolas', monospace; user-select: none; }
@@ -11,6 +12,14 @@ body {
     color: #e0e0e0; 
     overflow-x: hidden;
     background-image: radial-gradient(circle at 50% 50%, #1a0505 0%, #050505 100%);
+}
+
+#matrix-rain {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    z-index: -2; /* لتبقى خلف كل شيء */
+    opacity: 0.1; /* خفيفة جداً */
 }
 
 .container { max-width: 1200px; margin: 0 auto; padding: 40px 20px; position: relative; z-index: 5; }
