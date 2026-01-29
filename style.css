@@ -2,72 +2,26 @@
     --neon-red: #ff003c;
     --neon-blue: #00f3ff;
     --bg-dark: #050505;
-    --matrix-green: #00ff41; /* لون الماتريكس */
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Consolas', monospace; user-select: none; }
 
-body { 
-    background-color: var(--bg-dark); 
-    color: #e0e0e0; 
-    overflow-x: hidden;
-    background-image: radial-gradient(circle at 50% 50%, #1a0505 0%, #050505 100%);
-}
+body { background-color: var(--bg-dark); color: #e0e0e0; overflow-x: hidden; background-image: radial-gradient(circle at 50% 50%, #1a0505 0%, #050505 100%); }
 
-#matrix-rain {
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    z-index: -2; /* لتبقى خلف كل شيء */
-    opacity: 0.1; /* خفيفة جداً */
-}
+.container { max-width: 1200px; margin: 0 auto; padding: 40px 20px; }
 
-.container { max-width: 1200px; margin: 0 auto; padding: 40px 20px; position: relative; z-index: 5; }
+.glitch { font-size: 3.5rem; font-weight: 900; color: white; text-shadow: 2px 2px var(--neon-red), -2px -2px var(--neon-blue); text-align: center; letter-spacing: 5px; }
 
-/* تأثير Glitch للعنوان */
-.glitch {
-    font-size: 4rem; font-weight: 900; color: white; position: relative;
-    text-shadow: 3px 3px var(--neon-red), -3px -3px var(--neon-blue);
-    text-align: center; letter-spacing: 10px;
-}
+.main-frame { border: 2px solid var(--neon-red); padding: 40px; background: rgba(10, 10, 10, 0.9); border-radius: 5px; box-shadow: inset 0 0 20px rgba(255, 0, 60, 0.1); }
 
-.cyber-subtitle { text-align: center; color: var(--neon-red); margin-bottom: 40px; font-weight: bold; }
+.cyber-card { background: #0d0d0d; border: 1px solid #222; padding: 20px; transition: 0.4s; border-left: 4px solid var(--neon-blue); margin-bottom: 15px; }
 
-/* إطار المحتوى المستوحى من تصاميمك */
-.main-frame {
-    border: 2px solid var(--neon-red); 
-    padding: 40px;
-    background: rgba(10, 10, 10, 0.95); 
-    border-radius: 5px;
-    box-shadow: inset 0 0 30px rgba(255, 0, 60, 0.1), 0 0 20px rgba(255, 0, 60, 0.2);
-}
+.cyber-card:hover { border-color: var(--neon-blue); box-shadow: 0 0 15px rgba(0, 243, 255, 0.2); transform: translateX(-5px); }
 
-.cyber-card {
-    background: #0d0d0d; border: 1px solid #222; padding: 25px;
-    transition: 0.4s; margin-bottom: 20px; border-left: 4px solid var(--neon-blue);
-}
+.cyber-nav { display: flex; justify-content: center; gap: 15px; margin-bottom: 40px; }
 
-.cyber-card:hover { 
-    border-color: var(--neon-blue); 
-    box-shadow: 0 0 20px rgba(0, 243, 255, 0.3);
-    transform: translateX(-5px);
-}
+.nav-btn { background: transparent; border: 1px solid var(--neon-blue); color: var(--neon-blue); padding: 10px 25px; cursor: pointer; transition: 0.3s; clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%); }
 
-.cyber-nav { display: flex; justify-content: center; gap: 20px; margin-bottom: 40px; flex-wrap: wrap; }
+.nav-btn.active, .nav-btn:hover { background: var(--neon-blue); color: black; box-shadow: 0 0 15px var(--neon-blue); }
 
-.nav-btn {
-    background: transparent; border: 1px solid var(--neon-blue);
-    color: var(--neon-blue); padding: 12px 30px; cursor: pointer;
-    transition: 0.3s; clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%);
-}
-
-.nav-btn.active, .nav-btn:hover {
-    background: var(--neon-blue); color: black;
-    box-shadow: 0 0 15px var(--neon-blue);
-}
-
-.neon-button-link {
-    display: inline-flex; align-items: center; gap: 10px;
-    border: 2px solid #00e676; color: #00e676; padding: 15px 40px;
-    text-decoration: none; font-weight: bold; border-radius: 5px; box-shadow: 0 0 15px #00e676;
-}
+.whatsapp-btn { display: inline-flex; align-items: center; gap: 10px; border: 2px solid #00e676; color: #00e676; padding: 12px 30px; text-decoration: none; font-weight: bold; border-radius: 50px; }
