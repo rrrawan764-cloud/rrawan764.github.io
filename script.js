@@ -5,7 +5,7 @@ function loadComponent(name) {
         if (components[name]) {
             container.innerHTML = components[name];
             container.style.opacity = 1;
-            decodeEffect(); // تشغيل تأثير Matrix
+            decodeEffect();
         }
         document.querySelectorAll('.nav-btn').forEach(btn => {
             btn.classList.remove('active');
@@ -31,9 +31,11 @@ function decodeEffect() {
     });
 }
 
-// حماية الكود (Security Protocol)
+// بروتوكول الحماية الأمني (منع F12 و Ctrl+U)
 document.onkeydown = function(e) {
-    if(e.keyCode == 123 || (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0))) return false;
+    if(e.keyCode == 123 || (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) || (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0))) {
+        return false;
+    }
 };
 
 document.addEventListener('DOMContentLoaded', () => {
