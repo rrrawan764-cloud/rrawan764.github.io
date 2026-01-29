@@ -3,1841 +3,551 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UCYBERS | الحماية المتقدمة للعالم الرقمي | الأمن السيبراني | اختبار الاختراق | تدريب أمني</title>
-    <meta name="description" content="UCYBERS - شركة رائدة في الأمن السيبراني، نقدم خدمات اختبار الاختراق، استشارات أمنية، تدريب معتمد، شهادات دولية، ودورات متخصصة في كالي لينكس والهاكر الأخلاقي">
-    <meta name="keywords" content="أمن سيبراني, اختبار اختراق, كالي لينكس, تدريب أمني, شهادات أمن معلومات, استشارات أمنية, هندسة اجتماعية, اختراق أخلاقي, أمن الشبكات, أمن الويب, PCI DSS">
-    <meta name="author" content="UCYBERS Team">
-    <meta name="robots" content="index, follow">
-    
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="UCYBERS | الحماية المتقدمة للعالم الرقمي">
-    <meta property="og:description" content="خدمات أمن سيبراني متكاملة، دورات تدريبية معتمدة دولياً، واستشارات احترافية">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="https://ucybers.com/og-image.jpg">
-    <meta property="og:url" content="https://ucybers.com">
-    
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="UCYBERS | الأمن السيبراني والاختراق الأخلاقي">
-    <meta name="twitter:description" content="خدمات متكاملة في مجال الأمن السيبراني والتدريب المعتمد">
-    
-    <!-- روابط CSS -->
+    <title>سديم | خبيرة الأمن السيبراني والذكاء الاصطناعي</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #0a1931 0%, #1a1a2e 100%);
+            color: #ffffff;
+            line-height: 1.6;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        /* العنوان الرئيسي */
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 20px;
+            background: linear-gradient(90deg, #00b4db 0%, #0083b0 100%);
+            border-radius: 15px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            background: linear-gradient(45deg, #fff, #a5e9ff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 2px 10px rgba(0, 180, 219, 0.3);
+        }
+        
+        .header h2 {
+            font-size: 1.8rem;
+            color: #e6f7ff;
+            font-weight: 300;
+            margin-bottom: 15px;
+        }
+        
+        .tagline {
+            font-size: 1.2rem;
+            color: #b3e5fc;
+            font-style: italic;
+            margin-top: 10px;
+        }
+        
+        /* الأقسام */
+        .section {
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 30px;
+            border-right: 4px solid #00b4db;
+            transition: transform 0.3s ease;
+        }
+        
+        .section:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.12);
+        }
+        
+        .section-title {
+            color: #00b4db;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid rgba(0, 180, 219, 0.3);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .section-title i {
+            font-size: 1.5rem;
+        }
+        
+        /* الخدمات */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .service-card {
+            background: rgba(0, 180, 219, 0.1);
+            border-radius: 12px;
+            padding: 20px;
+            border: 1px solid rgba(0, 180, 219, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .service-card:hover {
+            background: rgba(0, 180, 219, 0.15);
+            border-color: #00b4db;
+            box-shadow: 0 5px 15px rgba(0, 180, 219, 0.2);
+        }
+        
+        .service-card h3 {
+            color: #4fc3f7;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .service-list {
+            list-style-type: none;
+        }
+        
+        .service-list li {
+            padding: 8px 0;
+            padding-right: 25px;
+            position: relative;
+        }
+        
+        .service-list li:before {
+            content: "✓";
+            position: absolute;
+            right: 0;
+            color: #00e676;
+            font-weight: bold;
+        }
+        
+        /* المشاريع */
+        .projects-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+        
+        .project-card {
+            background: rgba(26, 35, 126, 0.2);
+            border-radius: 12px;
+            padding: 20px;
+            border: 1px solid rgba(92, 107, 192, 0.3);
+        }
+        
+        .project-card h3 {
+            color: #8c9eff;
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+        
+        .project-details {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .detail-item {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .detail-label {
+            color: #b3e5fc;
+            font-weight: bold;
+            min-width: 100px;
+        }
+        
+        /* المزايا */
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .feature {
+            background: rgba(76, 175, 80, 0.1);
+            padding: 12px 20px;
+            border-radius: 25px;
+            border: 1px solid rgba(76, 175, 80, 0.3);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        /* التواصل */
+        .contact-methods {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .contact-card {
+            background: rgba(255, 193, 7, 0.1);
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            border: 1px solid rgba(255, 193, 7, 0.3);
+        }
+        
+        .contact-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .contact-btn {
+            display: inline-block;
+            background: linear-gradient(45deg, #00b4db, #0083b0);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            margin-top: 15px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .contact-btn:hover {
+            background: linear-gradient(45deg, #0083b0, #00b4db);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 131, 176, 0.4);
+        }
+        
+        /* الفوتر */
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #b3e5fc;
+            font-size: 0.9rem;
+        }
+        
+        .vision-box {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 25px;
+            border-radius: 12px;
+            margin: 30px 0;
+            border-right: 4px solid #ff6b6b;
+            font-style: italic;
+            line-height: 1.8;
+        }
+        
+        /* ريسپونسيف */
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .header h2 {
+                font-size: 1.4rem;
+            }
+            
+            .services-grid,
+            .projects-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .section {
+                padding: 20px;
+            }
+        }
+    </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <link rel="stylesheet" href="style.css">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
-    <link rel="manifest" href="assets/site.webmanifest">
-    
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "UCYBERS",
-        "url": "https://ucybers.com",
-        "logo": "https://ucybers.com/assets/logo.png",
-        "description": "شركة متخصصة في الأمن السيبراني والاختراق الأخلاقي",
-        "contactPoint": {
-            "@type": "ContactPoint",
-            "telephone": "+966-55-123-4567",
-            "contactType": "الدعم الفني",
-            "email": "info@ucybers.com",
-            "availableLanguage": "Arabic"
-        },
-        "sameAs": [
-            "https://twitter.com/ucybers",
-            "https://linkedin.com/company/ucybers",
-            "https://github.com/ucybers"
-        ]
-    }
-    </script>
 </head>
 <body>
-    <!-- شريط التنقل -->
-    <nav class="navbar">
-        <div class="container">
-            <a href="#home" class="logo">
-                <div class="logo-icon">
-                    <i class="fas fa-shield-alt"></i>
-                </div>
-                <div class="logo-text">
-                    <span class="logo-main">UCYBERS</span>
-                    <span class="logo-sub">Security Solutions</span>
-                </div>
-            </a>
-            
-            <ul class="nav-links">
-                <li><a href="#home" class="nav-link active"><i class="fas fa-home"></i> الرئيسية</a></li>
-                <li class="nav-dropdown">
-                    <a href="#services" class="nav-link"><i class="fas fa-concierge-bell"></i> خدماتنا <i class="fas fa-chevron-down"></i></a>
-                    <div class="dropdown-menu">
-                        <a href="#pentest"><i class="fas fa-bug"></i> اختبار الاختراق</a>
-                        <a href="#consulting"><i class="fas fa-headset"></i> استشارات مخصصة</a>
-                        <a href="#training"><i class="fas fa-user-friends"></i> تدريب شخص لشخص</a>
-                        <a href="#compliance"><i class="fas fa-file-contract"></i> تدقيق PCI DSS</a>
-                        <a href="#network"><i class="fas fa-network-wired"></i> اختراق الشبكات</a>
-                        <a href="#web"><i class="fas fa-code"></i> اختراق الويب</a>
-                    </div>
-                </li>
-                <li class="nav-dropdown">
-                    <a href="#courses" class="nav-link"><i class="fas fa-graduation-cap"></i> الدورات <i class="fas fa-chevron-down"></i></a>
-                    <div class="dropdown-menu">
-                        <a href="#cyber-security"><i class="fas fa-shield-alt"></i> الأمن السيبراني</a>
-                        <a href="#ethical-hacking"><i class="fas fa-user-secret"></i> الاختراق الأخلاقي</a>
-                        <a href="#kali-linux"><i class="fab fa-linux"></i> كالي لينكس</a>
-                        <a href="#social-engineering"><i class="fas fa-brain"></i> الهندسة الاجتماعية</a>
-                        <a href="#certifications"><i class="fas fa-certificate"></i> الشهادات المتقدمة</a>
-                    </div>
-                </li>
-                <li><a href="#academy" class="nav-link"><i class="fas fa-university"></i> الأكاديمية</a></li>
-                <li><a href="#certifications" class="nav-link"><i class="fas fa-award"></i> الشهادات</a></li>
-                <li><a href="#hackathon" class="nav-link"><i class="fas fa-laptop-code"></i> الهاكاثون</a></li>
-                <li><a href="#blog" class="nav-link"><i class="fas fa-blog"></i> المدونة</a></li>
-                <li><a href="#contact" class="nav-link"><i class="fas fa-phone"></i> اتصل بنا</a></li>
-            </ul>
-            
-            <div class="nav-actions">
-                <a href="tel:+966551234567" class="nav-phone">
-                    <i class="fas fa-phone"></i>
-                    <span>+966 55 123 4567</span>
-                </a>
-                <a href="#contact" class="btn btn-primary btn-small">
-                    <i class="fas fa-paper-plane"></i> اطلب خدمة
-                </a>
-                <button class="menu-toggle" aria-label="قائمة الهاتف">
-                    <i class="fas fa-bars"></i>
-                </button>
-            </div>
-        </div>
-    </nav>
+    <div class="container">
+        <header class="header">
+            <h1><i class="fas fa-shield-alt"></i> خبيرة الأمن السيبراني والذكاء الاصطناعي</h1>
+            <h2>سُـديم | مهندسة نظم أمنية ومطورة منصات ذكية</h2>
+            <p class="tagline">نحمي حاضركم الرقمي، ونبني مستقبلكم الذكي</p>
+        </header>
 
-    <!-- القسم الرئيسي -->
-    <section id="home" class="hero">
-        <div class="hero-background">
-            <div class="cyber-grid"></div>
-            <div class="hero-overlay"></div>
-        </div>
-        <div class="container">
-            <div class="hero-content animate__animated animate__fadeInUp">
-                <div class="hero-badge">
-                    <i class="fas fa-shield-check"></i>
-                    <span>رائدون في الأمن السيبراني منذ 2018</span>
-                </div>
-                <h1 class="hero-title">
-                    حماية <span class="highlight">متقدمة</span> 
-                    <br>لعالمك <span class="highlight">الرقمي</span>
-                </h1>
-                <p class="hero-description">
-                    نقدم حلول أمن سيبراني متكاملة وحصرية، مصممة خصيصاً لحماية بياناتك وأنظمتك من التهديدات الإلكترونية المتطورة. نضمن لك الأمان والثقة في عالم رقمي آمن.
-                </p>
-                <div class="hero-buttons">
-                    <a href="#services" class="btn btn-primary btn-lg">
-                        <i class="fas fa-search"></i> استكشف خدماتنا
-                        <span class="btn-arrow"><i class="fas fa-arrow-left"></i></span>
-                    </a>
-                    <a href="#contact" class="btn btn-secondary btn-lg">
-                        <i class="fas fa-comments"></i> احصل على استشارة مجانية
-                    </a>
-                </div>
-                
-                <div class="hero-features">
-                    <div class="feature">
-                        <i class="fas fa-bolt"></i>
-                        <span>استجابة فورية 24/7</span>
-                    </div>
-                    <div class="feature">
-                        <i class="fas fa-user-shield"></i>
-                        <span>فريق من الخبراء المعتمدين</span>
-                    </div>
-                    <div class="feature">
-                        <i class="fas fa-globe"></i>
-                        <span>خدمات عالمية المستوى</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="hero-image animate__animated animate__fadeIn">
-                <div class="cyber-terminal">
-                    <div class="terminal-header">
-                        <div class="terminal-dots">
-                            <span class="dot red"></span>
-                            <span class="dot yellow"></span>
-                            <span class="dot green"></span>
-                        </div>
-                        <span class="terminal-title">UCYBERS Security Terminal</span>
-                    </div>
-                    <div class="terminal-body">
-                        <div class="terminal-line">
-                            <span class="prompt">$</span>
-                            <span class="command">system_status --security</span>
-                        </div>
-                        <div class="terminal-line">
-                            <span class="output">✓ جميع الأنظمة محمية</span>
-                        </div>
-                        <div class="terminal-line">
-                            <span class="output">✓ 0 ثغرات حرجة</span>
-                        </div>
-                        <div class="terminal-line">
-                            <span class="output">✓ الحماية في أعلى مستوى</span>
-                        </div>
-                        <div class="terminal-line blink">
-                            <span class="prompt">$</span>
-                            <span class="cursor">_</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- إحصائيات -->
-        <div class="hero-stats">
-            <div class="container">
-                <div class="stats-grid">
-                    <div class="stat-card">
-                        <div class="stat-icon">
-                            <i class="fas fa-user-graduate"></i>
-                        </div>
-                        <div class="stat-content">
-                            <h3 class="stat-number" data-count="500">0</h3>
-                            <p class="stat-text">متدرب معتمد</p>
-                        </div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-icon">
-                            <i class="fas fa-project-diagram"></i>
-                        </div>
-                        <div class="stat-content">
-                            <h3 class="stat-number" data-count="120">0</h3>
-                            <p class="stat-text">مشروع ناجح</p>
-                        </div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-icon">
-                            <i class="fas fa-shield-check"></i>
-                        </div>
-                        <div class="stat-content">
-                            <h3 class="stat-number" data-count="99.9">0</h3>
-                            <p class="stat-text">% رضا العملاء</p>
-                        </div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-icon">
-                            <i class="fas fa-certificate"></i>
-                        </div>
-                        <div class="stat-content">
-                            <h3 class="stat-number" data-count="50">0</h3>
-                            <p class="stat-text">شهادة معتمدة</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        <section class="section">
+            <h2 class="section-title"><i class="fas fa-user-tie"></i> نبذة مهنية</h2>
+            <p>أطور حلولاً أمنية ذكية تجمع بين خبرة الأمن السيبراني المتقدم وتقنيات الذكاء الاصطناعي الحديثة، لإنشاء أنظمة استباقية تحمي المنظمات من التهديدات الإلكترونية المتطورة. أعمل على تصميم وتنفيذ منصات متكاملة توفر حماية شاملة وقابلة للتطوير.</p>
+        </section>
 
-    <!-- قسم الخدمات التفصيلي -->
-    <section id="services" class="services">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-badge">
-                    <i class="fas fa-star"></i>
-                    خدمات احترافية
+        <section class="section">
+            <h2 class="section-title"><i class="fas fa-shield-halved"></i> الخدمات الأمنية المتكاملة</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3><i class="fas fa-search"></i> التقييم والتدقيق</h3>
+                    <ul class="service-list">
+                        <li>تحليل الفجوات الأمنية وتقييم المخاطر</li>
+                        <li>اختبار الاختراق (Penetration Testing)</li>
+                        <li>مراجعة شاملة للأكواد والتطبيقات</li>
+                        <li>تقييم الامتثال للمعايير</li>
+                    </ul>
                 </div>
-                <h2 class="section-title">حلول أمنية <span class="highlight">شاملة</span></h2>
-                <p class="section-subtitle">نقدم مجموعة متكاملة من خدمات الأمن السيبراني المصممة خصيصاً لاحتياجاتك</p>
-            </div>
-            
-            <!-- خدمات الاختراق الأخلاقي -->
-            <div class="service-category" id="pentest">
-                <div class="category-header">
-                    <div class="category-icon">
-                        <i class="fas fa-user-secret"></i>
-                    </div>
-                    <h3>خدمات الاختراق الأخلاقي</h3>
-                    <p>اكتشف نقاط الضعف في أنظمتك قبل المخترقين</p>
+                
+                <div class="service-card">
+                    <h3><i class="fas fa-lock"></i> الحلول الوقائية</h3>
+                    <ul class="service-list">
+                        <li>تصميم وتنفيذ أنظمة الحماية الشاملة</li>
+                        <li>حلول أمن السحابة وحماية البيانات</li>
+                        <li>أنظمة التحكم في الوصول والهوية</li>
+                        <li>حماية الأجهزة الطرفية والشبكات</li>
+                    </ul>
                 </div>
-                <div class="services-grid">
-                    <div class="service-card">
-                        <div class="service-header">
-                            <div class="service-icon">
-                                <i class="fas fa-network-wired"></i>
-                            </div>
-                            <span class="service-badge">الأكثر طلباً</span>
-                        </div>
-                        <h4>اختبار اختراق الشبكات</h4>
-                        <p>فحص شامل للشبكات الداخلية والخارجية، اكتشاف الثغرات، تقييم مستوى الحماية، وتقديم تقرير مفصل مع الحلول.</p>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check"></i> مسح الشبكات الداخلية والخارجية</li>
-                            <li><i class="fas fa-check"></i> اكتشاف الأجهزة والخدمات</li>
-                            <li><i class="fas fa-check"></i> تقييم نقاط الضعف</li>
-                            <li><i class="fas fa-check"></i> تقرير مفصل مع الحلول</li>
-                        </ul>
-                        <div class="service-footer">
-                            <div class="service-price">
-                                <span class="price">تبدأ من 2,999 ر.س</span>
-                            </div>
-                            <a href="#contact" class="btn btn-service">
-                                <i class="fas fa-calendar-check"></i> احجز الآن
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <div class="service-card">
-                        <div class="service-header">
-                            <div class="service-icon">
-                                <i class="fas fa-code"></i>
-                            </div>
-                            <span class="service-badge new">جديد</span>
-                        </div>
-                        <h4>اختبار اختراق تطبيقات الويب</h4>
-                        <p>فحص شامل لتطبيقات الويب، اكتشاف ثغرات OWASP Top 10، اختبار صلاحيات المستخدمين، وحماية من الهجمات الشائعة.</p>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check"></i> فحص ثغرات OWASP Top 10</li>
-                            <li><i class="fas fa-check"></i> اختبار صلاحيات المستخدمين</li>
-                            <li><i class="fas fa-check"></i> اكتشاف ثغرات SQL Injection</li>
-                            <li><i class="fas fa-check"></i> حماية من هجمات XSS</li>
-                        </ul>
-                        <div class="service-footer">
-                            <div class="service-price">
-                                <span class="price">تبدأ من 3,499 ر.س</span>
-                            </div>
-                            <a href="#contact" class="btn btn-service">
-                                <i class="fas fa-calendar-check"></i> احجز الآن
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <div class="service-card">
-                        <div class="service-header">
-                            <div class="service-icon">
-                                <i class="fas fa-mobile-alt"></i>
-                            </div>
-                        </div>
-                        <h4>اختبار اختراق تطبيقات الجوال</h4>
-                        <p>فحص تطبيقات iOS و Android، اكتشاف الثغرات الأمنية، تحليل الثغرات في تخزين البيانات، وحماية من الهندسة العكسية.</p>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check"></i> فحص تطبيقات iOS و Android</li>
-                            <li><i class="fas fa-check"></i> اكتشاف ثغرات تخزين البيانات</li>
-                            <li><i class="fas fa-check"></i> تحليل الثغرات في الاتصالات</li>
-                            <li><i class="fas fa-check"></i> حماية من الهندسة العكسية</li>
-                        </ul>
-                        <div class="service-footer">
-                            <div class="service-price">
-                                <span class="price">تبدأ من 4,999 ر.س</span>
-                            </div>
-                            <a href="#contact" class="btn btn-service">
-                                <i class="fas fa-calendar-check"></i> احجز الآن
-                            </a>
-                        </div>
-                    </div>
+                
+                <div class="service-card">
+                    <h3><i class="fas fa-first-aid"></i> الاستجابة والتعافي</h3>
+                    <ul class="service-list">
+                        <li>خطط استعادة الأعمال بعد الهجمات</li>
+                        <li>إدارة حوادث الأمن السيبراني</li>
+                        <li>تحليل الأدلة الرقمية والتحقيقات</li>
+                        <li>تدريب فرق الأمن على عمليات الطوارئ</li>
+                    </ul>
                 </div>
             </div>
-            
-            <!-- الاستشارات الأمنية -->
-            <div class="service-category" id="consulting">
-                <div class="category-header">
-                    <div class="category-icon">
-                        <i class="fas fa-headset"></i>
-                    </div>
-                    <h3>الاستشارات الأمنية المخصصة</h3>
-                    <p>حلول أمنية مصممة خصيصاً لمؤسستك</p>
-                </div>
-                <div class="services-grid">
-                    <div class="service-card">
-                        <div class="service-header">
-                            <div class="service-icon">
-                                <i class="fas fa-file-contract"></i>
-                            </div>
-                        </div>
-                        <h4>تدقيق وامتثال PCI DSS</h4>
-                        <p>تدقيق شامل لامتثال أنظمة الدفع لمعايير PCI DSS، إعداد التقارير المطلوبة، ودعم عملية الحصول على الشهادة.</p>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check"></i> تقييم مستوى الامتثال الحالي</li>
-                            <li><i class="fas fa-check"></i> تدقيق شامل لجميع المتطلبات</li>
-                            <li><i class="fas fa-check"></i> إعداد تقارير ROC و AOC</li>
-                            <li><i class="fas fa-check"></i> دعم الحصول على الشهادة</li>
-                        </ul>
-                        <div class="service-footer">
-                            <div class="service-price">
-                                <span class="price">اسعار مخصصة</span>
-                            </div>
-                            <a href="#contact" class="btn btn-service">
-                                <i class="fas fa-comment-dots"></i> احصل على عرض
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <div class="service-card">
-                        <div class="service-header">
-                            <div class="service-icon">
-                                <i class="fas fa-shield-alt"></i>
-                            </div>
-                        </div>
-                        <h4>تقييم المخاطر الأمنية</h4>
-                        <p>تحليل شامل للمخاطر الأمنية لمؤسستك، تحديد نقاط الضعف، وتقديم خطة علاجية شاملة.</p>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check"></i> تحليل شامل للمخاطر</li>
-                            <li><i class="fas fa-check"></i> تحديد نقاط الضعف</li>
-                            <li><i class="fas fa-check"></i> تقييم التأثير المالي</li>
-                            <li><i class="fas fa-check"></i> خطة علاجية مفصلة</li>
-                        </ul>
-                        <div class="service-footer">
-                            <div class="service-price">
-                                <span class="price">تبدأ من 5,999 ر.س</span>
-                            </div>
-                            <a href="#contact" class="btn btn-service">
-                                <i class="fas fa-comment-dots"></i> احصل على عرض
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <div class="service-card">
-                        <div class="service-header">
-                            <div class="service-icon">
-                                <i class="fas fa-user-shield"></i>
-                            </div>
-                        </div>
-                        <h4>استشارات حوكمة الأمن</h4>
-                        <p>بناء إطار عمل متكامل لحوكمة الأمن المعلوماتي، سياسات وإجراءات أمنية، وضمان الامتثال التنظيمي.</p>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check"></i> بناء إطار حوكمة الأمن</li>
-                            <li><i class="fas fa-check"></i> تطوير سياسات أمنية</li>
-                            <li><i class="fas fa-check"></i> ضمان الامتثال التنظيمي</li>
-                            <li><i class="fas fa-check"></i> تدريب فرق العمل</li>
-                        </ul>
-                        <div class="service-footer">
-                            <div class="service-price">
-                                <span class="price">اسعار مخصصة</span>
-                            </div>
-                            <a href="#contact" class="btn btn-service">
-                                <i class="fas fa-comment-dots"></i> احصل على عرض
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- التدريب والتطوير -->
-            <div class="service-category" id="training">
-                <div class="category-header">
-                    <div class="category-icon">
-                        <i class="fas fa-chalkboard-teacher"></i>
-                    </div>
-                    <h3>التدريب والتطوير</h3>
-                    <p>برامج تدريبية احترافية لتطوير مهارات فريقك</p>
-                </div>
-                <div class="services-grid">
-                    <div class="service-card">
-                        <div class="service-header">
-                            <div class="service-icon">
-                                <i class="fas fa-user-friends"></i>
-                            </div>
-                            <span class="service-badge">شائع</span>
-                        </div>
-                        <h4>تدريب شخص لشخص</h4>
-                        <p>تدريب مكثف ومخصص مع خبراء الأمن السيبراني، جلسات فردية، تركيز على المهارات العملية، ومشاريع واقعية.</p>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check"></i> تدريب فردي مكثف</li>
-                            <li><i class="fas fa-check"></i> جلسات عملية مباشرة</li>
-                            <li><i class="fas fa-check"></i> تركيز على المهارات العملية</li>
-                            <li><i class="fas fa-check"></i> مشاريع تطبيقية واقعية</li>
-                        </ul>
-                        <div class="service-footer">
-                            <div class="service-price">
-                                <span class="price">تبدأ من 299 ر.س/ساعة</span>
-                            </div>
-                            <a href="#contact" class="btn btn-service">
-                                <i class="fas fa-user-graduate"></i> سجل الآن
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <div class="service-card">
-                        <div class="service-header">
-                            <div class="service-icon">
-                                <i class="fas fa-users"></i>
-                            </div>
-                        </div>
-                        <h4>تدريب فرق المؤسسات</h4>
-                        <p>برامج تدريبية مخصصة لفرق العمل، تطوير مهارات الأمن السيبراني، ورفع مستوى الوعي الأمني في المؤسسة.</p>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check"></i> برامج مخصصة للفرق</li>
-                            <li><i class="fas fa-check"></i> تطوير مهارات متخصصة</li>
-                            <li><i class="fas fa-check"></i> رفع مستوى الوعي الأمني</li>
-                            <li><i class="fas fa-check"></i> تقييم ومتابعة مستمرة</li>
-                        </ul>
-                        <div class="service-footer">
-                            <div class="service-price">
-                                <span class="price">اسعار مخصصة</span>
-                            </div>
-                            <a href="#contact" class="btn btn-service">
-                                <i class="fas fa-users"></i> اطلب عرضاً
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <div class="service-card">
-                        <div class="service-header">
-                            <div class="service-icon">
-                                <i class="fas fa-laptop-house"></i>
-                            </div>
-                            <span class="service-badge">متاح أونلاين</span>
-                        </div>
-                        <h4>ورش عمل افتراضية</h4>
-                        <p>ورش عمل تفاعلية عبر الإنترنت، تركيز على مواضيع محددة، تطبيقات عملية مباشرة، وشهادات مشاركة.</p>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check"></i> ورش تفاعلية أونلاين</li>
-                            <li><i class="fas fa-check"></i> تركيز على مواضيع محددة</li>
-                            <li><i class="fas fa-check"></i> تطبيقات عملية مباشرة</li>
-                            <li><i class="fas fa-check"></i> شهادات مشاركة معتمدة</li>
-                        </ul>
-                        <div class="service-footer">
-                            <div class="service-price">
-                                <span class="price">تبدأ من 499 ر.س</span>
-                            </div>
-                            <a href="#contact" class="btn btn-service">
-                                <i class="fas fa-video"></i> انضم الآن
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- حلول الأمن المتقدمة -->
-            <div class="service-category">
-                <div class="category-header">
-                    <div class="category-icon">
-                        <i class="fas fa-tools"></i>
-                    </div>
-                    <h3>حلول الأمن المتقدمة</h3>
-                    <p>تقنيات متطورة لحماية شاملة</p>
-                </div>
-                <div class="services-grid">
-                    <div class="service-card">
-                        <div class="service-header">
-                            <div class="service-icon">
-                                <i class="fas fa-brain"></i>
-                            </div>
-                        </div>
-                        <h4>الهندسة الاجتماعية</h4>
-                        <p>اختبار وعي الموظفين ضد هجمات الهندسة الاجتماعية، محاكاة هجمات واقعية، وتدريب على كيفية الاكتشاف والوقاية.</p>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check"></i> محاكاة هجمات واقعية</li>
-                            <li><i class="fas fa-check"></i> اختبار وعي الموظفين</li>
-                            <li><i class="fas fa-check"></i> تدريب على الاكتشاف والوقاية</li>
-                            <li><i class="fas fa-check"></i> تقرير مفصل مع النتائج</li>
-                        </ul>
-                        <div class="service-footer">
-                            <div class="service-price">
-                                <span class="price">تبدأ من 4,500 ر.س</span>
-                            </div>
-                            <a href="#contact" class="btn btn-service">
-                                <i class="fas fa-brain"></i> ابدأ الاختبار
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <div class="service-card">
-                        <div class="service-header">
-                            <div class="service-icon">
-                                <i class="fas fa-cloud"></i>
-                            </div>
-                        </div>
-                        <h4>أمن الحوسبة السحابية</h4>
-                        <p>تقييم أمن البنية السحابية، حماية بيانات AWS و Azure و Google Cloud، وضمان الامتثال لمعايير الأمن السحابي.</p>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check"></i> تقييم أمن البنية السحابية</li>
-                            <li><i class="fas fa-check"></i> حماية بيانات AWS و Azure</li>
-                            <li><i class="fas fa-check"></i> ضمان الامتثال السحابي</li>
-                            <li><i class="fas fa-check"></i> مراقبة وتنبيهات أمنية</li>
-                        </ul>
-                        <div class="service-footer">
-                            <div class="service-price">
-                                <span class="price">تبدأ من 6,999 ر.س</span>
-                            </div>
-                            <a href="#contact" class="btn btn-service">
-                                <i class="fas fa-cloud"></i> احصل على تقييم
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <div class="service-card">
-                        <div class="service-header">
-                            <div class="service-icon">
-                                <i class="fas fa-first-aid"></i>
-                            </div>
-                            <span class="service-badge">طارئ</span>
-                        </div>
-                        <h4>استجابة للحوادث الأمنية</h4>
-                        <p>استجابة سريعة للحوادث الأمنية، احتواء الهجمات، تحليل الأدلة الرقمية، واستعادة الأنظمة المتأثرة.</p>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check"></i> استجابة فورية 24/7</li>
-                            <li><i class="fas fa-check"></i> احتواء الهجمات الإلكترونية</li>
-                            <li><i class="fas fa-check"></i> تحليل الأدلة الرقمية</li>
-                            <li><i class="fas fa-check"></i> استعادة الأنظمة المتأثرة</li>
-                        </ul>
-                        <div class="service-footer">
-                            <div class="service-price">
-                                <span class="price">اتصل فوراً</span>
-                            </div>
-                            <a href="tel:+966551234567" class="btn btn-service emergency">
-                                <i class="fas fa-phone-alt"></i> اتصل الآن
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- قسم الدورات المتخصصة -->
-    <section id="courses" class="courses">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-badge">
-                    <i class="fas fa-graduation-cap"></i>
-                    مسارات تعليمية
-                </div>
-                <h2 class="section-title">دورات <span class="highlight">معتمدة</span> احترافية</h2>
-                <p class="section-subtitle">اختر من بين مساراتنا التعليمية الشاملة لتبدأ رحلتك في عالم الأمن السيبراني</p>
-            </div>
-            
-            <!-- مسارات التعلم -->
-            <div class="learning-paths">
-                <div class="path-tabs">
-                    <button class="path-tab active" data-path="beginner">مسار المبتدئين</button>
-                    <button class="path-tab" data-path="intermediate">مسار المتوسطين</button>
-                    <button class="path-tab" data-path="advanced">مسار المحترفين</button>
-                    <button class="path-tab" data-path="certifications">الشهادات المتقدمة</button>
+        <section class="section">
+            <h2 class="section-title"><i class="fas fa-robot"></i> حلول الذكاء الاصطناعي للأمن</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3><i class="fas fa-brain"></i> أنظمة الذكاء الاصطناعي</h3>
+                    <ul class="service-list">
+                        <li>نماذج التعلم الآلي لكشف الأنماط الضارة</li>
+                        <li>أنظمة تحليل السلوكيات المشبوهة (UEBA)</li>
+                        <li>أدوات الذكاء الاصطناعي لمكافحة الاحتيال</li>
+                        <li>تحليل التهديدات في وسائل التواصل</li>
+                    </ul>
                 </div>
                 
-                <div class="path-content">
-                    <!-- مسار المبتدئين -->
-                    <div class="path-pane active" id="beginner-path">
-                        <div class="courses-grid">
-                            <div class="course-card">
-                                <div class="course-header">
-                                    <div class="course-level beginner">مبتدئ</div>
-                                    <div class="course-duration">
-                                        <i class="far fa-clock"></i> 40 ساعة
-                                    </div>
-                                </div>
-                                <h4>مقدمة في الأمن السيبراني</h4>
-                                <p>تعلم أساسيات الأمن السيبراني، مفاهيم الحماية، أنواع الهجمات، ومبادئ الأمن الأساسية.</p>
-                                <div class="course-meta">
-                                    <span><i class="fas fa-video"></i> 25 فيديو تعليمي</span>
-                                    <span><i class="fas fa-file-alt"></i> 10 تمارين عملية</span>
-                                </div>
-                                <div class="course-price">
-                                    <span class="current-price">799 ر.س</span>
-                                    <span class="original-price">1,299 ر.س</span>
-                                </div>
-                                <a href="#contact" class="btn btn-course">سجل في الدورة</a>
-                            </div>
-                            
-                            <div class="course-card">
-                                <div class="course-header">
-                                    <div class="course-level beginner">مبتدئ</div>
-                                    <div class="course-duration">
-                                        <i class="far fa-clock"></i> 35 ساعة
-                                    </div>
-                                </div>
-                                <h4>أساسيات الشبكات للأمن</h4>
-                                <p>فهم أساسيات الشبكات، بروتوكولات الاتصال، وأمن الشبكات للمبتدئين.</p>
-                                <div class="course-meta">
-                                    <span><i class="fas fa-video"></i> 20 فيديو تعليمي</span>
-                                    <span><i class="fas fa-file-alt"></i> 8 تمارين عملية</span>
-                                </div>
-                                <div class="course-price">
-                                    <span class="current-price">699 ر.س</span>
-                                    <span class="original-price">1,099 ر.س</span>
-                                </div>
-                                <a href="#contact" class="btn btn-course">سجل في الدورة</a>
-                            </div>
-                            
-                            <div class="course-card">
-                                <div class="course-header">
-                                    <div class="course-level beginner">مبتدئ</div>
-                                    <div class="course-duration">
-                                        <i class="far fa-clock"></i> 30 ساعة
-                                    </div>
-                                </div>
-                                <h4>مقدمة في كالي لينكس</h4>
-                                <p>تعلم أساسيات كالي لينكس، التثبيت، الأوامر الأساسية، وأدوات الأمن المتاحة.</p>
-                                <div class="course-meta">
-                                    <span><i class="fas fa-video"></i> 18 فيديو تعليمي</span>
-                                    <span><i class="fas fa-file-alt"></i> 12 تمرين عملي</span>
-                                </div>
-                                <div class="course-price">
-                                    <span class="current-price">899 ر.س</span>
-                                    <span class="original-price">1,499 ر.س</span>
-                                </div>
-                                <a href="#contact" class="btn btn-course">سجل في الدورة</a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- مسار المتوسطين -->
-                    <div class="path-pane" id="intermediate-path">
-                        <div class="courses-grid">
-                            <div class="course-card">
-                                <div class="course-header">
-                                    <div class="course-level intermediate">متوسط</div>
-                                    <div class="course-duration">
-                                        <i class="far fa-clock"></i> 60 ساعة
-                                    </div>
-                                </div>
-                                <h4>اختبار اختراق الشبكات</h4>
-                                <p>تعلم تقنيات اختبار اختراق الشبكات، أدوات NMAP و Metasploit، وتقييم الثغرات.</p>
-                                <div class="course-meta">
-                                    <span><i class="fas fa-video"></i> 35 فيديو تعليمي</span>
-                                    <span><i class="fas fa-file-alt"></i> 20 تمرين عملي</span>
-                                </div>
-                                <div class="course-price">
-                                    <span class="current-price">1,499 ر.س</span>
-                                    <span class="original-price">2,499 ر.س</span>
-                                </div>
-                                <a href="#contact" class="btn btn-course">سجل في الدورة</a>
-                            </div>
-                            
-                            <div class="course-card">
-                                <div class="course-header">
-                                    <div class="course-level intermediate">متوسط</div>
-                                    <div class="course-duration">
-                                        <i class="far fa-clock"></i> 50 ساعة
-                                    </div>
-                                </div>
-                                <h4>أمن تطبيقات الويب</h4>
-                                <p>تعلم اكتشاف ثغرات الويب، OWASP Top 10، أدوات Burp Suite، وحماية التطبيقات.</p>
-                                <div class="course-meta">
-                                    <span><i class="fas fa-video"></i> 30 فيديو تعليمي</span>
-                                    <span><i class="fas fa-file-alt"></i> 15 تمرين عملي</span>
-                                </div>
-                                <div class="course-price">
-                                    <span class="current-price">1,299 ر.س</span>
-                                    <span class="original-price">2,199 ر.س</span>
-                                </div>
-                                <a href="#contact" class="btn btn-course">سجل في الدورة</a>
-                            </div>
-                            
-                            <div class="course-card">
-                                <div class="course-header">
-                                    <div class="course-level intermediate">متوسط</div>
-                                    <div class="course-duration">
-                                        <i class="far fa-clock"></i> 45 ساعة
-                                    </div>
-                                </div>
-                                <h4>الهندسة الاجتماعية المتقدمة</h4>
-                                <p>تقنيات الهندسة الاجتماعية، أدوات SET، وكيفية الحماية من هذه الهجمات.</p>
-                                <div class="course-meta">
-                                    <span><i class="fas fa-video"></i> 25 فيديو تعليمي</span>
-                                    <span><i class="fas fa-file-alt"></i> 10 تمارين عملية</span>
-                                </div>
-                                <div class="course-price">
-                                    <span class="current-price">999 ر.س</span>
-                                    <span class="original-price">1,799 ر.س</span>
-                                </div>
-                                <a href="#contact" class="btn btn-course">سجل في الدورة</a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- مسار المحترفين -->
-                    <div class="path-pane" id="advanced-path">
-                        <div class="courses-grid">
-                            <div class="course-card">
-                                <div class="course-header">
-                                    <div class="course-level advanced">متقدم</div>
-                                    <div class="course-duration">
-                                        <i class="far fa-clock"></i> 80 ساعة
-                                    </div>
-                                </div>
-                                <h4>اختبار اختراق متقدم</h4>
-                                <p>تقنيات اختبار اختراق متقدمة، اختراق الأنظمة المعقدة، وتجاوس أنظمة الحماية.</p>
-                                <div class="course-meta">
-                                    <span><i class="fas fa-video"></i> 45 فيديو تعليمي</span>
-                                    <span><i class="fas fa-file-alt"></i> 25 تمرين عملي</span>
-                                </div>
-                                <div class="course-price">
-                                    <span class="current-price">2,999 ر.س</span>
-                                    <span class="original-price">4,999 ر.س</span>
-                                </div>
-                                <a href="#contact" class="btn btn-course">سجل في الدورة</a>
-                            </div>
-                            
-                            <div class="course-card">
-                                <div class="course-header">
-                                    <div class="course-level advanced">متقدم</div>
-                                    <div class="course-duration">
-                                        <i class="far fa-clock"></i> 70 ساعة
-                                    </div>
-                                </div>
-                                <h4>تحقيق الأدلة الرقمية</h4>
-                                <p>تقنيات جمع وتحليل الأدلة الرقمية، أدوات التحقيق، وإعداد التقارير القضائية.</p>
-                                <div class="course-meta">
-                                    <span><i class="fas fa-video"></i> 40 فيديو تعليمي</span>
-                                    <span><i class="fas fa-file-alt"></i> 20 تمرين عملي</span>
-                                </div>
-                                <div class="course-price">
-                                    <span class="current-price">2,499 ر.س</span>
-                                    <span class="original-price">3,999 ر.س</span>
-                                </div>
-                                <a href="#contact" class="btn btn-course">سجل في الدورة</a>
-                            </div>
-                            
-                            <div class="course-card">
-                                <div class="course-header">
-                                    <div class="course-level advanced">متقدم</div>
-                                    <div class="course-duration">
-                                        <i class="far fa-clock"></i> 90 ساعة
-                                    </div>
-                                </div>
-                                <h4>أمن الحوسبة السحابية</h4>
-                                <p>تأمين البنية السحابية، أمن AWS و Azure، وحماية البيانات السحابية.</p>
-                                <div class="course-meta">
-                                    <span><i class="fas fa-video"></i> 50 فيديو تعليمي</span>
-                                    <span><i class="fas fa-file-alt"></i> 30 تمرين عملي</span>
-                                </div>
-                                <div class="course-price">
-                                    <span class="current-price">3,499 ر.س</span>
-                                    <span class="original-price">5,499 ر.س</span>
-                                </div>
-                                <a href="#contact" class="btn btn-course">سجل في الدورة</a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- الشهادات المتقدمة -->
-                    <div class="path-pane" id="certifications-path">
-                        <div class="courses-grid">
-                            <div class="course-card">
-                                <div class="course-header">
-                                    <div class="course-level certification">شهادة</div>
-                                    <div class="course-duration">
-                                        <i class="far fa-clock"></i> 120 ساعة
-                                    </div>
-                                </div>
-                                <h4>شهادة محترف الأمن السيبراني (CSCP)</h4>
-                                <p>برنامج متكامل يؤهلك للحصول على شهادة محترف الأمن السيبراني المعتمدة دولياً.</p>
-                                <div class="course-meta">
-                                    <span><i class="fas fa-video"></i> 60 فيديو تعليمي</span>
-                                    <span><i class="fas fa-file-alt"></i> 40 تمرين عملي</span>
-                                </div>
-                                <div class="course-price">
-                                    <span class="current-price">5,999 ر.س</span>
-                                    <span class="original-price">9,999 ر.س</span>
-                                </div>
-                                <a href="#contact" class="btn btn-course">سجل في البرنامج</a>
-                            </div>
-                            
-                            <div class="course-card">
-                                <div class="course-header">
-                                    <div class="course-level certification">شهادة</div>
-                                    <div class="course-duration">
-                                        <i class="far fa-clock"></i> 100 ساعة
-                                    </div>
-                                </div>
-                                <h4>شهادة اختبار الاختراق الأخلاقي (CEHP)</h4>
-                                <p>برنامج متقدم يؤهلك لشهادة اختبار الاختراق الأخلاقي المعتمدة.</p>
-                                <div class="course-meta">
-                                    <span><i class="fas fa-video"></i> 50 فيديو تعليمي</span>
-                                    <span><i class="fas fa-file-alt"></i> 35 تمرين عملي</span>
-                                </div>
-                                <div class="course-price">
-                                    <span class="current-price">4,999 ر.س</span>
-                                    <span class="original-price">8,499 ر.س</span>
-                                </div>
-                                <a href="#contact" class="btn btn-course">سجل في البرنامج</a>
-                            </div>
-                            
-                            <div class="course-card">
-                                <div class="course-header">
-                                    <div class="course-level certification">شهادة</div>
-                                    <div class="course-duration">
-                                        <i class="far fa-clock"></i> 150 ساعة
-                                    </div>
-                                </div>
-                                <h4>برنامج مدير أمن المعلومات (CISM)</h4>
-                                <p>برنامج قيادي يؤهلك لإدارة أمن المعلومات في المؤسسات الكبرى.</p>
-                                <div class="course-meta">
-                                    <span><i class="fas fa-video"></i> 70 فيديو تعليمي</span>
-                                    <span><i class="fas fa-file-alt"></i> 45 تمرين عملي</span>
-                                </div>
-                                <div class="course-price">
-                                    <span class="current-price">7,999 ر.س</span>
-                                    <span class="original-price">12,999 ر.س</span>
-                                </div>
-                                <a href="#contact" class="btn btn-course">سجل في البرنامج</a>
-                            </div>
-                        </div>
-                    </div>
+                <div class="service-card">
+                    <h3><i class="fas fa-cogs"></i> الأتمتة الذكية</h3>
+                    <ul class="service-list">
+                        <li>روبوتات أتمتة عمليات الأمن (SOAR)</li>
+                        <li>مساعدات ذكية لتحليل التهديدات</li>
+                        <li>أنظمة أتمتة الاستجابة للحوادث</li>
+                        <li>تحليل البيانات الأمنية بالزمن الحقيقي</li>
+                    </ul>
                 </div>
             </div>
-            
-            <!-- باقات الدورات -->
-            <div class="course-packages">
-                <h3 class="packages-title">باقات تعليمية <span class="highlight">مميزة</span></h3>
-                <div class="packages-grid">
-                    <div class="package-card">
-                        <div class="package-header">
-                            <h4>الباقة الأساسية</h4>
-                            <div class="package-price">
-                                <span class="price">2,999 ر.س</span>
-                                <span class="period">/ للباقة</span>
-                            </div>
-                        </div>
-                        <ul class="package-features">
-                            <li><i class="fas fa-check"></i> 3 دورات من مستوى مبتدئ</li>
-                            <li><i class="fas fa-check"></i> مواد تعليمية شاملة</li>
-                            <li><i class="fas fa-check"></i> شهادات إتمام</li>
-                            <li><i class="fas fa-check"></i> دعم فني لمدة 3 أشهر</li>
-                            <li><i class="fas fa-times"></i> جلسات إرشادية</li>
-                            <li><i class="fas fa-times"></i> مشروع تخرج</li>
-                        </ul>
-                        <a href="#contact" class="btn btn-package">اختر الباقة</a>
-                    </div>
-                    
-                    <div class="package-card featured">
-                        <div class="package-badge">الأفضل مبيعاً</div>
-                        <div class="package-header">
-                            <h4>الباقة المتقدمة</h4>
-                            <div class="package-price">
-                                <span class="price">5,999 ر.س</span>
-                                <span class="period">/ للباقة</span>
-                            </div>
-                        </div>
-                        <ul class="package-features">
-                            <li><i class="fas fa-check"></i> 5 دورات من جميع المستويات</li>
-                            <li><i class="fas fa-check"></i> مواد تعليمية شاملة</li>
-                            <li><i class="fas fa-check"></i> شهادات معتمدة</li>
-                            <li><i class="fas fa-check"></i> دعم فني لمدة 6 أشهر</li>
-                            <li><i class="fas fa-check"></i> 4 جلسات إرشادية</li>
-                            <li><i class="fas fa-check"></i> مشروع تخرج وتقييم</li>
-                        </ul>
-                        <a href="#contact" class="btn btn-package featured">اختر الباقة</a>
-                    </div>
-                    
-                    <div class="package-card">
-                        <div class="package-header">
-                            <h4>الباقة المؤسسية</h4>
-                            <div class="package-price">
-                                <span class="price">اتصل للاستفسار</span>
-                                <span class="period">/ مخصصة</span>
-                            </div>
-                        </div>
-                        <ul class="package-features">
-                            <li><i class="fas fa-check"></i> دورات مخصصة للمؤسسة</li>
-                            <li><i class="fas fa-check"></i> تدريب مباشر للفرق</li>
-                            <li><i class="fas fa-check"></i> شهادات معتمدة للموظفين</li>
-                            <li><i class="fas fa-check"></i> دعم فني لمدة سنة</li>
-                            <li><i class="fas fa-check"></i> جلسات إرشادية أسبوعية</li>
-                            <li><i class="fas fa-check"></i> تقارير تقدم مفصلة</li>
-                        </ul>
-                        <a href="#contact" class="btn btn-package">اتصل بنا</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- قسم الأكاديمية -->
-    <section id="academy" class="academy">
-        <div class="academy-background"></div>
-        <div class="container">
-            <div class="section-header">
-                <div class="section-badge">
-                    <i class="fas fa-university"></i>
-                    الأكاديمية المتخصصة
-                </div>
-                <h2 class="section-title">رحلتك نحو <span class="highlight">الاحتراف</span></h2>
-                <p class="section-subtitle">نقدم بيئة تعليمية متكاملة تجمع بين النظرية والتطبيق العملي</p>
-            </div>
-            
-            <div class="academy-content">
-                <div class="academy-features">
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-chalkboard-teacher"></i>
-                        </div>
-                        <h4>مدربون معتمدون</h4>
-                        <p>فريق من المدربين الحاصلين على شهادات دولية في الأمن السيبراني مع خبرة عملية واسعة.</p>
-                    </div>
-                    
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-laptop-code"></i>
-                        </div>
-                        <h4>معامل افتراضية</h4>
-                        <p>معامل متطورة مجهزة بأحدث الأدوات والتقنيات للتدريب العملي في بيئة آمنة.</p>
-                    </div>
-                    
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-briefcase"></i>
-                        </div>
-                        <h4>توجيه وظيفي</h4>
-                        <p>برامج توجيهية تساعدك في بناء مسارك الوظيفي والتواصل مع شركات الرعاية.</p>
-                    </div>
-                    
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-certificate"></i>
-                        </div>
-                        <h4>شهادات معترف بها</h4>
-                        <p>شهادات إتمام معتمدة من جهات دولية معترف بها في سوق العمل.</p>
-                    </div>
+        <section class="section">
+            <h2 class="section-title"><i class="fas fa-layer-group"></i> بناء المنصات الذكية</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3><i class="fas fa-desktop"></i> منصات الأمن المتكاملة</h3>
+                    <ul class="service-list">
+                        <li>منصات SIEM/SOAR مخصصة</li>
+                        <li>بوابات إدارة الثغرات الأمنية</li>
+                        <li>أنظمة إدارة التهديدات الاستخبارية</li>
+                        <li>منصات محاكاة الهجمات الإلكترونية</li>
+                    </ul>
                 </div>
                 
-                <div class="academy-process">
-                    <h3>مراحل <span class="highlight">التعلم</span> في أكاديميتنا</h3>
-                    <div class="process-steps">
-                        <div class="step">
-                            <div class="step-number">1</div>
-                            <div class="step-content">
-                                <h5>التقييم المبدئي</h5>
-                                <p>تقييم مستوى المهارات الحالي وتحديد المسار المناسب</p>
-                            </div>
-                        </div>
-                        
-                        <div class="step">
-                            <div class="step-number">2</div>
-                            <div class="step-content">
-                                <h5>التعلم النظري</h5>
-                                <p>دراسة المواد النظرية مع أمثلة عملية واقعية</p>
-                            </div>
-                        </div>
-                        
-                        <div class="step">
-                            <div class="step-number">3</div>
-                            <div class="step-content">
-                                <h5>التطبيق العملي</h5>
-                                <p>تطبيق المهارات في معاملنا الافتراضية المتطورة</p>
-                            </div>
-                        </div>
-                        
-                        <div class="step">
-                            <div class="step-number">4</div>
-                            <div class="step-content">
-                                <h5>المشاريع والتقييم</h5>
-                                <p>تنفيذ مشاريع حقيقية وتقييم شامل للأداء</p>
-                            </div>
-                        </div>
-                        
-                        <div class="step">
-                            <div class="step-number">5</div>
-                            <div class="step-content">
-                                <h5>الشهادة والتوظيف</h5>
-                                <p>الحصول على الشهادة والدعم في البحث عن وظيفة</p>
-                            </div>
-                        </div>
-                    </div>
+                <div class="service-card">
+                    <h3><i class="fas fa-code"></i> تطبيقات وحلول تقنية</h3>
+                    <ul class="service-list">
+                        <li>تطوير واجهات برمجة تطبيقات أمنية</li>
+                        <li>تطبيقات جوال للمراقبة الأمنية</li>
+                        <li>منصات التدريب والتوعية الأمنية</li>
+                        <li>حلول أمنية للبيانات الضخمة</li>
+                    </ul>
                 </div>
             </div>
-            
-            <!-- معرض الإنجازات -->
-            <div class="achievements">
-                <h3>إنجازات <span class="highlight">خريجينا</span></h3>
-                <div class="achievements-slider">
-                    <div class="achievement-card">
-                        <div class="achievement-content">
-                            <i class="fas fa-quote-right"></i>
-                            <p>"بفضل التدريب في UCYBERS، حصلت على وظيفة في شركة أمن سيبراني كبرى خلال شهر من التخرج"</p>
-                            <div class="achievement-author">
-                                <strong>أحمد محمد</strong>
-                                <span>مهندس أمن سيبراني</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="achievement-card">
-                        <div class="achievement-content">
-                            <i class="fas fa-quote-right"></i>
-                            <p>"المشاريع العملية ساعدتني في فهم التحديات الواقعية وطريقة التعامل معها بشكل احترافي"</p>
-                            <div class="achievement-author">
-                                <strong>سارة عبدالله</strong>
-                                <span>أخصائية اختبار اختراق</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="achievement-card">
-                        <div class="achievement-content">
-                            <i class="fas fa-quote-right"></i>
-                            <p>"الشهادة المعتمدة فتحت لي أبواب العمل في مشاريع دولية مع شركات عالمية"</p>
-                            <div class="achievement-author">
-                                <strong>خالد الزهراني</strong>
-                                <span>مستشار أمن معلومات</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- قسم الهاكاثون -->
-    <section id="hackathon" class="hackathon">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-badge">
-                    <i class="fas fa-laptop-code"></i>
-                    فعاليات الهاكاثون
-                </div>
-                <h2 class="section-title">هاكاثون <span class="highlight">المستقبل</span></h2>
-                <p class="section-subtitle">فرصة لعرض مهاراتك والتعاون مع المواهب الأخرى في مجال الأمن السيبراني</p>
-            </div>
-            
-            <div class="hackathon-content">
-                <div class="hackathon-info">
-                    <div class="info-card">
-                        <div class="info-icon">
-                            <i class="fas fa-calendar-alt"></i>
+        <section class="section">
+            <h2 class="section-title"><i class="fas fa-project-diagram"></i> محفظة المشاريع</h2>
+            <div class="projects-container">
+                <div class="project-card">
+                    <h3><i class="fas fa-shield-alt"></i> "الدرع الذكي المتقدم"</h3>
+                    <div class="project-details">
+                        <div class="detail-item">
+                            <span class="detail-label">النوع:</span>
+                            <span>منصة SIEM مدعومة بالذكاء الاصطناعي</span>
                         </div>
-                        <div class="info-content">
-                            <h4>التاريخ والوقت</h4>
-                            <p>15-17 مارس 2026<br>من 9 صباحاً حتى 6 مساءً</p>
+                        <div class="detail-item">
+                            <span class="detail-label">الميزات:</span>
+                            <span>تحليل تهديدات تلقائي، تقارير ذكية</span>
                         </div>
-                    </div>
-                    
-                    <div class="info-card">
-                        <div class="info-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="info-content">
-                            <h4>المكان</h4>
-                            <p>قاعة المؤتمرات - الرياض<br>ومتاح المشاركة عن بعد</p>
-                        </div>
-                    </div>
-                    
-                    <div class="info-card">
-                        <div class="info-icon">
-                            <i class="fas fa-trophy"></i>
-                        </div>
-                        <div class="info-content">
-                            <h4>الجوائز</h4>
-                            <p>جوائز نقدية تصل إلى 50,000 ر.س<br>فرص تدريب وعمل مع شركات راعية</p>
-                        </div>
-                    </div>
-                    
-                    <div class="info-card">
-                        <div class="info-icon">
-                            <i class="fas fa-users"></i>
-                        </div>
-                        <div class="info-content">
-                            <h4>المشاركون</h4>
-                            <p>فرق من 3-5 أفراد<br>مستويات مبتدئ ومتقدم ومحترف</p>
+                        <div class="detail-item">
+                            <span class="detail-label">التقنيات:</span>
+                            <span>Python, ML, Elastic Stack, React</span>
                         </div>
                     </div>
                 </div>
                 
-                <div class="hackathon-registration">
-                    <h3>سجل في هاكاثون المستقبل</h3>
-                    <p>انضم إلى أكبر تجمع للمهتمين بالأمن السيبراني وشارك في تحدي حقيقي</p>
-                    
-                    <form id="hackathonForm" class="registration-form">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="teamName"><i class="fas fa-users"></i> اسم الفريق</label>
-                                <input type="text" id="teamName" placeholder="أدخل اسم فريقك" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="teamLeader"><i class="fas fa-crown"></i> قائد الفريق</label>
-                                <input type="text" id="teamLeader" placeholder="اسم قائد الفريق" required>
-                            </div>
+                <div class="project-card">
+                    <h3><i class="fas fa-robot"></i> "الحارس الافتراضي"</h3>
+                    <div class="project-details">
+                        <div class="detail-item">
+                            <span class="detail-label">النوع:</span>
+                            <span>مساعد ذكي لإدارة الأمن</span>
                         </div>
-                        
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="teamSize"><i class="fas fa-user-friends"></i> عدد الأعضاء</label>
-                                <select id="teamSize" required>
-                                    <option value="">اختر عدد الأعضاء</option>
-                                    <option value="3">3 أعضاء</option>
-                                    <option value="4">4 أعضاء</option>
-                                    <option value="5">5 أعضاء</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="teamLevel"><i class="fas fa-chart-line"></i> مستوى الفريق</label>
-                                <select id="teamLevel" required>
-                                    <option value="">اختر المستوى</option>
-                                    <option value="beginner">مبتدئ</option>
-                                    <option value="intermediate">متوسط</option>
-                                    <option value="advanced">متقدم</option>
-                                </select>
-                            </div>
+                        <div class="detail-item">
+                            <span class="detail-label">الميزات:</span>
+                            <span>ردود تلقائية، تحليل بلغة طبيعية</span>
                         </div>
-                        
-                        <div class="form-group">
-                            <label for="teamEmail"><i class="fas fa-envelope"></i> البريد الإلكتروني</label>
-                            <input type="email" id="teamEmail" placeholder="البريد الإلكتروني للفريق" required>
+                        <div class="detail-item">
+                            <span class="detail-label">التقنيات:</span>
+                            <span>NLP, Chatbot, Azure AI, Node.js</span>
                         </div>
-                        
-                        <div class="form-group">
-                            <label for="teamPhone"><i class="fas fa-phone"></i> رقم الهاتف</label>
-                            <input type="tel" id="teamPhone" placeholder="رقم هاتف قائد الفريق" required>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <h3><i class="fas fa-graduation-cap"></i> "أكاديمية الأمن التفاعلية"</h3>
+                    <div class="project-details">
+                        <div class="detail-item">
+                            <span class="detail-label">النوع:</span>
+                            <span>منصة تدريب أمن سيبراني</span>
                         </div>
-                        
-                        <div class="form-group">
-                            <label for="teamDescription"><i class="fas fa-file-alt"></i> وصف الفريق والمهارات</label>
-                            <textarea id="teamDescription" rows="4" placeholder="صف فريقك والمهارات التي يتمتعون بها..." required></textarea>
+                        <div class="detail-item">
+                            <span class="detail-label">الميزات:</span>
+                            <span>معامل افتراضية، محاكاة هجمات</span>
                         </div>
-                        
-                        <div class="form-group">
-                            <label class="checkbox-label">
-                                <input type="checkbox" required>
-                                <span>أوافق على شروط المشاركة في الهاكاثون</span>
-                            </label>
-                        </div>
-                        
-                        <button type="submit" class="btn btn-primary btn-lg">
-                            <i class="fas fa-paper-plane"></i> سجل فريقك الآن
-                        </button>
-                    </form>
-                    
-                    <div class="registration-status">
-                        <div class="status-header">
-                            <h4>حالة التسجيلات</h4>
-                            <div class="status-badge">مفتوح</div>
-                        </div>
-                        <div class="status-progress">
-                            <div class="progress-bar">
-                                <div class="progress-fill" style="width: 75%"></div>
-                            </div>
-                            <div class="progress-text">75% من المقاعد ممتلئة</div>
-                        </div>
-                        <div class="status-info">
-                            <p><i class="fas fa-info-circle"></i> آخر موعد للتسجيل: 10 مارس 2026</p>
+                        <div class="detail-item">
+                            <span class="detail-label">التقنيات:</span>
+                            <span>Vue.js, Docker, Cybersecurity Labs</span>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- قسم الشهادات الدولية -->
-    <section id="certifications" class="certifications">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-badge">
-                    <i class="fas fa-award"></i>
-                    الشهادات الدولية
+        <section class="section">
+            <h2 class="section-title"><i class="fas fa-trophy"></i> المميزات التنافسية</h2>
+            <div class="features">
+                <div class="feature">
+                    <i class="fas fa-link"></i>
+                    <span>تكامل حقيقي بين الأمن السيبراني والذكاء الاصطناعي</span>
                 </div>
-                <h2 class="section-title">شهادات <span class="highlight">معترف بها</span> عالمياً</h2>
-                <p class="section-subtitle">نقدم برامج إعداد للحصول على أهم الشهادات الدولية في مجال الأمن السيبراني</p>
-            </div>
-            
-            <div class="certs-grid">
-                <div class="cert-card">
-                    <div class="cert-logo">
-                        <i class="fab fa-linux"></i>
-                    </div>
-                    <h4>شهادة محترف كالي لينكس (KLP)</h4>
-                    <p>شهادة متخصصة في استخدام أدوات كالي لينكس للاختراق الأخلاقي</p>
-                    <div class="cert-meta">
-                        <span><i class="fas fa-clock"></i> 80 ساعة تدريب</span>
-                        <span><i class="fas fa-star"></i> صعوبة: متوسطة</span>
-                    </div>
-                    <a href="#contact" class="btn btn-cert">احصل على التفاصيل</a>
+                <div class="feature">
+                    <i class="fas fa-layer-group"></i>
+                    <span>خبرة في بناء أنظمة من الصفر وحتى النشر</span>
                 </div>
-                
-                <div class="cert-card">
-                    <div class="cert-logo">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <h4>شهادة الأمن السيبراني المعتمد (CSC)</h4>
-                    <p>شهادة أساسية تغطي جميع جوانب الأمن السيبراني للمبتدئين</p>
-                    <div class="cert-meta">
-                        <span><i class="fas fa-clock"></i> 100 ساعة تدريب</span>
-                        <span><i class="fas fa-star"></i> صعوبة: مبتدئ</span>
-                    </div>
-                    <a href="#contact" class="btn btn-cert">احصل على التفاصيل</a>
+                <div class="feature">
+                    <i class="fas fa-globe"></i>
+                    <span>فهم عميق للمتطلبات المحلية والدولية</span>
                 </div>
-                
-                <div class="cert-card">
-                    <div class="cert-logo">
-                        <i class="fas fa-user-secret"></i>
-                    </div>
-                    <h4>شهادة اختبار الاختراق الأخلاقي (CEH)</h4>
-                    <p>شهادة متقدمة في اختبارات الاختراق والتقييم الأمني</p>
-                    <div class="cert-meta">
-                        <span><i class="fas fa-clock"></i> 120 ساعة تدريب</span>
-                        <span><i class="fas fa-star"></i> صعوبة: متقدمة</span>
-                    </div>
-                    <a href="#contact" class="btn btn-cert">احصل على التفاصيل</a>
+                <div class="feature">
+                    <i class="fas fa-expand-arrows-alt"></i>
+                    <span>تصميم حلول قابلة للتطوير والتخصيص</span>
                 </div>
-                
-                <div class="cert-card">
-                    <div class="cert-logo">
-                        <i class="fas fa-network-wired"></i>
-                    </div>
-                    <h4>شهادة أخصائي أمن الشبكات (CNSP)</h4>
-                    <p>شهادة متخصصة في حماية وتأمين البنية التحتية للشبكات</p>
-                    <div class="cert-meta">
-                        <span><i class="fas fa-clock"></i> 90 ساعة تدريب</span>
-                        <span><i class="fas fa-star"></i> صعوبة: متوسطة</span>
-                    </div>
-                    <a href="#contact" class="btn btn-cert">احصل على التفاصيل</a>
-                </div>
-                
-                <div class="cert-card">
-                    <div class="cert-logo">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <h4>شهادة أمن تطبيقات الويب (WASP)</h4>
-                    <p>شهادة متخصصة في اكتشاف وحماية ثغرات تطبيقات الويب</p>
-                    <div class="cert-meta">
-                        <span><i class="fas fa-clock"></i> 85 ساعة تدريب</span>
-                        <span><i class="fas fa-star"></i> صعوبة: متوسطة</span>
-                    </div>
-                    <a href="#contact" class="btn btn-cert">احصل على التفاصيل</a>
-                </div>
-                
-                <div class="cert-card">
-                    <div class="cert-logo">
-                        <i class="fas fa-cloud"></i>
-                    </div>
-                    <h4>شهادة أمن الحوسبة السحابية (CCSP)</h4>
-                    <p>شهادة متقدمة في تأمين البنية التحتية السحابية</p>
-                    <div class="cert-meta">
-                        <span><i class="fas fa-clock"></i> 110 ساعة تدريب</span>
-                        <span><i class="fas fa-star"></i> صعوبة: متقدمة</span>
-                    </div>
-                    <a href="#contact" class="btn btn-cert">احصل على التفاصيل</a>
-                </div>
-            </div>
-            
-            <div class="cert-process">
-                <h3>خطوات <span class="highlight">الحصول على الشهادة</span></h3>
-                <div class="process-steps">
-                    <div class="step">
-                        <div class="step-icon">
-                            <i class="fas fa-clipboard-check"></i>
-                        </div>
-                        <h5>التسجيل والتقييم</h5>
-                        <p>تسجيل في البرنامج وتقييم المستوى الحالي</p>
-                    </div>
-                    
-                    <div class="step">
-                        <div class="step-icon">
-                            <i class="fas fa-book-open"></i>
-                        </div>
-                        <h5>الدراسة والتدريب</h5>
-                        <p>دراسة المواد والتدريب العملي في المعامل</p>
-                    </div>
-                    
-                    <div class="step">
-                        <div class="step-icon">
-                            <i class="fas fa-tasks"></i>
-                        </div>
-                        <h5>التطبيق والمشاريع</h5>
-                        <p>تطبيق المهارات في مشاريع عملية واقعية</p>
-                    </div>
-                    
-                    <div class="step">
-                        <div class="step-icon">
-                            <i class="fas fa-file-signature"></i>
-                        </div>
-                        <h5>الاختبار والتقييم</h5>
-                        <p>اجتياز الاختبارات النهائية والتقييم الشامل</p>
-                    </div>
-                    
-                    <div class="step">
-                        <div class="step-icon">
-                            <i class="fas fa-award"></i>
-                        </div>
-                        <h5>الحصول على الشهادة</h5>
-                        <p>استلام الشهادة المعتمدة دولياً</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- قسم المدونة -->
-    <section id="blog" class="blog">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-badge">
-                    <i class="fas fa-newspaper"></i>
-                    المدونة التقنية
-                </div>
-                <h2 class="section-title">أحدث <span class="highlight">المقالات</span> والتحديثات</h2>
-                <p class="section-subtitle">ابق على اطلاع بأحدث الأخبار والتطورات في عالم الأمن السيبراني</p>
-            </div>
-            
-            <div class="blog-grid">
-                <article class="blog-card featured">
-                    <div class="blog-image">
-                        <div class="image-overlay">
-                            <span class="blog-category">شروحات</span>
-                        </div>
-                        <div class="blog-date">
-                            <span class="day">27</span>
-                            <span class="month">يناير</span>
-                        </div>
-                    </div>
-                    <div class="blog-content">
-                        <h4><a href="#">دليل شامل لاختبار اختراق الشبكات للمبتدئين</a></h4>
-                        <p>تعلم خطوة بخطوة كيفية إجراء اختبار اختراق للشبكات باستخدام أدوات مجانية ومفتوحة المصدر.</p>
-                        <div class="blog-meta">
-                            <span><i class="fas fa-user"></i> أحمد الشمري</span>
-                            <span><i class="fas fa-eye"></i> 1,245 مشاهدة</span>
-                            <span><i class="fas fa-comment"></i> 24 تعليق</span>
-                        </div>
-                        <a href="#" class="blog-read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
-                    </div>
-                </article>
-                
-                <article class="blog-card">
-                    <div class="blog-image">
-                        <div class="image-overlay">
-                            <span class="blog-category">أخبار</span>
-                        </div>
-                        <div class="blog-date">
-                            <span class="day">25</span>
-                            <span class="month">يناير</span>
-                        </div>
-                    </div>
-                    <div class="blog-content">
-                        <h4><a href="#">أحدث ثغرات OWASP Top 10 2026 وكيفية الحماية منها</a></h4>
-                        <p>تعرف على أحدث الثغرات الأمنية في تطبيقات الويب وطرق الحماية منها في إصدار 2026.</p>
-                        <div class="blog-meta">
-                            <span><i class="fas fa-user"></i> نوره العتيبي</span>
-                            <span><i class="fas fa-eye"></i> 892 مشاهدة</span>
-                            <span><i class="fas fa-comment"></i> 18 تعليق</span>
-                        </div>
-                        <a href="#" class="blog-read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
-                    </div>
-                </article>
-                
-                <article class="blog-card">
-                    <div class="blog-image">
-                        <div class="image-overlay">
-                            <span class="blog-category">توجيه مهني</span>
-                        </div>
-                        <div class="blog-date">
-                            <span class="day">23</span>
-                            <span class="month">يناير</span>
-                        </div>
-                    </div>
-                    <div class="blog-content">
-                        <h4><a href="#">كيف تبدأ مسيرتك في الأمن السيبراني بدون خبرة سابقة؟</a></h4>
-                        <p>دليل عملي لبدء مسيرة مهنية ناجحة في مجال الأمن السيبراني من الصفر.</p>
-                        <div class="blog-meta">
-                            <span><i class="fas fa-user"></i> محمد الحربي</span>
-                            <span><i class="fas fa-eye"></i> 1,543 مشاهدة</span>
-                            <span><i class="fas fa-comment"></i> 32 تعليق</span>
-                        </div>
-                        <a href="#" class="blog-read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
-                    </div>
-                </article>
-                
-                <article class="blog-card">
-                    <div class="blog-image">
-                        <div class="image-overlay">
-                            <span class="blog-category">أدوات</span>
-                        </div>
-                        <div class="blog-date">
-                            <span class="day">21</span>
-                            <span class="month">يناير</span>
-                        </div>
-                    </div>
-                    <div class="blog-content">
-                        <h4><a href="#">أفضل 10 أدوات مجانية للهاكر الأخلاقي في 2026</a></h4>
-                        <p>تعرف على أحدث الأدوات المجانية التي يستخدمها محترفو الأمن السيبراني حول العالم.</p>
-                        <div class="blog-meta">
-                            <span><i class="fas fa-user"></i> سعيد القحطاني</span>
-                            <span><i class="fas fa-eye"></i> 2,100 مشاهدة</span>
-                            <span><i class="fas fa-comment"></i> 45 تعليق</span>
-                        </div>
-                        <a href="#" class="blog-read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
-                    </div>
-                </article>
-            </div>
-            
-            <div class="blog-categories">
-                <h3>أقسام <span class="highlight">المدونة</span></h3>
-                <div class="categories-grid">
-                    <a href="#" class="category-card">
-                        <div class="category-icon">
-                            <i class="fas fa-network-wired"></i>
-                        </div>
-                        <h5>اختراق الشبكات</h5>
-                        <p>شروحات وأدوات اختراق الشبكات</p>
-                    </a>
-                    
-                    <a href="#" class="category-card">
-                        <div class="category-icon">
-                            <i class="fas fa-code"></i>
-                        </div>
-                        <h5>اختراق الويب</h5>
-                        <p>ثغرات وتقنيات أمن تطبيقات الويب</p>
-                    </a>
-                    
-                    <a href="#" class="category-card">
-                        <div class="category-icon">
-                            <i class="fab fa-linux"></i>
-                        </div>
-                        <h5>كالي لينكس</h5>
-                        <p>دروس وأدوات نظام كالي لينكس</p>
-                    </a>
-                    
-                    <a href="#" class="category-card">
-                        <div class="category-icon">
-                            <i class="fas fa-brain"></i>
-                        </div>
-                        <h5>الهندسة الاجتماعية</h5>
-                        <p>تقنيات الحماية من الهندسة الاجتماعية</p>
-                    </a>
-                    
-                    <a href="#" class="category-card">
-                        <div class="category-icon">
-                            <i class="fas fa-newspaper"></i>
-                        </div>
-                        <h5>أخبار الأمن</h5>
-                        <p>آخر أخبار التهديدات والثغرات</p>
-                    </a>
-                    
-                    <a href="#" class="category-card">
-                        <div class="category-icon">
-                            <i class="fas fa-graduation-cap"></i>
-                        </div>
-                        <h5>توجيه مهني</h5>
-                        <p>نصائح لتطوير المسيرة المهنية</p>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- قسم الاتصال -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-badge">
+                <div class="feature">
                     <i class="fas fa-headset"></i>
-                    اتصل بنا
-                </div>
-                <h2 class="section-title">كن على <span class="highlight">اتصال</span> معنا</h2>
-                <p class="section-subtitle">نحن هنا للإجابة على استفساراتك وتقديم الحلول المناسبة لاحتياجاتك</p>
-            </div>
-            
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="info-card large">
-                        <div class="info-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="info-content">
-                            <h4>مقرنا الرئيسي</h4>
-                            <p>الرياض، حي النخيل، شارع الملك فهد<br>المملكة العربية السعودية</p>
-                            <a href="#" class="map-link">
-                                <i class="fas fa-directions"></i> افتح في خرائط جوجل
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <div class="info-card">
-                        <div class="info-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <div class="info-content">
-                            <h4>اتصل بنا</h4>
-                            <p>+966 55 123 4567<br>+966 11 234 5678</p>
-                            <a href="tel:+966551234567" class="phone-link">
-                                <i class="fas fa-phone-alt"></i> اتصل الآن
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <div class="info-card">
-                        <div class="info-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="info-content">
-                            <h4>البريد الإلكتروني</h4>
-                            <p>info@ucybers.com<br>support@ucybers.com</p>
-                            <a href="mailto:info@ucybers.com" class="email-link">
-                                <i class="fas fa-paper-plane"></i> أرسل بريداً
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <div class="info-card">
-                        <div class="info-icon">
-                            <i class="fas fa-clock"></i>
-                        </div>
-                        <div class="info-content">
-                            <h4>ساعات العمل</h4>
-                            <p>الأحد - الخميس: 8 ص - 6 م<br>الجمعة - السبت: مغلق</p>
-                            <span class="status online">
-                                <i class="fas fa-circle"></i> متاحون الآن
-                            </span>
-                        </div>
-                    </div>
-                    
-                    <!-- وسائل التواصل الاجتماعي -->
-                    <div class="social-contact">
-                        <h4>تابعنا على</h4>
-                        <div class="social-links">
-                            <a href="#" class="social-link twitter">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <a href="#" class="social-link linkedin">
-                                <i class="fab fa-linkedin-in"></i>
-                            </a>
-                            <a href="#" class="social-link youtube">
-                                <i class="fab fa-youtube"></i>
-                            </a>
-                            <a href="#" class="social-link telegram">
-                                <i class="fab fa-telegram"></i>
-                            </a>
-                            <a href="#" class="social-link github">
-                                <i class="fab fa-github"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="contact-form">
-                    <div class="form-header">
-                        <h3>أرسل لنا رسالة</h3>
-                        <p>سنرد عليك خلال 24 ساعة عمل</p>
-                    </div>
-                    
-                    <form id="contactForm" class="contact-form-content">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="name"><i class="fas fa-user"></i> الاسم الكامل *</label>
-                                <input type="text" id="name" placeholder="أدخل اسمك الكامل" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="email"><i class="fas fa-envelope"></i> البريد الإلكتروني *</label>
-                                <input type="email" id="email" placeholder="أدخل بريدك الإلكتروني" required>
-                            </div>
-                        </div>
-                        
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="phone"><i class="fas fa-phone"></i> رقم الهاتف</label>
-                                <input type="tel" id="phone" placeholder="رقم الهاتف (اختياري)">
-                            </div>
-                            <div class="form-group">
-                                <label for="company"><i class="fas fa-building"></i> المؤسسة</label>
-                                <input type="text" id="company" placeholder="اسم المؤسسة (اختياري)">
-                            </div>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="service"><i class="fas fa-concierge-bell"></i> نوع الخدمة المطلوبة *</label>
-                            <select id="service" required>
-                                <option value="">اختر نوع الخدمة</option>
-                                <option value="pentest">اختبار اختراق</option>
-                                <option value="consulting">استشارات أمنية</option>
-                                <option value="training">تدريب وتطوير</option>
-                                <option value="compliance">تدقيق وامتثال</option>
-                                <option value="incident">استجابة للحوادث</option>
-                                <option value="other">خدمة أخرى</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="budget"><i class="fas fa-money-bill-wave"></i> الميزانية المقترحة</label>
-                            <select id="budget">
-                                <option value="">اختر نطاق الميزانية</option>
-                                <option value="1000-5000">1,000 - 5,000 ر.س</option>
-                                <option value="5000-15000">5,000 - 15,000 ر.س</option>
-                                <option value="15000-30000">15,000 - 30,000 ر.س</option>
-                                <option value="30000+">أكثر من 30,000 ر.س</option>
-                                <option value="custom">مخصص - سأتصل لمناقشة</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="message"><i class="fas fa-comment-dots"></i> تفاصيل الطلب *</label>
-                            <textarea id="message" rows="6" placeholder="صف احتياجاتك بالتفصيل..." required></textarea>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label class="checkbox-label">
-                                <input type="checkbox" required>
-                                <span>أوافق على سياسة الخصوصية وشروط الخدمة</span>
-                            </label>
-                        </div>
-                        
-                        <button type="submit" class="btn btn-primary btn-lg btn-block">
-                            <i class="fas fa-paper-plane"></i> إرسال الطلب
-                        </button>
-                    </form>
+                    <span>دعم فني مستمر وتحديثات دورية</span>
                 </div>
             </div>
-            
-            <!-- خريطة -->
-            <div class="contact-map">
-                <div class="map-placeholder">
-                    <div class="map-overlay">
-                        <h4>موقعنا على الخريطة</h4>
-                        <p>الرياض، حي النخيل، شارع الملك فهد</p>
-                        <a href="#" class="btn btn-secondary">
-                            <i class="fas fa-directions"></i> احصل على الاتجاهات
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- التذييل -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <a href="#home" class="footer-logo">
-                        <div class="logo-icon">
-                            <i class="fas fa-shield-alt"></i>
-                        </div>
-                        <div class="logo-text">
-                            <span class="logo-main">UCYBERS</span>
-                            <span class="logo-sub">Security Solutions</span>
-                        </div>
-                    </a>
-                    <p class="footer-about">
-                        شركة رائدة في مجال الأمن السيبراني، نقدم حلولاً متكاملة وشاملة لحماية البيانات والأنظمة من التهديدات الإلكترونية المتطورة.
-                    </p>
-                    <div class="footer-social">
-                        <a href="#" class="social-icon">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" class="social-icon">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a href="#" class="social-icon">
-                            <i class="fab fa-youtube"></i>
-                        </a>
-                        <a href="#" class="social-icon">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="#" class="social-icon">
-                            <i class="fab fa-github"></i>
-                        </a>
+        <div class="vision-box">
+            <h3><i class="fas fa-eye"></i> رؤيتي</h3>
+            <p>"أؤمن بأن الأمن السيبراني الفعال ليس مجرد حاجز دفاعي، بل نظام ذكي يتعلم ويتكيف ويتنبأ، وهذا بالضبط ما أسعى لبنائه: أنظمة أمنية حية تنمو مع نمو تهديدات العالم الرقمي."</p>
+        </div>
+
+        <section class="section">
+            <h2 class="section-title"><i class="fas fa-envelope"></i> التواصل المهني الآمن</h2>
+            <p>لضمان أعلى معايير الخصوصية والأمان التي أطبقها في عملي، أتاح الطرق التالية للتواصل:</p>
+            
+            <div class="contact-methods">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
                     </div>
+                    <h3>البريد الإلكتروني</h3>
+                    <p>للحصول على رد رسمي ومفصل</p>
+                    <button class="contact-btn" onclick="showEmail()">تواصل عبر البريد</button>
                 </div>
                 
-                <div class="footer-col">
-                    <h4>روابط سريعة</h4>
-                    <ul class="footer-links">
-                        <li><a href="#home"><i class="fas fa-chevron-left"></i> الرئيسية</a></li>
-                        <li><a href="#services"><i class="fas fa-chevron-left"></i> خدماتنا</a></li>
-                        <li><a href="#courses"><i class="fas fa-chevron-left"></i> الدورات</a></li>
-                        <li><a href="#academy"><i class="fas fa-chevron-left"></i> الأكاديمية</a></li>
-                        <li><a href="#certifications"><i class="fas fa-chevron-left"></i> الشهادات</a></li>
-                        <li><a href="#blog"><i class="fas fa-chevron-left"></i> المدونة</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-col">
-                    <h4>خدماتنا</h4>
-                    <ul class="footer-links">
-                        <li><a href="#pentest"><i class="fas fa-chevron-left"></i> اختبار الاختراق</a></li>
-                        <li><a href="#consulting"><i class="fas fa-chevron-left"></i> استشارات أمنية</a></li>
-                        <li><a href="#training"><i class="fas fa-chevron-left"></i> تدريب وتطوير</a></li>
-                        <li><a href="#compliance"><i class="fas fa-chevron-left"></i> تدقيق PCI DSS</a></li>
-                        <li><a href="#network"><i class="fas fa-chevron-left"></i> اختراق الشبكات</a></li>
-                        <li><a href="#web"><i class="fas fa-chevron-left"></i> اختراق الويب</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-col">
-                    <h4>اشترك في النشرة البريدية</h4>
-                    <p>ابق على اطلاع بأحدث الدورات والعروض والمقالات التقنية</p>
-                    <form class="newsletter-form">
-                        <div class="input-group">
-                            <input type="email" placeholder="بريدك الإلكتروني" required>
-                            <button type="submit">
-                                <i class="fas fa-paper-plane"></i>
-                            </button>
-                        </div>
-                    </form>
-                    <div class="footer-contact">
-                        <p><i class="fas fa-phone"></i> +966 55 123 4567</p>
-                        <p><i class="fas fa-envelope"></i> info@ucybers.com</p>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fab fa-linkedin"></i>
                     </div>
+                    <h3>LinkedIn</h3>
+                    <p>للتواصل الاحترافي والشبكات</p>
+                    <button class="contact-btn" onclick="showLinkedIn()">زيارة LinkedIn</button>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h3>الاجتماعات</h3>
+                    <p>اجتماعات افتراضية مسبقة المواعيد</p>
+                    <button class="contact-btn" onclick="scheduleMeeting()">جدولة اجتماع</button>
                 </div>
             </div>
             
-            <div class="footer-bottom">
-                <div class="footer-copyright">
-                    <p>&copy; 2026 UCYBERS. جميع الحقوق محفوظة.</p>
-                    <p>تم التطوير بواسطة فريق UCYBERS التقني</p>
-                </div>
-                <div class="footer-legal">
-                    <a href="#">سياسة الخصوصية</a>
-                    <a href="#">شروط الاستخدام</a>
-                    <a href="#">سياسة الاسترجاع</a>
-                    <a href="#">خريطة الموقع</a>
-                </div>
+            <div style="margin-top: 30px; text-align: center;">
+                <p><i class="fas fa-lock"></i> <strong>الخصوصية والأمان أولوية</strong> - نلتزم بأعلى معايير حماية البيانات في جميع تعاملاتنا.</p>
             </div>
-        </div>
-    </footer>
+        </section>
 
-    <!-- أزرار المساعدة -->
-    <div class="help-buttons">
-        <a href="tel:+966551234567" class="help-button phone">
-            <i class="fas fa-phone"></i>
-            <span class="help-text">اتصل بنا</span>
-        </a>
-        
-        <a href="https://wa.me/966551234567" class="help-button whatsapp" target="_blank">
-            <i class="fab fa-whatsapp"></i>
-            <span class="help-text">واتساب</span>
-        </a>
-        
-        <button class="help-button chat" id="chatButton">
-            <i class="fas fa-comment-dots"></i>
-            <span class="help-text">الدردشة</span>
-        </button>
-        
-        <button class="scroll-top" id="scrollTop">
-            <i class="fas fa-chevron-up"></i>
-        </button>
+        <footer class="footer">
+            <p>© 2024 سديم | خبيرة الأمن السيبراني والذكاء الاصطناعي. جميع الحقوق محفوظة.</p>
+            <p>مصمم بدقة ليعكس الاحترافية والتخصص في مجال الأمن السيبراني المتقدم</p>
+        </footer>
     </div>
 
-    <!-- نموذج الدردشة -->
-    <div class="chat-modal" id="chatModal">
-        <div class="chat-header">
-            <div class="chat-title">
-                <i class="fas fa-comments"></i>
-                <h4>الدردشة المباشرة</h4>
-            </div>
-            <button class="chat-close" id="chatClose">
-                <i class="fas fa-times"></i>
-            </button>
-        </div>
-        <div class="chat-body">
-            <div class="chat-messages">
-                <div class="message bot">
-                    <div class="message-content">
-                        <p>مرحباً! كيف يمكنني مساعدتك اليوم؟</p>
-                    </div>
-                    <div class="message-time">الآن</div>
-                </div>
-            </div>
-            <div class="chat-input">
-                <input type="text" placeholder="اكتب رسالتك هنا..." id="chatInput">
-                <button id="chatSend">
-                    <i class="fas fa-paper-plane"></i>
-                </button>
-            </div>
-        </div>
-    </div>
-
-    <script src="script.js"></script>
+    <script>
+        // وظائف للتواصل
+        function showEmail() {
+            alert("يرجى التواصل عبر البريد الإلكتروني المهني:\ncybersecurity.expert@example.com");
+        }
+        
+        function showLinkedIn() {
+            alert("يمكنك زيارة ملفي على LinkedIn عبر البحث عن: سديم للأمن السيبراني");
+        }
+        
+        function scheduleMeeting() {
+            alert("لجدولة اجتماع، يرجى إرسال بريد إلكتروني مع تحديد طبيعة الاستشارة.");
+        }
+        
+        // تأثيرات تفاعلية بسيطة
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.service-card, .project-card');
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-10px)';
+                    this.style.transition = '0.3s ease';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                });
+            });
+        });
+    </script>
 </body>
 </html>
