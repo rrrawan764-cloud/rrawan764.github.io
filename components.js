@@ -21,7 +21,7 @@ const components = {
                 <div class="cyber-card">
                     <i class="fas fa-terminal" style="color:var(--neon-blue)"></i>
                     <h3>البرمجة والتطوير</h3>
-                    <p>أدوات وسكربتات متطورة بـ Python و JS.</p>
+                    <p>بناء أدوات وسكربتات متطورة بـ Python و JS.</p>
                 </div>
                 <div class="cyber-card">
                     <i class="fab fa-linux" style="color:var(--neon-blue)"></i>
@@ -32,5 +32,22 @@ const components = {
         </div>
     `,
     projects: `<div class="cyber-card"><h3>مشروع تأمين الأنظمة</h3><p>تطوير بروتوكولات حماية متكاملة للبنى التحتية.</p></div>`,
-    contact: `<div class="cyber-card" style="text-align:center;"><h3>محطة التواصل</h3><p>EMAIL: info@ucybers.com</p></div>`
+    contact: `
+        <div class="content-animate" style="text-align:center;">
+            <h2 style="color:var(--neon-red); margin-bottom:25px;">[ محطة التواصل الآمن ]</h2>
+            <div class="grid-layout" style="display: flex; flex-direction: column; align-items: center; gap: 20px;">
+                <div class="cyber-card" style="width: 100%; max-width: 500px;">
+                    <i class="fas fa-envelope" style="color:var(--neon-blue); font-size: 1.5rem;"></i>
+                    <h4 style="margin-top:10px;">البريد الإلكتروني</h4>
+                    <p style="color:var(--neon-blue); font-weight: bold;">Rrrawan764@gmail.com</p>
+                </div>
+                <div class="cyber-card" style="width: 100%; max-width: 500px;">
+                    <i class="fas fa-phone-alt" style="color:var(--neon-blue); font-size: 1.5rem;"></i>
+                    <h4 style="margin-top:10px;">رقم الجوال</h4>
+                    <p dir="ltr" style="color:var(--neon-blue); font-weight: bold;">+966 54 969 0896</p>
+                </div>
+            </div>
+            <p style="margin-top:30px; font-size: 0.9rem; color: #777;">* يتم التعامل مع جميع الطلبات بسرية تامة وفق بروتوكولات RAWAN TECH الأمنية.</p>
+        </div>
+    `
 };
