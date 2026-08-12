@@ -3,42 +3,1001 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RAWAN TECH | Cyber Security & Software Architect</title>
+    <title>RAWAN TECH | البرمجيات | خبيرة Linux | حلول تقنية متكاملة</title>
+    <meta name="description" content="RAWAN TECH - خبيرة في البرمجيات و Linux، نقدم خدمات تقنية متكاملة: برمجة شاشات السيارات، تطوير المواقع، صيانة الجوالات، وحلول أمنية">
+    <meta name="keywords" content="رawan, برمجيات, Linux, خبيرة لينكس, برمجة سيارات, تطوير مواقع, صيانة جوالات, حلول تقنية">
+    <meta name="author" content="RAWAN ALHRBI">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="RAWAN TECH | البرمجيات | خبيرة Linux">
+    <meta property="og:description" content="حلول تقنية متكاملة من خبيرة في البرمجيات و Linux">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://rawantech.com">
+    
+    <!-- روابط CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
 </head>
-<body oncontextmenu="return false;">
-    <div class="stars-background"></div> <div class="cyber-overlay"></div>
-    <div class="scanlines"></div>
-
-    <div class="container">
-        <header class="main-header">
-            <div class="logo-wrapper">
-                <h1 class="glitch" data-text="RAWAN TECH">RAWAN TECH</h1>
-                <div class="status-bar"><span class="pulse"></span> ONLINE_SECURE</div>
-            </div>
-            <p class="cyber-subtitle" data-decode>الأمن السيبراني | هندسة البرمجيات | خبيرة Linux</p>
-        </header>
-
-        <nav class="cyber-nav">
-            <button class="nav-btn active" onclick="loadComponent('about')">01. عني</button>
-            <button class="nav-btn" onclick="loadComponent('services')">02. الخدمات</button>
-            <button class="nav-btn" onclick="loadComponent('projects')">03. المشاريع</button>
-            <button class="nav-btn" onclick="loadComponent('contact')">04. تواصل</button>
-        </nav>
-
-        <main id="dynamic-content" class="main-frame">
-            </main>
-
-        <div class="action-footer">
-            <a href="https://wa.me/yournumber" class="whatsapp-btn">
-                <i class="fab fa-whatsapp"></i> whatsapp-btn
+<body>
+    <!-- شريط التنقل -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="#home" class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+                <div class="logo-text">
+                    <span class="logo-main">RAWAN <span>TECH</span></span>
+                    <span class="logo-sub">خبيرة برمجيات &amp; Linux</span>
+                </div>
             </a>
+            
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="nav-link active"><i class="fas fa-home"></i> الرئيسية</a></li>
+                <li><a href="#about" class="nav-link"><i class="fas fa-user"></i> عني</a></li>
+                <li class="nav-dropdown">
+                    <a href="#services" class="nav-link"><i class="fas fa-concierge-bell"></i> الخدمات <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="#car-services"><i class="fas fa-car"></i> خدمات السيارات</a>
+                        <a href="#internet-services"><i class="fas fa-globe"></i> خدمات الإنترنت</a>
+                        <a href="#mobile-services"><i class="fas fa-mobile-alt"></i> خدمات الجوالات</a>
+                        <a href="#software-services"><i class="fas fa-laptop-code"></i> خدمات البرمجيات</a>
+                        <a href="#linux-services"><i class="fab fa-linux"></i> خدمات Linux</a>
+                    </div>
+                </li>
+                <li><a href="#projects" class="nav-link"><i class="fas fa-project-diagram"></i> المشاريع</a></li>
+                <li><a href="#contact" class="nav-link"><i class="fas fa-phone"></i> تواصل</a></li>
+            </ul>
+            
+            <div class="nav-actions">
+                <a href="tel:+966551234567" class="nav-phone">
+                    <i class="fas fa-phone"></i>
+                    <span>+966 55 123 4567</span>
+                </a>
+                <a href="#contact" class="btn btn-primary btn-small">
+                    <i class="fas fa-paper-plane"></i> تواصل معي
+                </a>
+                <button class="menu-toggle" aria-label="قائمة الهاتف" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
         </div>
+    </nav>
 
-        <footer class="rights-footer">
-            <p>جميع الحقوق محفوظة لـ <strong>RAWAN ALHRBI</strong> &copy; 2026</p>
-        </footer>
+    <!-- القسم الرئيسي -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="cyber-grid"></div>
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content animate__animated animate__fadeInUp">
+                <div class="hero-badge">
+                    <i class="fas fa-star"></i>
+                    <span>خبيرة برمجيات &amp; Linux</span>
+                </div>
+                <h1 class="hero-title">
+                    <span class="highlight">RAWAN</span> TECH
+                    <br>حلول <span class="highlight">تقنية</span> متكاملة
+                </h1>
+                <p class="hero-description">
+                    أقدم حلولاً تقنية متكاملة في مجالات البرمجيات، Linux، برمجة السيارات، تطوير المواقع، وصيانة الأجهزة. خبرة تمتد لسنوات في تقديم خدمات احترافية لعملائي.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#services" class="btn btn-primary btn-lg">
+                        <i class="fas fa-search"></i> استكشف خدماتي
+                        <span class="btn-arrow"><i class="fas fa-arrow-left"></i></span>
+                    </a>
+                    <a href="#contact" class="btn btn-secondary btn-lg">
+                        <i class="fas fa-comments"></i> تواصل معي
+                    </a>
+                </div>
+                
+                <div class="hero-features">
+                    <div class="feature">
+                        <i class="fas fa-code"></i>
+                        <span>خبيرة برمجيات</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fab fa-linux"></i>
+                        <span>متخصصة Linux</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-car"></i>
+                        <span>برمجة سيارات</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-image animate__animated animate__fadeIn">
+                <div class="cyber-terminal">
+                    <div class="terminal-header">
+                        <div class="terminal-dots">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <span class="terminal-title">RAWAN TECH Terminal</span>
+                    </div>
+                    <div class="terminal-body">
+                        <div class="terminal-line">
+                            <span class="prompt">$</span>
+                            <span class="command">whoami</span>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="output">رawan - خبيرة برمجيات و Linux</span>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="prompt">$</span>
+                            <span class="command">system_status</span>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="output">✓ جميع الأنظمة تعمل بكفاءة</span>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="output">✓ جاهزة لتقديم الحلول</span>
+                        </div>
+                        <div class="terminal-line blink">
+                            <span class="prompt">$</span>
+                            <span class="cursor">_</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- إحصائيات -->
+        <div class="hero-stats">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3 class="stat-number" data-count="150">0</h3>
+                            <p class="stat-text">مشروع برمجي</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-car"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3 class="stat-number" data-count="200">0</h3>
+                            <p class="stat-text">سيارة مبرمجة</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3 class="stat-number" data-count="500">0</h3>
+                            <p class="stat-text">جهاز تم صيانته</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3 class="stat-number" data-count="300">0</h3>
+                            <p class="stat-text">عميل سعيد</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم عني -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <i class="fas fa-user"></i>
+                    من أنا
+                </div>
+                <h2 class="section-title">رawan <span class="highlight">الحر بي</span></h2>
+                <p class="section-subtitle">خبيرة برمجيات ومتخصصة في Linux، أقدم حلولاً تقنية متكاملة</p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="about-placeholder">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <h3>خبيرة برمجيات &amp; Linux</h3>
+                    <p>
+                        أنا <strong>رawan الحر بي</strong>، خبيرة في مجال البرمجيات و Linux، أقدم خدمات تقنية متكاملة تشمل برمجة السيارات، تطوير المواقع والتطبيقات، صيانة الأجهزة، وحلول Linux المتقدمة.
+                    </p>
+                    <p>
+                        أمتلك خبرة واسعة في التعامل مع مختلف التقنيات وأسعى دائماً لتقديم أفضل الحلول لعملائي بأعلى جودة.
+                    </p>
+                    <div class="about-skills">
+                        <div class="skill-tag"><i class="fab fa-linux"></i> Linux</div>
+                        <div class="skill-tag"><i class="fas fa-code"></i> برمجة</div>
+                        <div class="skill-tag"><i class="fas fa-car"></i> برمجة سيارات</div>
+                        <div class="skill-tag"><i class="fas fa-globe"></i> تطوير ويب</div>
+                        <div class="skill-tag"><i class="fas fa-mobile-alt"></i> صيانة أجهزة</div>
+                        <div class="skill-tag"><i class="fas fa-shield-alt"></i> أمن معلومات</div>
+                    </div>
+                    <a href="#contact" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i> تواصل معي
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم الخدمات -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <i class="fas fa-star"></i>
+                    خدماتي
+                </div>
+                <h2 class="section-title">خدمات <span class="highlight">احترافية</span></h2>
+                <p class="section-subtitle">أقدم مجموعة متكاملة من الخدمات التقنية المصممة خصيصاً لاحتياجاتك</p>
+            </div>
+            
+            <!-- خدمات السيارات -->
+            <div class="service-category" id="car-services">
+                <div class="category-header">
+                    <div class="category-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h3>خدمات السيارات المتخصصة</h3>
+                    <p>حلول تقنية متطورة لسيارتك</p>
+                </div>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-header">
+                            <div class="service-icon">
+                                <i class="fas fa-microchip"></i>
+                            </div>
+                            <span class="service-badge">الأكثر طلباً</span>
+                        </div>
+                        <h4>برمجة شاشات السيارات وتحويلها ديجيتال</h4>
+                        <p>تحويل شاشة سيارتك إلى نظام ديجيتال متطور، برمجة متقدمة، دعم كامل للماركات الحديثة.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> تحويل الشاشة إلى ديجيتال</li>
+                            <li><i class="fas fa-check"></i> برمجة أنظمة المعلومات والترفيه</li>
+                            <li><i class="fas fa-check"></i> دعم Apple CarPlay و Android Auto</li>
+                            <li><i class="fas fa-check"></i> تحديث خرائط ونظام الملاحة</li>
+                        </ul>
+                        <div class="service-footer">
+                            <div class="service-price">
+                                <span class="price">تبدأ من 1,499 ر.س</span>
+                            </div>
+                            <a href="#contact" class="btn btn-service">
+                                <i class="fas fa-calendar-check"></i> احجز الآن
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-header">
+                            <div class="service-icon">
+                                <i class="fas fa-syringe"></i>
+                            </div>
+                            <span class="service-badge">جديد</span>
+                        </div>
+                        <h4>قراءة أعطال السيارات</h4>
+                        <p>فحص شامل باستخدام أحدث أجهزة OBD، قراءة وتحليل الأعطال، مسح الأخطاء.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> قراءة أكواد الأعطال</li>
+                            <li><i class="fas fa-check"></i> تحليل بيانات المحرك</li>
+                            <li><i class="fas fa-check"></i> مسح الأعطال وإعادة الضبط</li>
+                            <li><i class="fas fa-check"></i> تقرير مفصل عن حالة السيارة</li>
+                        </ul>
+                        <div class="service-footer">
+                            <div class="service-price">
+                                <span class="price">تبدأ من 399 ر.س</span>
+                            </div>
+                            <a href="#contact" class="btn btn-service">
+                                <i class="fas fa-calendar-check"></i> احجز الآن
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-header">
+                            <div class="service-icon">
+                                <i class="fas fa-key"></i>
+                            </div>
+                        </div>
+                        <h4>برمجة مفاتيح السيارات</h4>
+                        <p>برمجة مفاتيح جديدة، نسخ مفاتيح ذكية، إصلاح مشاكل المفاتيح.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> برمجة مفاتيح جديدة</li>
+                            <li><i class="fas fa-check"></i> نسخ مفاتيح ذكية</li>
+                            <li><i class="fas fa-check"></i> إصلاح مشاكل المفاتيح</li>
+                            <li><i class="fas fa-check"></i> برمجة أنظمة الدخول الذكي</li>
+                        </ul>
+                        <div class="service-footer">
+                            <div class="service-price">
+                                <span class="price">تبدأ من 499 ر.س</span>
+                            </div>
+                            <a href="#contact" class="btn btn-service">
+                                <i class="fas fa-calendar-check"></i> احجز الآن
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- خدمات الإنترنت -->
+            <div class="service-category" id="internet-services">
+                <div class="category-header">
+                    <div class="category-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>خدمات الإنترنت والتطوير الرقمي</h3>
+                    <p>حلول رقمية متكاملة</p>
+                </div>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-header">
+                            <div class="service-icon">
+                                <i class="fas fa-cubes"></i>
+                            </div>
+                            <span class="service-badge">شائع</span>
+                        </div>
+                        <h4>بناء منصات رقمية</h4>
+                        <p>تصميم وتطوير منصات رقمية متكاملة، بوابات إلكترونية، أنظمة إدارة محتوى.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> منصات إلكترونية متكاملة</li>
+                            <li><i class="fas fa-check"></i> أنظمة إدارة محتوى مخصصة</li>
+                            <li><i class="fas fa-check"></i> بوابات دفع وتجارة إلكترونية</li>
+                            <li><i class="fas fa-check"></i> تحسين تجربة المستخدم</li>
+                        </ul>
+                        <div class="service-footer">
+                            <div class="service-price">
+                                <span class="price">تبدأ من 4,999 ر.س</span>
+                            </div>
+                            <a href="#contact" class="btn btn-service">
+                                <i class="fas fa-cubes"></i> اطلب الآن
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-header">
+                            <div class="service-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                        </div>
+                        <h4>تطوير المواقع والتطبيقات</h4>
+                        <p>تصميم وتطوير مواقع وتطبيقات احترافية، واجهات مستخدم جذابة.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> مواقع ويب احترافية</li>
+                            <li><i class="fas fa-check"></i> تطبيقات موبايل</li>
+                            <li><i class="fas fa-check"></i> واجهات مستخدم تفاعلية</li>
+                            <li><i class="fas fa-check"></i> تحسين محركات البحث</li>
+                        </ul>
+                        <div class="service-footer">
+                            <div class="service-price">
+                                <span class="price">تبدأ من 2,999 ر.س</span>
+                            </div>
+                            <a href="#contact" class="btn btn-service">
+                                <i class="fas fa-code"></i> اطلب الآن
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-header">
+                            <div class="service-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <span class="service-badge">حماية</span>
+                        </div>
+                        <h4>حماية الشبكات</h4>
+                        <p>تأمين الشبكات والبنية التحتية، جدران حماية متقدمة، كشف التهديدات.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> جدران حماية متقدمة</li>
+                            <li><i class="fas fa-check"></i> كشف التهديدات</li>
+                            <li><i class="fas fa-check"></i> حماية من الهجمات</li>
+                            <li><i class="fas fa-check"></i> مراقبة أمنية 24/7</li>
+                        </ul>
+                        <div class="service-footer">
+                            <div class="service-price">
+                                <span class="price">تبدأ من 3,499 ر.س</span>
+                            </div>
+                            <a href="#contact" class="btn btn-service">
+                                <i class="fas fa-shield-alt"></i> اطلب الآن
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- خدمات الجوالات -->
+            <div class="service-category" id="mobile-services">
+                <div class="category-header">
+                    <div class="category-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>خدمات صيانة الجوالات والأجهزة</h3>
+                    <p>تصليح متخصص لجميع الأجهزة الذكية</p>
+                </div>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-header">
+                            <div class="service-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <span class="service-badge">الأكثر طلباً</span>
+                        </div>
+                        <h4>تصليح الجوالات</h4>
+                        <p>تصليح جميع أنواع الجوالات، استبدال شاشات وبطاريات، تصليح أعطال البرامج.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> استبدال شاشات وبطاريات</li>
+                            <li><i class="fas fa-check"></i> تصليح أعطال البرامج</li>
+                            <li><i class="fas fa-check"></i> حل مشاكل الشحن والصوت</li>
+                            <li><i class="fas fa-check"></i> فتح سماعات وقارئ بصمة</li>
+                        </ul>
+                        <div class="service-footer">
+                            <div class="service-price">
+                                <span class="price">تبدأ من 199 ر.س</span>
+                            </div>
+                            <a href="#contact" class="btn btn-service">
+                                <i class="fas fa-tools"></i> احجز الآن
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-header">
+                            <div class="service-icon">
+                                <i class="fas fa-gamepad"></i>
+                            </div>
+                            <span class="service-badge">جديد</span>
+                        </div>
+                        <h4>تصليح السوني والأجهزة المعدلة</h4>
+                        <p>تصليح أجهزة السوني بجميع إصداراتها، تصليح الأجهزة المعدلة.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> تصليح جميع إصدارات السوني</li>
+                            <li><i class="fas fa-check"></i> تركيب أنظمة تشغيل</li>
+                            <li><i class="fas fa-check"></i> معالجة مشاكل الأداء</li>
+                            <li><i class="fas fa-check"></i> تصليح أجهزة معدلة</li>
+                        </ul>
+                        <div class="service-footer">
+                            <div class="service-price">
+                                <span class="price">تبدأ من 299 ر.س</span>
+                            </div>
+                            <a href="#contact" class="btn btn-service">
+                                <i class="fas fa-gamepad"></i> احجز الآن
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-header">
+                            <div class="service-icon">
+                                <i class="fas fa-laptop"></i>
+                            </div>
+                        </div>
+                        <h4>تصليح أعطال اللابتوب</h4>
+                        <p>تصليح جميع أعطال اللابتوب، استبدال قطع غيار، تصليح شاشات وكيبورد.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> استبدال قطع غيار</li>
+                            <li><i class="fas fa-check"></i> تصليح شاشات وكيبورد</li>
+                            <li><i class="fas fa-check"></i> معالجة مشاكل الأداء</li>
+                            <li><i class="fas fa-check"></i> تصليح البطارية والشحن</li>
+                        </ul>
+                        <div class="service-footer">
+                            <div class="service-price">
+                                <span class="price">تبدأ من 249 ر.س</span>
+                            </div>
+                            <a href="#contact" class="btn btn-service">
+                                <i class="fas fa-laptop"></i> احجز الآن
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- خدمات البرمجيات -->
+            <div class="service-category" id="software-services">
+                <div class="category-header">
+                    <div class="category-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>خدمات البرمجيات</h3>
+                    <p>حلول برمجية متكاملة</p>
+                </div>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-header">
+                            <div class="service-icon">
+                                <i class="fas fa-database"></i>
+                            </div>
+                        </div>
+                        <h4>تطوير أنظمة قواعد البيانات</h4>
+                        <p>تصميم وتطوير قواعد بيانات متكاملة، تحسين الأداء، وإدارة البيانات بكفاءة.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> تصميم قواعد بيانات</li>
+                            <li><i class="fas fa-check"></i> تحسين الأداء</li>
+                            <li><i class="fas fa-check"></i> إدارة البيانات</li>
+                            <li><i class="fas fa-check"></i> نسخ احتياطي واستعادة</li>
+                        </ul>
+                        <div class="service-footer">
+                            <div class="service-price">
+                                <span class="price">تبدأ من 3,999 ر.س</span>
+                            </div>
+                            <a href="#contact" class="btn btn-service">
+                                <i class="fas fa-database"></i> اطلب الآن
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-header">
+                            <div class="service-icon">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                        </div>
+                        <h4>أتمتة العمليات</h4>
+                        <p>حلول أتمتة متكاملة للعمليات، توفير الوقت والجهد، وزيادة الإنتاجية.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> أتمتة المهام المتكررة</li>
+                            <li><i class="fas fa-check"></i> تحسين سير العمل</li>
+                            <li><i class="fas fa-check"></i> توفير الوقت والجهد</li>
+                            <li><i class="fas fa-check"></i> زيادة الإنتاجية</li>
+                        </ul>
+                        <div class="service-footer">
+                            <div class="service-price">
+                                <span class="price">تبدأ من 2,499 ر.س</span>
+                            </div>
+                            <a href="#contact" class="btn btn-service">
+                                <i class="fas fa-robot"></i> اطلب الآن
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-header">
+                            <div class="service-icon">
+                                <i class="fas fa-cloud-upload-alt"></i>
+                            </div>
+                        </div>
+                        <h4>حلول الحوسبة السحابية</h4>
+                        <p>استضافة وتطوير حلول سحابية متكاملة، إدارة الخوادم، وضمان التوفر العالي.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> استضافة سحابية</li>
+                            <li><i class="fas fa-check"></i> إدارة الخوادم</li>
+                            <li><i class="fas fa-check"></i> توفر عالي</li>
+                            <li><i class="fas fa-check"></i> أمان سحابي</li>
+                        </ul>
+                        <div class="service-footer">
+                            <div class="service-price">
+                                <span class="price">تبدأ من 5,999 ر.س</span>
+                            </div>
+                            <a href="#contact" class="btn btn-service">
+                                <i class="fas fa-cloud-upload-alt"></i> اطلب الآن
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- خدمات Linux -->
+            <div class="service-category" id="linux-services">
+                <div class="category-header">
+                    <div class="category-icon">
+                        <i class="fab fa-linux"></i>
+                    </div>
+                    <h3>خدمات Linux المتخصصة</h3>
+                    <p>حلول متكاملة لأنظمة Linux</p>
+                </div>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-header">
+                            <div class="service-icon">
+                                <i class="fas fa-server"></i>
+                            </div>
+                            <span class="service-badge">خبرة</span>
+                        </div>
+                        <h4>إدارة خوادم Linux</h4>
+                        <p>إدارة وتكوين خوادم Linux، تحسين الأداء، وضمان الأمان والاستقرار.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> تكوين الخوادم</li>
+                            <li><i class="fas fa-check"></i> تحسين الأداء</li>
+                            <li><i class="fas fa-check"></i> أمان الخوادم</li>
+                            <li><i class="fas fa-check"></i> مراقبة مستمرة</li>
+                        </ul>
+                        <div class="service-footer">
+                            <div class="service-price">
+                                <span class="price">تبدأ من 4,999 ر.س</span>
+                            </div>
+                            <a href="#contact" class="btn btn-service">
+                                <i class="fas fa-server"></i> اطلب الآن
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-header">
+                            <div class="service-icon">
+                                <i class="fas fa-terminal"></i>
+                            </div>
+                        </div>
+                        <h4>برمجة Bash &amp; Scripting</h4>
+                        <p>تطوير سكربتات Bash لأتمتة المهام، إدارة الأنظمة، وحل المشكلات.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> سكربتات Bash</li>
+                            <li><i class="fas fa-check"></i> أتمتة المهام</li>
+                            <li><i class="fas fa-check"></i> إدارة الأنظمة</li>
+                            <li><i class="fas fa-check"></i> حل المشكلات</li>
+                        </ul>
+                        <div class="service-footer">
+                            <div class="service-price">
+                                <span class="price">تبدأ من 1,999 ر.س</span>
+                            </div>
+                            <a href="#contact" class="btn btn-service">
+                                <i class="fas fa-terminal"></i> اطلب الآن
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-header">
+                            <div class="service-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                        </div>
+                        <h4>أمن Linux</h4>
+                        <p>تأمين أنظمة Linux، اكتشاف الثغرات، وإعداد جدران الحماية المتقدمة.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> تأمين الأنظمة</li>
+                            <li><i class="fas fa-check"></i> اكتشاف الثغرات</li>
+                            <li><i class="fas fa-check"></i> جدران حماية</li>
+                            <li><i class="fas fa-check"></i> تدقيق أمني</li>
+                        </ul>
+                        <div class="service-footer">
+                            <div class="service-price">
+                                <span class="price">تبدأ من 3,999 ر.س</span>
+                            </div>
+                            <a href="#contact" class="btn btn-service">
+                                <i class="fas fa-shield-alt"></i> اطلب الآن
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم المشاريع -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <i class="fas fa-project-diagram"></i>
+                    مشاريعي
+                </div>
+                <h2 class="section-title">أحدث <span class="highlight">المشاريع</span></h2>
+                <p class="section-subtitle">نماذج من المشاريع التي قمت بتنفيذها لعملائي</p>
+            </div>
+            
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <div class="project-content">
+                        <h4>برمجة شاشات سيارات فاخرة</h4>
+                        <p>تحويل شاشات 10 سيارات فاخرة إلى نظام ديجيتال متطور مع Apple CarPlay.</p>
+                        <div class="project-tags">
+                            <span>برمجة سيارات</span>
+                            <span>ديجيتال</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <div class="project-content">
+                        <h4>منصة تجارة إلكترونية</h4>
+                        <p>تطوير منصة تجارة إلكترونية متكاملة مع نظام دفع آمن.</p>
+                        <div class="project-tags">
+                            <span>تطوير ويب</span>
+                            <span>تجارة إلكترونية</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fab fa-linux"></i>
+                    </div>
+                    <div class="project-content">
+                        <h4>تأمين خوادم Linux</h4>
+                        <p>تأمين 5 خوادم Linux لشركة تقنية، مع إعداد جدران حماية متقدمة.</p>
+                        <div class="project-tags">
+                            <span>Linux</span>
+                            <span>أمن معلومات</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <div class="project-content">
+                        <h4>تطبيق جوال للخدمات</h4>
+                        <p>تطوير تطبيق جوال متكامل باللغتين العربية والإنجليزية.</p>
+                        <div class="project-tags">
+                            <span>تطبيقات</span>
+                            <span>موبايل</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم الاتصال -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <i class="fas fa-headset"></i>
+                    تواصل معي
+                </div>
+                <h2 class="section-title">كن على <span class="highlight">اتصال</span></h2>
+                <p class="section-subtitle">أنا هنا للإجابة على استفساراتك وتقديم الحلول المناسبة</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-card large">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>المقر</h4>
+                            <p>المملكة العربية السعودية</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>اتصل بي</h4>
+                            <p>+966 55 123 4567</p>
+                            <a href="tel:+966551234567" class="phone-link">
+                                <i class="fas fa-phone-alt"></i> اتصل الآن
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>البريد الإلكتروني</h4>
+                            <p>rawan@rawantech.com</p>
+                            <a href="mailto:rawan@rawantech.com" class="email-link">
+                                <i class="fas fa-paper-plane"></i> أرسل بريداً
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>ساعات العمل</h4>
+                            <p>الأحد - الخميس: 9 ص - 9 م</p>
+                            <span class="status online">
+                                <i class="fas fa-circle"></i> متاحة الآن
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <div class="social-contact">
+                        <h4>تابعيني على</h4>
+                        <div class="social-links">
+                            <a href="#" class="social-link twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-link linkedin"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="social-link youtube"><i class="fab fa-youtube"></i></a>
+                            <a href="#" class="social-link telegram"><i class="fab fa-telegram"></i></a>
+                            <a href="#" class="social-link github"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <div class="form-header">
+                        <h3>أرسلي رسالة</h3>
+                        <p>سأرد عليك خلال 24 ساعة</p>
+                    </div>
+                    
+                    <form id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name"><i class="fas fa-user"></i> الاسم *</label>
+                                <input type="text" id="name" placeholder="أدخل اسمك" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email"><i class="fas fa-envelope"></i> البريد الإلكتروني *</label>
+                                <input type="email" id="email" placeholder="أدخل بريدك" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="service"><i class="fas fa-concierge-bell"></i> نوع الخدمة المطلوبة *</label>
+                            <select id="service" required>
+                                <option value="">اختر نوع الخدمة</option>
+                                <option value="car">خدمات السيارات</option>
+                                <option value="internet">خدمات الإنترنت</option>
+                                <option value="mobile">خدمات الجوالات</option>
+                                <option value="software">خدمات البرمجيات</option>
+                                <option value="linux">خدمات Linux</option>
+                                <option value="other">خدمة أخرى</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message"><i class="fas fa-comment-dots"></i> تفاصيل الطلب *</label>
+                            <textarea id="message" rows="5" placeholder="صفي احتياجاتك بالتفصيل..." required></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" required>
+                                <span>أوافق على سياسة الخصوصية</span>
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-lg btn-block">
+                            <i class="fas fa-paper-plane"></i> إرسال الطلب
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- التذييل -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="#home" class="footer-logo">
+                        <div class="logo-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div class="logo-text">
+                            <span class="logo-main">RAWAN <span>TECH</span></span>
+                            <span class="logo-sub">خبيرة برمجيات &amp; Linux</span>
+                        </div>
+                    </a>
+                    <p class="footer-about">
+                        أقدم حلولاً تقنية متكاملة في مجالات البرمجيات، Linux، برمجة السيارات، تطوير المواقع، وصيانة الأجهزة.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>روابط سريعة</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home"><i class="fas fa-chevron-left"></i> الرئيسية</a></li>
+                        <li><a href="#about"><i class="fas fa-chevron-left"></i> عني</a></li>
+                        <li><a href="#services"><i class="fas fa-chevron-left"></i> الخدمات</a></li>
+                        <li><a href="#projects"><i class="fas fa-chevron-left"></i> المشاريع</a></li>
+                        <li><a href="#contact"><i class="fas fa-chevron-left"></i> تواصل</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>خدماتي</h4>
+                    <ul class="footer-links">
+                        <li><a href="#car-services"><i class="fas fa-chevron-left"></i> خدمات السيارات</a></li>
+                        <li><a href="#internet-services"><i class="fas fa-chevron-left"></i> خدمات الإنترنت</a></li>
+                        <li><a href="#mobile-services"><i class="fas fa-chevron-left"></i> خدمات الجوالات</a></li>
+                        <li><a href="#software-services"><i class="fas fa-chevron-left"></i> خدمات البرمجيات</a></li>
+                        <li><a href="#linux-services"><i class="fas fa-chevron-left"></i> خدمات Linux</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>اشتركي في النشرة</h4>
+                    <p>ابق على اطلاع بأحدث الخدمات والعروض</p>
+                    <form class="newsletter-form">
+                        <div class="input-group">
+                            <input type="email" placeholder="بريدك الإلكتروني" required>
+                            <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                        </div>
+                    </form>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-phone"></i> +966 55 123 4567</p>
+                        <p><i class="fas fa-envelope"></i> rawan@rawantech.com</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <p>&copy; 2026 RAWAN ALHRBI. جميع الحقوق محفوظة لـ</p>
+                </div>
+                <div class="footer-legal">
+                    <a href="#">سياسة الخصوصية</a>
+                    <a href="#">شروط الاستخدام</a>
+                    <a href="#">خريطة الموقع</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- أزرار المساعدة -->
+    <div class="help-buttons">
+        <a href="tel:+966551234567" class="help-button phone">
+            <i class="fas fa-phone"></i>
+            <span class="help-text">اتصل بي</span>
+        </a>
+        <a href="https://wa.me/966551234567" class="help-button whatsapp" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+            <span class="help-text">واتساب</span>
+        </a>
+        <button class="help-button chat" id="chatButton">
+            <i class="fas fa-comment-dots"></i>
+            <span class="help-text">الدردشة</span>
+        </button>
+        <button class="scroll-top" id="scrollTop">
+            <i class="fas fa-chevron-up"></i>
+        </button>
+    </div>
+
+    <!-- الدردشة -->
+    <div class="chat-modal" id="chatModal">
+        <div class="chat-header">
+            <div class="chat-title">
+                <i class="fas fa-comments"></i>
+                <h4>الدردشة المباشرة</h4>
+            </div>
+            <button class="chat-close" id="chatClose"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="chat-body">
+            <div class="chat-messages">
+                <div class="message bot">
+                    <div class="message-content"><p>مرحباً! كيف يمكنني مساعدتك اليوم؟</p></div>
+                    <div class="message-time">الآن</div>
+                </div>
+            </div>
+            <div class="chat-input">
+                <input type="text" placeholder="اكتب رسالتك..." id="chatInput">
+                <button id="chatSend"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
     </div>
 
     <script src="components.js"></script>
