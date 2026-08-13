@@ -1,8091 +1,3893 @@
 <!DOCTYPE html>
-
 <html lang="ar" dir="rtl">
-
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Rawan Tash | Cybersecurity Specialized Training | UCYBERS</title>
-
-    <meta name="description" content="Rawan Tash - Certified Cybersecurity Trainer offering specialized training courses in Penetration Testing, Kali Linux, and Social Engineering.">
-
-    <meta name="keywords" content="Rawan Tash, Rawan Alharbi, Cybersecurity Trainer, Security Training, Pentesting, Kali Linux, Social Engineering">
-
+    <title>Rawan Tash | التدريب المتخصص في الأمن السيبراني</title>
+    <meta name="description" content="Rawan Tash - مدربة متخصصة في الأمن السيبراني، أقدم دورات تدريبية عملية في اختبار الاختراق، كالي لينكس، والهندسة الاجتماعية، مع خدمات استشارية متكاملة.">
+    <meta name="keywords" content="Rawan Tash, روان تاش, مدربة أمن سيبراني, تدريب أمني, اختبار اختراق, كالي لينكس, هندسة اجتماعية, دورات أمن سيبراني">
     <meta name="author" content="Rawan Alharbi (Rawan Tash)">
-
     <meta name="robots" content="index, follow">
-
     
-
     <!-- Open Graph Meta Tags -->
-
-    <meta property="og:title" content="Rawan Tash | Cybersecurity Specialized Training">
-
-    <meta property="og:description" content="Specialized cybersecurity training courses with certified trainer Rawan Tash">
-
+    <meta property="og:title" content="Rawan Tash | التدريب المتخصص في الأمن السيبراني">
+    <meta property="og:description" content="دورات تدريبية عملية وخدمات استشارية لبناء مستقبل مهني متين في الأمن السيبراني.">
     <meta property="og:type" content="website">
-
     <meta property="og:image" content="https://ucybers.com/og-image.jpg">
-
     <meta property="og:url" content="https://ucybers.com">
-
     
-
-    <!-- Twitter Card -->
-
-    <meta name="twitter:card" content="summary_large_image">
-
-    <meta name="twitter:title" content="Rawan Tash | Cybersecurity Specialized Training">
-
-    <meta name="twitter:description" content="Specialized cybersecurity training courses with certified trainer Rawan Tash">
-
-    
-
     <!-- روابط CSS -->
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
-
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-
     
-
     <style>
-
         /* ===== CSS متكامل ===== */
-
         * {
-
             margin: 0;
-
             padding: 0;
-
             box-sizing: border-box;
-
         }
-
         
-
         :root {
-
             --primary: #00d4ff;
-
             --primary-dark: #0099cc;
-
             --secondary: #7c3aed;
-
             --dark: #0a0e17;
-
             --darker: #060a12;
-
             --card-bg: rgba(255,255,255,0.05);
-
             --glass: rgba(255,255,255,0.08);
-
             --text: #e2e8f0;
-
             --text-light: #94a3b8;
-
             --border: rgba(0,212,255,0.2);
-
             --shadow: 0 8px 32px rgba(0,0,0,0.4);
-
             --radius: 16px;
-
             --transition: all 0.3s ease;
-
         }
-
         
-
         html {
-
             scroll-behavior: smooth;
-
         }
-
         
-
         body {
-
             font-family: 'Tajawal', sans-serif;
-
             background: var(--dark);
-
             color: var(--text);
-
             line-height: 1.7;
-
             overflow-x: hidden;
-
         }
-
         
-
         .container {
-
             max-width: 1280px;
-
             margin: 0 auto;
-
             padding: 0 24px;
-
         }
-
         
-
         /* ===== شريط التنقل ===== */
-
         .navbar {
-
             position: fixed;
-
             top: 0;
-
             left: 0;
-
             right: 0;
-
             z-index: 1000;
-
             background: rgba(10,14,23,0.95);
-
             backdrop-filter: blur(20px);
-
             border-bottom: 1px solid var(--border);
-
             padding: 12px 0;
-
             transition: var(--transition);
-
         }
-
         
-
         .navbar .container {
-
             display: flex;
-
             align-items: center;
-
             justify-content: space-between;
-
         }
-
         
-
         .logo {
-
             display: flex;
-
             align-items: center;
-
             gap: 12px;
-
             text-decoration: none;
-
         }
-
         
-
         .logo-icon {
-
             width: 45px;
-
             height: 45px;
-
             background: linear-gradient(135deg, var(--primary), var(--secondary));
-
             border-radius: 12px;
-
             display: flex;
-
             align-items: center;
-
             justify-content: center;
-
             font-size: 22px;
-
             color: #fff;
-
             box-shadow: 0 0 30px rgba(0,212,255,0.3);
-
         }
-
         
-
         .logo-text {
-
             display: flex;
-
             flex-direction: column;
-
         }
-
         
-
         .logo-main {
-
             font-size: 22px;
-
             font-weight: 900;
-
             color: #fff;
-
             letter-spacing: 1px;
-
         }
-
         
-
         .logo-main span {
-
             color: var(--primary);
-
         }
-
         
-
         .logo-sub {
-
             font-size: 11px;
-
             color: var(--text-light);
-
             letter-spacing: 2px;
-
             margin-top: -2px;
-
         }
-
         
-
         .nav-links {
-
             display: flex;
-
             list-style: none;
-
             gap: 6px;
-
             align-items: center;
-
         }
-
         
-
         .nav-links li {
-
             position: relative;
-
         }
-
         
-
         .nav-link {
-
             color: var(--text-light);
-
             text-decoration: none;
-
             padding: 8px 14px;
-
             border-radius: 10px;
-
             font-size: 14px;
-
             font-weight: 500;
-
             transition: var(--transition);
-
             display: flex;
-
             align-items: center;
-
             gap: 6px;
-
         }
-
         
-
         .nav-link:hover,
-
         .nav-link.active {
-
             color: #fff;
-
             background: rgba(0,212,255,0.1);
-
         }
-
         
-
         .nav-link i {
-
             font-size: 13px;
-
         }
-
         
-
         .nav-dropdown:hover .dropdown-menu {
-
             opacity: 1;
-
             visibility: visible;
-
             transform: translateY(0);
-
         }
-
         
-
         .dropdown-menu {
-
             position: absolute;
-
             top: 100%;
-
             right: 0;
-
             background: rgba(10,14,23,0.98);
-
             backdrop-filter: blur(20px);
-
             border: 1px solid var(--border);
-
             border-radius: 12px;
-
             padding: 8px;
-
             min-width: 220px;
-
             opacity: 0;
-
             visibility: hidden;
-
             transform: translateY(10px);
-
             transition: var(--transition);
-
         }
-
         
-
         .dropdown-menu a {
-
             display: flex;
-
             align-items: center;
-
             gap: 10px;
-
             padding: 10px 14px;
-
             color: var(--text-light);
-
             text-decoration: none;
-
             border-radius: 8px;
-
             font-size: 14px;
-
             transition: var(--transition);
-
         }
-
         
-
         .dropdown-menu a:hover {
-
             background: rgba(0,212,255,0.1);
-
             color: #fff;
-
         }
-
         
-
         .dropdown-menu a i {
-
             width: 20px;
-
             color: var(--primary);
-
         }
-
         
-
         .nav-actions {
-
             display: flex;
-
             align-items: center;
-
             gap: 12px;
-
         }
-
         
-
         .nav-phone {
-
             color: var(--text-light);
-
             text-decoration: none;
-
             display: flex;
-
             align-items: center;
-
             gap: 8px;
-
             font-size: 14px;
-
             transition: var(--transition);
-
         }
-
         
-
         .nav-phone:hover {
-
             color: var(--primary);
-
         }
-
         
-
         .btn {
-
             display: inline-flex;
-
             align-items: center;
-
             gap: 8px;
-
             padding: 10px 24px;
-
             border-radius: 12px;
-
             font-weight: 600;
-
             text-decoration: none;
-
             font-size: 14px;
-
             border: none;
-
             cursor: pointer;
-
             transition: var(--transition);
-
         }
-
         
-
         .btn-primary {
-
             background: linear-gradient(135deg, var(--primary), var(--secondary));
-
             color: #fff;
-
             box-shadow: 0 4px 20px rgba(0,212,255,0.3);
-
         }
-
         
-
         .btn-primary:hover {
-
             transform: translateY(-2px);
-
             box-shadow: 0 8px 30px rgba(0,212,255,0.4);
-
         }
-
         
-
         .btn-secondary {
-
             background: rgba(255,255,255,0.08);
-
             color: #fff;
-
             border: 1px solid rgba(255,255,255,0.15);
-
         }
-
         
-
         .btn-secondary:hover {
-
             background: rgba(255,255,255,0.15);
-
         }
-
         
-
         .btn-small {
-
             padding: 8px 16px;
-
             font-size: 13px;
-
         }
-
         
-
         .btn-lg {
-
             padding: 14px 32px;
-
             font-size: 16px;
-
         }
-
         
-
         .menu-toggle {
-
             display: none;
-
             background: none;
-
             border: none;
-
             color: #fff;
-
             font-size: 24px;
-
             cursor: pointer;
-
         }
-
         
-
         /* ===== القسم الرئيسي ===== */
-
         .hero {
-
             position: relative;
-
             min-height: 100vh;
-
             display: flex;
-
             align-items: center;
-
             padding: 120px 0 60px;
-
             overflow: hidden;
-
         }
-
         
-
         .hero-background {
-
             position: absolute;
-
             inset: 0;
-
             z-index: 0;
-
         }
-
         
-
         .cyber-grid {
-
             position: absolute;
-
             inset: 0;
-
             background-image: 
-
                 linear-gradient(rgba(0,212,255,0.03) 1px, transparent 1px),
-
                 linear-gradient(90deg, rgba(0,212,255,0.03) 1px, transparent 1px);
-
             background-size: 50px 50px;
-
         }
-
         
-
         .hero-overlay {
-
             position: absolute;
-
             inset: 0;
-
             background: radial-gradient(ellipse at 30% 50%, rgba(0,212,255,0.08), transparent 70%);
-
         }
-
         
-
         .hero .container {
-
             position: relative;
-
             z-index: 1;
-
             display: grid;
-
             grid-template-columns: 1fr 1fr;
-
             gap: 60px;
-
             align-items: center;
-
         }
-
         
-
         .hero-badge {
-
             display: inline-flex;
-
             align-items: center;
-
             gap: 8px;
-
             background: rgba(0,212,255,0.12);
-
             border: 1px solid var(--border);
-
             padding: 6px 16px;
-
             border-radius: 50px;
-
             font-size: 13px;
-
             color: var(--primary);
-
             margin-bottom: 20px;
-
         }
-
         
-
         .hero-title {
-
             font-size: 52px;
-
             font-weight: 900;
-
             line-height: 1.2;
-
             margin-bottom: 20px;
-
         }
-
         
-
         .hero-title .highlight {
-
             background: linear-gradient(135deg, var(--primary), var(--secondary));
-
             -webkit-background-clip: text;
-
             -webkit-text-fill-color: transparent;
-
         }
-
         
-
         .hero-description {
-
             font-size: 18px;
-
             color: var(--text-light);
-
             margin-bottom: 30px;
-
             max-width: 500px;
-
         }
-
         
-
         .hero-buttons {
-
             display: flex;
-
             gap: 16px;
-
             flex-wrap: wrap;
-
             margin-bottom: 40px;
-
         }
-
         
-
         .btn-arrow {
-
             display: inline-block;
-
             transition: var(--transition);
-
         }
-
         
-
         .btn-primary:hover .btn-arrow {
-
             transform: translateX(-4px);
-
         }
-
         
-
         .hero-features {
-
             display: flex;
-
             gap: 30px;
-
         }
-
         
-
         .hero-features .feature {
-
             display: flex;
-
             align-items: center;
-
             gap: 8px;
-
             color: var(--text-light);
-
             font-size: 14px;
-
         }
-
         
-
         .hero-features .feature i {
-
             color: var(--primary);
-
         }
-
         
-
         /* ===== Terminal ===== */
-
         .cyber-terminal {
-
             background: rgba(0,0,0,0.7);
-
             border: 1px solid var(--border);
-
             border-radius: var(--radius);
-
             overflow: hidden;
-
             box-shadow: 0 20px 60px rgba(0,0,0,0.5);
-
         }
-
         
-
         .terminal-header {
-
             padding: 12px 20px;
-
             background: rgba(255,255,255,0.05);
-
             display: flex;
-
             align-items: center;
-
             gap: 12px;
-
             border-bottom: 1px solid var(--border);
-
         }
-
         
-
         .terminal-dots {
-
             display: flex;
-
             gap: 6px;
-
         }
-
         
-
         .terminal-dots .dot {
-
             width: 12px;
-
             height: 12px;
-
             border-radius: 50%;
-
         }
-
         
-
         .terminal-dots .red { background: #ff5f56; }
-
         .terminal-dots .yellow { background: #ffbd2e; }
-
         .terminal-dots .green { background: #27c93f; }
-
         
-
         .terminal-title {
-
             color: var(--text-light);
-
             font-size: 13px;
-
         }
-
         
-
         .terminal-body {
-
             padding: 24px;
-
             font-family: 'Courier New', monospace;
-
             font-size: 14px;
-
             min-height: 200px;
-
         }
-
         
-
         .terminal-line {
-
             padding: 4px 0;
-
             display: flex;
-
             align-items: center;
-
             gap: 8px;
-
         }
-
         
-
         .terminal-line .prompt {
-
             color: var(--primary);
-
         }
-
         
-
         .terminal-line .command {
-
             color: #fff;
-
         }
-
         
-
         .terminal-line .output {
-
             color: #27c93f;
-
         }
-
         
-
         .terminal-line .cursor {
-
             animation: blink 1s infinite;
-
         }
-
         
-
         @keyframes blink {
-
             0%, 50% { opacity: 1; }
-
             51%, 100% { opacity: 0; }
-
         }
-
         
-
         /* ===== الإحصائيات ===== */
-
         .hero-stats {
-
             position: relative;
-
             z-index: 1;
-
             margin-top: 40px;
-
         }
-
         
-
         .stats-grid {
-
             display: grid;
-
             grid-template-columns: repeat(4, 1fr);
-
             gap: 20px;
-
         }
-
         
-
         .stat-card {
-
             background: var(--card-bg);
-
             border: 1px solid var(--border);
-
             border-radius: var(--radius);
-
             padding: 24px;
-
             display: flex;
-
             align-items: center;
-
             gap: 16px;
-
             transition: var(--transition);
-
         }
-
         
-
         .stat-card:hover {
-
             transform: translateY(-4px);
-
             border-color: var(--primary);
-
         }
-
         
-
         .stat-icon {
-
             width: 50px;
-
             height: 50px;
-
             background: rgba(0,212,255,0.1);
-
             border-radius: 12px;
-
             display: flex;
-
             align-items: center;
-
             justify-content: center;
-
             font-size: 22px;
-
             color: var(--primary);
-
         }
-
         
-
         .stat-number {
-
             font-size: 32px;
-
             font-weight: 900;
-
             color: #fff;
-
         }
-
         
-
         .stat-text {
-
             color: var(--text-light);
-
             font-size: 14px;
-
         }
-
         
-
         /* ===== الأقسام العامة ===== */
-
         section {
-
             padding: 80px 0;
-
         }
-
         
-
         .section-header {
-
             text-align: center;
-
             margin-bottom: 50px;
-
         }
-
         
-
         .section-badge {
-
             display: inline-flex;
-
             align-items: center;
-
             gap: 8px;
-
             background: rgba(0,212,255,0.1);
-
             color: var(--primary);
-
             padding: 4px 16px;
-
             border-radius: 50px;
-
             font-size: 13px;
-
             margin-bottom: 12px;
-
         }
-
         
-
         .section-title {
-
             font-size: 40px;
-
             font-weight: 800;
-
         }
-
         
-
         .section-title .highlight {
-
             background: linear-gradient(135deg, var(--primary), var(--secondary));
-
             -webkit-background-clip: text;
-
             -webkit-text-fill-color: transparent;
-
         }
-
         
-
         .section-subtitle {
-
             color: var(--text-light);
-
             font-size: 18px;
-
             max-width: 600px;
-
             margin: 0 auto;
-
         }
-
         
-
         /* ===== الخدمات ===== */
-
         .service-category {
-
             margin-bottom: 60px;
-
         }
-
         
-
         .category-header {
-
             display: flex;
-
             align-items: center;
-
             gap: 16px;
-
             margin-bottom: 24px;
-
         }
-
         
-
         .category-icon {
-
             width: 50px;
-
             height: 50px;
-
             background: rgba(0,212,255,0.1);
-
             border-radius: 12px;
-
             display: flex;
-
             align-items: center;
-
             justify-content: center;
-
             font-size: 22px;
-
             color: var(--primary);
-
         }
-
         
-
         .category-header h3 {
-
             font-size: 24px;
-
         }
-
         
-
         .category-header p {
-
             color: var(--text-light);
-
             font-size: 14px;
-
         }
-
         
-
         .services-grid {
-
             display: grid;
-
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-
             gap: 24px;
-
         }
-
         
-
         .service-card {
-
             background: var(--card-bg);
-
             border: 1px solid var(--border);
-
             border-radius: var(--radius);
-
             padding: 28px;
-
             transition: var(--transition);
-
         }
-
         
-
         .service-card:hover {
-
             transform: translateY(-6px);
-
             border-color: var(--primary);
-
             box-shadow: var(--shadow);
-
         }
-
         
-
         .service-header {
-
             display: flex;
-
             align-items: center;
-
             justify-content: space-between;
-
             margin-bottom: 16px;
-
         }
-
         
-
         .service-icon {
-
             width: 48px;
-
             height: 48px;
-
             background: rgba(0,212,255,0.1);
-
             border-radius: 12px;
-
             display: flex;
-
             align-items: center;
-
             justify-content: center;
-
             font-size: 20px;
-
             color: var(--primary);
-
         }
-
         
-
         .service-badge {
-
             font-size: 11px;
-
             padding: 4px 12px;
-
             border-radius: 50px;
-
             background: rgba(0,212,255,0.15);
-
             color: var(--primary);
-
         }
-
         
-
         .service-badge.new {
-
             background: rgba(124,58,237,0.2);
-
             color: #a78bfa;
-
         }
-
         
-
         .service-card h4 {
-
             font-size: 20px;
-
             margin-bottom: 10px;
-
         }
-
         
-
         .service-card p {
-
             color: var(--text-light);
-
             font-size: 14px;
-
             margin-bottom: 16px;
-
         }
-
         
-
         .service-features {
-
             list-style: none;
-
             margin-bottom: 20px;
-
         }
-
         
-
         .service-features li {
-
             display: flex;
-
             align-items: center;
-
             gap: 8px;
-
             padding: 4px 0;
-
             font-size: 14px;
-
             color: var(--text-light);
-
         }
-
         
-
         .service-features li i {
-
             color: var(--primary);
-
             font-size: 12px;
-
         }
-
         
-
         .service-footer {
-
             display: flex;
-
             align-items: center;
-
             justify-content: space-between;
-
             padding-top: 16px;
-
             border-top: 1px solid var(--border);
-
         }
-
         
-
         .service-price .price {
-
             font-weight: 700;
-
             color: #fff;
-
         }
-
         
-
         .btn-service {
-
             background: rgba(0,212,255,0.1);
-
             color: var(--primary);
-
             padding: 8px 20px;
-
             border-radius: 8px;
-
             text-decoration: none;
-
             font-size: 14px;
-
             font-weight: 600;
-
             transition: var(--transition);
-
         }
-
         
-
         .btn-service:hover {
-
             background: var(--primary);
-
             color: #fff;
-
         }
-
         
-
         .btn-service.emergency {
-
             background: #ef4444;
-
             color: #fff;
-
         }
-
         
-
         .btn-service.emergency:hover {
-
             background: #dc2626;
-
         }
-
         
-
         /* ===== الدورات ===== */
-
         .path-tabs {
-
             display: flex;
-
             gap: 12px;
-
             flex-wrap: wrap;
-
             justify-content: center;
-
             margin-bottom: 30px;
-
         }
-
         
-
         .path-tab {
-
             padding: 10px 24px;
-
             border: 1px solid var(--border);
-
             border-radius: 50px;
-
             background: transparent;
-
             color: var(--text-light);
-
             cursor: pointer;
-
             transition: var(--transition);
-
             font-family: inherit;
-
             font-size: 14px;
-
         }
-
         
-
         .path-tab:hover,
-
         .path-tab.active {
-
             background: rgba(0,212,255,0.1);
-
             border-color: var(--primary);
-
             color: #fff;
-
         }
-
         
-
         .path-pane {
-
             display: none;
-
         }
-
         
-
         .path-pane.active {
-
             display: block;
-
         }
-
         
-
         .courses-grid {
-
             display: grid;
-
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-
             gap: 24px;
-
         }
-
         
-
         .course-card {
-
             background: var(--card-bg);
-
             border: 1px solid var(--border);
-
             border-radius: var(--radius);
-
             padding: 24px;
-
             transition: var(--transition);
-
         }
-
         
-
         .course-card:hover {
-
             transform: translateY(-4px);
-
             border-color: var(--primary);
-
         }
-
         
-
         .course-header {
-
             display: flex;
-
             justify-content: space-between;
-
             align-items: center;
-
             margin-bottom: 12px;
-
         }
-
         
-
         .course-level {
-
             padding: 4px 12px;
-
             border-radius: 50px;
-
             font-size: 12px;
-
             font-weight: 600;
-
         }
-
         
-
         .course-level.beginner {
-
             background: rgba(34,197,94,0.2);
-
             color: #4ade80;
-
         }
-
         
-
         .course-level.intermediate {
-
             background: rgba(251,191,36,0.2);
-
             color: #fbbf24;
-
         }
-
         
-
         .course-level.advanced {
-
             background: rgba(239,68,68,0.2);
-
             color: #f87171;
-
         }
-
         
-
-        .course-level.certification {
-
-            background: rgba(124,58,237,0.2);
-
-            color: #a78bfa;
-
-        }
-
-        
-
         .course-duration {
-
             color: var(--text-light);
-
             font-size: 13px;
-
         }
-
         
-
         .course-card h4 {
-
             font-size: 18px;
-
             margin-bottom: 8px;
-
         }
-
         
-
         .course-card p {
-
             color: var(--text-light);
-
             font-size: 14px;
-
             margin-bottom: 12px;
-
         }
-
         
-
         .course-meta {
-
             display: flex;
-
             gap: 16px;
-
             font-size: 13px;
-
             color: var(--text-light);
-
             margin-bottom: 12px;
-
         }
-
         
-
         .course-price {
-
             display: flex;
-
             gap: 12px;
-
             align-items: center;
-
             margin-bottom: 16px;
-
         }
-
         
-
         .course-price .current-price {
-
             font-size: 20px;
-
             font-weight: 800;
-
             color: #fff;
-
         }
-
         
-
         .course-price .original-price {
-
             font-size: 14px;
-
             color: var(--text-light);
-
             text-decoration: line-through;
-
         }
-
         
-
         .btn-course {
-
             display: inline-block;
-
             background: rgba(0,212,255,0.1);
-
             color: var(--primary);
-
             padding: 8px 24px;
-
             border-radius: 8px;
-
             text-decoration: none;
-
             font-weight: 600;
-
             transition: var(--transition);
-
         }
-
         
-
         .btn-course:hover {
-
             background: var(--primary);
-
             color: #fff;
-
         }
-
         
-
         /* ===== باقات الدورات ===== */
-
         .packages-title {
-
             font-size: 28px;
-
             text-align: center;
-
             margin-bottom: 30px;
-
         }
-
         
-
         .packages-grid {
-
             display: grid;
-
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-
             gap: 24px;
-
         }
-
         
-
         .package-card {
-
             background: var(--card-bg);
-
             border: 1px solid var(--border);
-
             border-radius: var(--radius);
-
             padding: 30px;
-
             text-align: center;
-
             transition: var(--transition);
-
             position: relative;
-
         }
-
         
-
         .package-card:hover {
-
             transform: translateY(-6px);
-
             border-color: var(--primary);
-
         }
-
         
-
         .package-card.featured {
-
             border-color: var(--primary);
-
             background: rgba(0,212,255,0.05);
-
         }
-
         
-
         .package-badge {
-
             position: absolute;
-
             top: -12px;
-
             right: 50%;
-
             transform: translateX(50%);
-
             background: linear-gradient(135deg, var(--primary), var(--secondary));
-
             color: #fff;
-
             padding: 4px 16px;
-
             border-radius: 50px;
-
             font-size: 12px;
-
             font-weight: 600;
-
         }
-
         
-
         .package-header h4 {
-
             font-size: 20px;
-
             margin-bottom: 8px;
-
         }
-
         
-
         .package-price .price {
-
             font-size: 28px;
-
             font-weight: 900;
-
             color: #fff;
-
         }
-
         
-
         .package-price .period {
-
             color: var(--text-light);
-
             font-size: 14px;
-
         }
-
         
-
         .package-features {
-
             list-style: none;
-
             margin: 20px 0;
-
             text-align: right;
-
         }
-
         
-
         .package-features li {
-
             padding: 6px 0;
-
             display: flex;
-
             align-items: center;
-
             gap: 8px;
-
             font-size: 14px;
-
             color: var(--text-light);
-
         }
-
         
-
         .package-features li i {
-
             color: var(--primary);
-
         }
-
         
-
         .package-features li .fa-times {
-
             color: #ef4444;
-
         }
-
         
-
         .btn-package {
-
             display: inline-block;
-
             background: rgba(255,255,255,0.05);
-
             color: #fff;
-
             padding: 10px 32px;
-
             border-radius: 8px;
-
             text-decoration: none;
-
             font-weight: 600;
-
             border: 1px solid var(--border);
-
             transition: var(--transition);
-
         }
-
         
-
         .btn-package:hover {
-
             background: rgba(0,212,255,0.1);
-
             border-color: var(--primary);
-
         }
-
         
-
         .btn-package.featured {
-
             background: linear-gradient(135deg, var(--primary), var(--secondary));
-
             border: none;
-
         }
-
         
-
         .btn-package.featured:hover {
-
             transform: scale(1.05);
-
         }
-
         
-
         /* ===== الأكاديمية ===== */
-
         .academy {
-
             background: var(--darker);
-
             position: relative;
-
         }
-
         
-
         .academy-background {
-
             position: absolute;
-
             inset: 0;
-
             background: radial-gradient(ellipse at 70% 30%, rgba(0,212,255,0.05), transparent 70%);
-
         }
-
         
-
         .academy-content {
-
             position: relative;
-
             z-index: 1;
-
         }
-
         
-
         .academy-features {
-
             display: grid;
-
             grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-
             gap: 24px;
-
             margin-bottom: 60px;
-
         }
-
         
-
         .feature-card {
-
             background: var(--card-bg);
-
             border: 1px solid var(--border);
-
             border-radius: var(--radius);
-
             padding: 24px;
-
             text-align: center;
-
             transition: var(--transition);
-
         }
-
         
-
         .feature-card:hover {
-
             transform: translateY(-4px);
-
             border-color: var(--primary);
-
         }
-
         
-
         .feature-card .feature-icon {
-
             width: 60px;
-
             height: 60px;
-
             margin: 0 auto 16px;
-
             background: rgba(0,212,255,0.1);
-
             border-radius: 50%;
-
             display: flex;
-
             align-items: center;
-
             justify-content: center;
-
             font-size: 24px;
-
             color: var(--primary);
-
         }
-
         
-
         .feature-card h4 {
-
             font-size: 18px;
-
             margin-bottom: 8px;
-
         }
-
         
-
         .feature-card p {
-
             color: var(--text-light);
-
             font-size: 14px;
-
         }
-
         
-
         /* ===== مراحل التعلم ===== */
-
         .academy-process h3,
-
-        .cert-process h3,
-
         .achievements h3 {
-
             font-size: 28px;
-
             text-align: center;
-
             margin-bottom: 30px;
-
         }
-
         
-
         .process-steps {
-
             display: flex;
-
             flex-wrap: wrap;
-
             justify-content: center;
-
             gap: 20px;
-
         }
-
         
-
         .step {
-
             background: var(--card-bg);
-
             border: 1px solid var(--border);
-
             border-radius: var(--radius);
-
             padding: 20px 24px;
-
             display: flex;
-
             align-items: center;
-
             gap: 16px;
-
             flex: 1;
-
             min-width: 180px;
-
             max-width: 220px;
-
             transition: var(--transition);
-
         }
-
         
-
         .step:hover {
-
             border-color: var(--primary);
-
             transform: translateY(-4px);
-
         }
-
         
-
         .step-number {
-
             width: 40px;
-
             height: 40px;
-
             background: rgba(0,212,255,0.1);
-
             border-radius: 50%;
-
             display: flex;
-
             align-items: center;
-
             justify-content: center;
-
             font-weight: 900;
-
             color: var(--primary);
-
             flex-shrink: 0;
-
         }
-
         
-
         .step-content h5 {
-
             font-size: 15px;
-
             margin-bottom: 2px;
-
         }
-
         
-
         .step-content p {
-
             color: var(--text-light);
-
             font-size: 12px;
-
         }
-
         
-
-        /* ===== الشهادات ===== */
-
-        .certs-grid {
-
-            display: grid;
-
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-
-            gap: 24px;
-
-            margin-bottom: 60px;
-
-        }
-
-        
-
-        .cert-card {
-
-            background: var(--card-bg);
-
-            border: 1px solid var(--border);
-
-            border-radius: var(--radius);
-
-            padding: 24px;
-
-            text-align: center;
-
-            transition: var(--transition);
-
-        }
-
-        
-
-        .cert-card:hover {
-
-            transform: translateY(-4px);
-
-            border-color: var(--primary);
-
-        }
-
-        
-
-        .cert-logo {
-
-            width: 64px;
-
-            height: 64px;
-
-            margin: 0 auto 16px;
-
-            background: rgba(0,212,255,0.1);
-
-            border-radius: 50%;
-
-            display: flex;
-
-            align-items: center;
-
-            justify-content: center;
-
-            font-size: 28px;
-
-            color: var(--primary);
-
-        }
-
-        
-
-        .cert-card h4 {
-
-            font-size: 18px;
-
-            margin-bottom: 8px;
-
-        }
-
-        
-
-        .cert-card p {
-
-            color: var(--text-light);
-
-            font-size: 14px;
-
-            margin-bottom: 12px;
-
-        }
-
-        
-
-        .cert-meta {
-
-            display: flex;
-
-            justify-content: center;
-
-            gap: 16px;
-
-            font-size: 13px;
-
-            color: var(--text-light);
-
-            margin-bottom: 16px;
-
-        }
-
-        
-
-        .btn-cert {
-
-            display: inline-block;
-
-            background: rgba(0,212,255,0.1);
-
-            color: var(--primary);
-
-            padding: 8px 24px;
-
-            border-radius: 8px;
-
-            text-decoration: none;
-
-            font-weight: 600;
-
-            transition: var(--transition);
-
-        }
-
-        
-
-        .btn-cert:hover {
-
-            background: var(--primary);
-
-            color: #fff;
-
-        }
-
-        
-
-        .cert-process .step {
-
-            max-width: 200px;
-
-        }
-
-        
-
         /* ===== المدونة ===== */
-
         .blog-grid {
-
             display: grid;
-
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-
             gap: 24px;
-
             margin-bottom: 50px;
-
         }
-
         
-
         .blog-card {
-
             background: var(--card-bg);
-
             border: 1px solid var(--border);
-
             border-radius: var(--radius);
-
             overflow: hidden;
-
             transition: var(--transition);
-
         }
-
         
-
         .blog-card:hover {
-
             transform: translateY(-4px);
-
             border-color: var(--primary);
-
         }
-
         
-
         .blog-card.featured {
-
             grid-column: span 2;
-
         }
-
         
-
         .blog-image {
-
             height: 200px;
-
             background: linear-gradient(135deg, rgba(0,212,255,0.1), rgba(124,58,237,0.1));
-
             position: relative;
-
         }
-
         
-
         .blog-card.featured .blog-image {
-
             height: 280px;
-
         }
-
         
-
         .image-overlay {
-
             position: absolute;
-
             inset: 0;
-
             display: flex;
-
             align-items: flex-start;
-
             justify-content: flex-start;
-
             padding: 16px;
-
         }
-
         
-
         .blog-category {
-
             background: rgba(0,0,0,0.7);
-
             padding: 4px 12px;
-
             border-radius: 50px;
-
             font-size: 12px;
-
             color: var(--primary);
-
         }
-
         
-
         .blog-date {
-
             position: absolute;
-
             bottom: 16px;
-
             right: 16px;
-
             background: rgba(0,0,0,0.8);
-
             padding: 8px 12px;
-
             border-radius: 8px;
-
             text-align: center;
-
         }
-
         
-
         .blog-date .day {
-
             font-size: 20px;
-
             font-weight: 800;
-
             display: block;
-
             color: #fff;
-
         }
-
         
-
         .blog-date .month {
-
             font-size: 12px;
-
             color: var(--text-light);
-
         }
-
         
-
         .blog-content {
-
             padding: 20px;
-
         }
-
         
-
         .blog-content h4 {
-
             font-size: 18px;
-
             margin-bottom: 8px;
-
         }
-
         
-
         .blog-content h4 a {
-
             color: #fff;
-
             text-decoration: none;
-
             transition: var(--transition);
-
         }
-
         
-
         .blog-content h4 a:hover {
-
             color: var(--primary);
-
         }
-
         
-
         .blog-content p {
-
             color: var(--text-light);
-
             font-size: 14px;
-
             margin-bottom: 12px;
-
         }
-
         
-
         .blog-meta {
-
             display: flex;
-
             gap: 16px;
-
             font-size: 13px;
-
             color: var(--text-light);
-
             margin-bottom: 12px;
-
         }
-
         
-
         .blog-read-more {
-
             color: var(--primary);
-
             text-decoration: none;
-
             font-weight: 600;
-
             display: inline-flex;
-
             align-items: center;
-
             gap: 6px;
-
             transition: var(--transition);
-
         }
-
         
-
         .blog-read-more:hover {
-
             gap: 12px;
-
         }
-
         
-
         /* ===== أقسام المدونة ===== */
-
         .blog-categories h3 {
-
             font-size: 24px;
-
             text-align: center;
-
             margin-bottom: 24px;
-
         }
-
         
-
         .categories-grid {
-
             display: grid;
-
             grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-
             gap: 16px;
-
         }
-
         
-
         .category-card {
-
             background: var(--card-bg);
-
             border: 1px solid var(--border);
-
             border-radius: var(--radius);
-
             padding: 20px;
-
             text-align: center;
-
             text-decoration: none;
-
             color: #fff;
-
             transition: var(--transition);
-
         }
-
         
-
         .category-card:hover {
-
             transform: translateY(-4px);
-
             border-color: var(--primary);
-
         }
-
         
-
         .category-card .category-icon {
-
             font-size: 28px;
-
             color: var(--primary);
-
             margin-bottom: 8px;
-
         }
-
         
-
         .category-card h5 {
-
             font-size: 16px;
-
             margin-bottom: 4px;
-
         }
-
         
-
         .category-card p {
-
             font-size: 12px;
-
             color: var(--text-light);
-
         }
-
         
-
         /* ===== الاتصال ===== */
-
         .contact-content {
-
             display: grid;
-
             grid-template-columns: 1fr 1fr;
-
             gap: 40px;
-
             margin-bottom: 40px;
-
         }
-
         
-
         .contact-info {
-
             display: grid;
-
             grid-template-columns: 1fr 1fr;
-
             gap: 16px;
-
         }
-
         
-
         .contact-info .info-card.large {
-
             grid-column: span 2;
-
         }
-
         
-
         .info-card {
-
             background: var(--card-bg);
-
             border: 1px solid var(--border);
-
             border-radius: var(--radius);
-
             padding: 20px;
-
             display: flex;
-
             gap: 16px;
-
             transition: var(--transition);
-
         }
-
         
-
         .info-card:hover {
-
             border-color: var(--primary);
-
         }
-
         
-
         .info-card .info-icon {
-
             width: 44px;
-
             height: 44px;
-
             background: rgba(0,212,255,0.1);
-
             border-radius: 50%;
-
             display: flex;
-
             align-items: center;
-
             justify-content: center;
-
             font-size: 18px;
-
             color: var(--primary);
-
             flex-shrink: 0;
-
         }
-
         
-
         .info-card h4 {
-
             font-size: 16px;
-
             margin-bottom: 4px;
-
         }
-
         
-
         .info-card p {
-
             color: var(--text-light);
-
             font-size: 14px;
-
         }
-
         
-
-        .map-link,
-
         .phone-link,
-
         .email-link {
-
             color: var(--primary);
-
             text-decoration: none;
-
             font-size: 13px;
-
             display: inline-flex;
-
             align-items: center;
-
             gap: 6px;
-
             margin-top: 6px;
-
         }
-
         
-
         .status.online {
-
             display: inline-flex;
-
             align-items: center;
-
             gap: 6px;
-
             color: #4ade80;
-
             font-size: 13px;
-
             margin-top: 6px;
-
         }
-
         
-
         .status.online i {
-
             font-size: 10px;
-
         }
-
         
-
-        /* ===== التواصل الاجتماعي ===== */
-
-        .social-contact {
-
-            grid-column: span 2;
-
-            text-align: center;
-
-            padding: 20px;
-
-            background: var(--card-bg);
-
-            border: 1px solid var(--border);
-
-            border-radius: var(--radius);
-
-        }
-
-        
-
-        .social-contact h4 {
-
-            margin-bottom: 12px;
-
-        }
-
-        
-
-        .social-links {
-
-            display: flex;
-
-            justify-content: center;
-
-            gap: 12px;
-
-        }
-
-        
-
-        .social-link {
-
-            width: 44px;
-
-            height: 44px;
-
-            border-radius: 50%;
-
-            display: flex;
-
-            align-items: center;
-
-            justify-content: center;
-
-            color: #fff;
-
-            text-decoration: none;
-
-            transition: var(--transition);
-
-        }
-
-        
-
-        .social-link.twitter { background: #1da1f2; }
-
-        .social-link.linkedin { background: #0a66c2; }
-
-        .social-link.youtube { background: #ff0000; }
-
-        .social-link.telegram { background: #0088cc; }
-
-        .social-link.github { background: #333; }
-
-        
-
-        .social-link:hover {
-
-            transform: scale(1.1);
-
-        }
-
-        
-
         /* ===== نموذج الاتصال ===== */
-
         .contact-form {
-
             background: var(--card-bg);
-
             border: 1px solid var(--border);
-
             border-radius: var(--radius);
-
             padding: 30px;
-
         }
-
         
-
         .form-header {
-
             margin-bottom: 24px;
-
         }
-
         
-
         .form-header h3 {
-
             font-size: 22px;
-
         }
-
         
-
         .form-header p {
-
             color: var(--text-light);
-
             font-size: 14px;
-
         }
-
         
-
         .form-row {
-
             display: grid;
-
             grid-template-columns: 1fr 1fr;
-
             gap: 16px;
-
         }
-
         
-
         .form-group {
-
             margin-bottom: 16px;
-
         }
-
         
-
         .form-group label {
-
             display: block;
-
             font-size: 14px;
-
             font-weight: 600;
-
             margin-bottom: 6px;
-
         }
-
         
-
         .form-group label i {
-
             color: var(--primary);
-
             margin-left: 6px;
-
         }
-
         
-
         .form-group input,
-
         .form-group select,
-
         .form-group textarea {
-
             width: 100%;
-
             padding: 12px 16px;
-
             background: rgba(255,255,255,0.05);
-
             border: 1px solid var(--border);
-
             border-radius: 10px;
-
             color: #fff;
-
             font-family: inherit;
-
             font-size: 14px;
-
             transition: var(--transition);
-
         }
-
         
-
         .form-group input:focus,
-
         .form-group select:focus,
-
         .form-group textarea:focus {
-
             outline: none;
-
             border-color: var(--primary);
-
             box-shadow: 0 0 20px rgba(0,212,255,0.1);
-
         }
-
         
-
         .form-group select option {
-
             background: var(--dark);
-
             color: #fff;
-
         }
-
         
-
         .checkbox-label {
-
             display: flex;
-
             align-items: center;
-
             gap: 10px;
-
             cursor: pointer;
-
         }
-
         
-
         .checkbox-label input[type="checkbox"] {
-
             width: 18px;
-
             height: 18px;
-
             accent-color: var(--primary);
-
         }
-
         
-
         .checkbox-label span {
-
             font-size: 14px;
-
             color: var(--text-light);
-
         }
-
         
-
         .btn-block {
-
             width: 100%;
-
             justify-content: center;
-
         }
-
         
-
         /* ===== خريطة ===== */
-
         .contact-map {
-
             margin-top: 40px;
-
         }
-
         
-
         .map-placeholder {
-
             height: 280px;
-
             background: var(--card-bg);
-
             border: 1px solid var(--border);
-
             border-radius: var(--radius);
-
             display: flex;
-
             align-items: center;
-
             justify-content: center;
-
             position: relative;
-
             overflow: hidden;
-
         }
-
         
-
         .map-placeholder::before {
-
             content: '';
-
             position: absolute;
-
             inset: 0;
-
             background: 
-
                 radial-gradient(circle at 30% 40%, rgba(0,212,255,0.05), transparent 60%),
-
                 radial-gradient(circle at 70% 60%, rgba(124,58,237,0.05), transparent 60%);
-
         }
-
         
-
         .map-overlay {
-
             position: relative;
-
             z-index: 1;
-
             text-align: center;
-
         }
-
         
-
         .map-overlay h4 {
-
             font-size: 20px;
-
             margin-bottom: 4px;
-
         }
-
         
-
         .map-overlay p {
-
             color: var(--text-light);
-
             margin-bottom: 12px;
-
         }
-
         
-
         /* ===== التذييل ===== */
-
         .footer {
-
             background: var(--darker);
-
             border-top: 1px solid var(--border);
-
             padding: 60px 0 30px;
-
         }
-
         
-
         .footer-grid {
-
             display: grid;
-
             grid-template-columns: 2fr 1fr 1fr 1.5fr;
-
             gap: 40px;
-
             margin-bottom: 40px;
-
         }
-
         
-
         .footer-logo {
-
             display: flex;
-
             align-items: center;
-
             gap: 12px;
-
             text-decoration: none;
-
             margin-bottom: 16px;
-
         }
-
         
-
         .footer-about {
-
             color: var(--text-light);
-
             font-size: 14px;
-
             line-height: 1.8;
-
             margin-bottom: 16px;
-
         }
-
         
-
         .footer-social {
-
             display: flex;
-
             gap: 10px;
-
         }
-
         
-
         .footer-social .social-icon {
-
             width: 40px;
-
             height: 40px;
-
             border-radius: 50%;
-
             background: rgba(255,255,255,0.05);
-
             display: flex;
-
             align-items: center;
-
             justify-content: center;
-
             color: var(--text-light);
-
             text-decoration: none;
-
             transition: var(--transition);
-
         }
-
         
-
         .footer-social .social-icon:hover {
-
             background: rgba(0,212,255,0.1);
-
             color: var(--primary);
-
         }
-
         
-
         .footer-col h4 {
-
             font-size: 18px;
-
             margin-bottom: 16px;
-
         }
-
         
-
         .footer-links {
-
             list-style: none;
-
         }
-
         
-
         .footer-links li {
-
             margin-bottom: 8px;
-
         }
-
         
-
         .footer-links a {
-
             color: var(--text-light);
-
             text-decoration: none;
-
             font-size: 14px;
-
             display: flex;
-
             align-items: center;
-
             gap: 6px;
-
             transition: var(--transition);
-
         }
-
         
-
         .footer-links a:hover {
-
             color: var(--primary);
-
         }
-
         
-
         .footer-links a i {
-
             font-size: 10px;
-
         }
-
         
-
         .newsletter-form .input-group {
-
             display: flex;
-
             gap: 8px;
-
             margin-top: 8px;
-
         }
-
         
-
         .newsletter-form input {
-
             flex: 1;
-
             padding: 10px 14px;
-
             background: rgba(255,255,255,0.05);
-
             border: 1px solid var(--border);
-
             border-radius: 8px;
-
             color: #fff;
-
             font-family: inherit;
-
             font-size: 14px;
-
         }
-
         
-
         .newsletter-form input:focus {
-
             outline: none;
-
             border-color: var(--primary);
-
         }
-
         
-
         .newsletter-form button {
-
             padding: 10px 16px;
-
             background: var(--primary);
-
             border: none;
-
             border-radius: 8px;
-
             color: #fff;
-
             cursor: pointer;
-
             transition: var(--transition);
-
         }
-
         
-
         .newsletter-form button:hover {
-
             background: var(--primary-dark);
-
         }
-
         
-
         .footer-contact {
-
             margin-top: 12px;
-
         }
-
         
-
         .footer-contact p {
-
             color: var(--text-light);
-
             font-size: 14px;
-
             display: flex;
-
             align-items: center;
-
             gap: 8px;
-
         }
-
         
-
         .footer-contact p i {
-
             color: var(--primary);
-
             width: 18px;
-
         }
-
         
-
         .footer-bottom {
-
             border-top: 1px solid var(--border);
-
             padding-top: 24px;
-
             display: flex;
-
             justify-content: space-between;
-
             flex-wrap: wrap;
-
             gap: 12px;
-
         }
-
         
-
         .footer-copyright p {
-
             color: var(--text-light);
-
             font-size: 14px;
-
         }
-
         
-
         .footer-legal {
-
             display: flex;
-
             gap: 16px;
-
         }
-
         
-
         .footer-legal a {
-
             color: var(--text-light);
-
             text-decoration: none;
-
             font-size: 13px;
-
             transition: var(--transition);
-
         }
-
         
-
         .footer-legal a:hover {
-
             color: var(--primary);
-
         }
-
         
-
         /* ===== أزرار المساعدة ===== */
-
         .help-buttons {
-
             position: fixed;
-
             left: 20px;
-
             bottom: 20px;
-
             display: flex;
-
             flex-direction: column;
-
             gap: 12px;
-
             z-index: 999;
-
         }
-
         
-
         .help-button {
-
             width: 56px;
-
             height: 56px;
-
             border-radius: 50%;
-
             display: flex;
-
             align-items: center;
-
             justify-content: center;
-
             color: #fff;
-
             text-decoration: none;
-
             box-shadow: 0 4px 20px rgba(0,0,0,0.4);
-
             transition: var(--transition);
-
             position: relative;
-
             border: none;
-
             cursor: pointer;
-
         }
-
         
-
         .help-button:hover {
-
             transform: scale(1.1);
-
         }
-
         
-
         .help-button .help-text {
-
             position: absolute;
-
             right: 70px;
-
             background: rgba(0,0,0,0.9);
-
             padding: 4px 12px;
-
             border-radius: 6px;
-
             font-size: 12px;
-
             white-space: nowrap;
-
             opacity: 0;
-
             pointer-events: none;
-
             transition: var(--transition);
-
         }
-
         
-
         .help-button:hover .help-text {
-
             opacity: 1;
-
         }
-
         
-
         .help-button.phone {
-
             background: #3b82f6;
-
         }
-
         
-
         .help-button.whatsapp {
-
             background: #25d366;
-
         }
-
         
-
         .help-button.chat {
-
             background: var(--secondary);
-
         }
-
         
-
         .scroll-top {
-
             width: 48px;
-
             height: 48px;
-
             border-radius: 50%;
-
             background: rgba(0,212,255,0.15);
-
             border: 1px solid var(--border);
-
             color: #fff;
-
             cursor: pointer;
-
             transition: var(--transition);
-
             display: flex;
-
             align-items: center;
-
             justify-content: center;
-
         }
-
         
-
         .scroll-top:hover {
-
             background: rgba(0,212,255,0.25);
-
         }
-
         
-
         /* ===== الدردشة ===== */
-
         .chat-modal {
-
             position: fixed;
-
             left: 20px;
-
             bottom: 90px;
-
             width: 360px;
-
             max-height: 480px;
-
             background: var(--dark);
-
             border: 1px solid var(--border);
-
             border-radius: var(--radius);
-
             box-shadow: var(--shadow);
-
             z-index: 1000;
-
             display: none;
-
             flex-direction: column;
-
             overflow: hidden;
-
         }
-
         
-
         .chat-modal.open {
-
             display: flex;
-
         }
-
         
-
         .chat-header {
-
             padding: 16px 20px;
-
             background: rgba(0,212,255,0.05);
-
             border-bottom: 1px solid var(--border);
-
             display: flex;
-
             justify-content: space-between;
-
             align-items: center;
-
         }
-
         
-
         .chat-title {
-
             display: flex;
-
             align-items: center;
-
             gap: 10px;
-
         }
-
         
-
         .chat-title i {
-
             color: var(--primary);
-
         }
-
         
-
         .chat-title h4 {
-
             font-size: 16px;
-
         }
-
         
-
         .chat-close {
-
             background: none;
-
             border: none;
-
             color: var(--text-light);
-
             font-size: 20px;
-
             cursor: pointer;
-
         }
-
         
-
         .chat-body {
-
             flex: 1;
-
             display: flex;
-
             flex-direction: column;
-
             max-height: 380px;
-
         }
-
         
-
         .chat-messages {
-
             flex: 1;
-
             padding: 16px;
-
             overflow-y: auto;
-
             display: flex;
-
             flex-direction: column;
-
             gap: 12px;
-
         }
-
         
-
         .message {
-
             max-width: 85%;
-
         }
-
         
-
         .message.bot {
-
             align-self: flex-start;
-
         }
-
         
-
         .message.user {
-
             align-self: flex-end;
-
         }
-
         
-
         .message-content {
-
             padding: 10px 14px;
-
             border-radius: 12px;
-
             font-size: 14px;
-
         }
-
         
-
         .message.bot .message-content {
-
             background: rgba(255,255,255,0.05);
-
         }
-
         
-
         .message.user .message-content {
-
             background: rgba(0,212,255,0.15);
-
         }
-
         
-
         .message-time {
-
             font-size: 10px;
-
             color: var(--text-light);
-
             margin-top: 4px;
-
         }
-
         
-
         .chat-input {
-
             padding: 12px 16px;
-
             border-top: 1px solid var(--border);
-
             display: flex;
-
             gap: 8px;
-
         }
-
         
-
         .chat-input input {
-
             flex: 1;
-
             padding: 10px 14px;
-
             background: rgba(255,255,255,0.05);
-
             border: 1px solid var(--border);
-
             border-radius: 8px;
-
             color: #fff;
-
             font-family: inherit;
-
             font-size: 14px;
-
         }
-
         
-
         .chat-input input:focus {
-
             outline: none;
-
             border-color: var(--primary);
-
         }
-
         
-
         .chat-input button {
-
             padding: 10px 16px;
-
             background: var(--primary);
-
             border: none;
-
             border-radius: 8px;
-
             color: #fff;
-
             cursor: pointer;
-
             transition: var(--transition);
-
         }
-
         
-
         .chat-input button:hover {
-
             background: var(--primary-dark);
-
         }
-
         
-
         /* ===== استجابة الهواتف ===== */
-
         @media (max-width: 1024px) {
-
             .hero .container {
-
                 grid-template-columns: 1fr;
-
                 text-align: center;
-
             }
-
             
-
             .hero-description {
-
                 margin: 0 auto 30px;
-
             }
-
             
-
             .hero-buttons {
-
                 justify-content: center;
-
             }
-
             
-
             .hero-features {
-
                 justify-content: center;
-
             }
-
             
-
             .contact-content {
-
                 grid-template-columns: 1fr;
-
             }
-
             
-
             .footer-grid {
-
                 grid-template-columns: 1fr 1fr;
-
             }
-
         }
-
         
-
         @media (max-width: 768px) {
-
             .nav-links {
-
                 display: none;
-
                 position: absolute;
-
                 top: 100%;
-
                 left: 0;
-
                 right: 0;
-
                 background: rgba(10,14,23,0.98);
-
                 flex-direction: column;
-
                 padding: 20px;
-
                 gap: 8px;
-
                 border-bottom: 1px solid var(--border);
-
             }
-
             
-
             .nav-links.open {
-
                 display: flex;
-
             }
-
             
-
             .menu-toggle {
-
                 display: block;
-
             }
-
             
-
             .nav-phone span {
-
                 display: none;
-
             }
-
             
-
             .dropdown-menu {
-
                 position: static;
-
                 opacity: 1;
-
                 visibility: visible;
-
                 transform: none;
-
                 background: transparent;
-
                 border: none;
-
                 padding: 0 16px;
-
             }
-
             
-
             .stats-grid {
-
                 grid-template-columns: 1fr 1fr;
-
             }
-
             
-
             .hero-title {
-
                 font-size: 32px;
-
             }
-
             
-
             .section-title {
-
                 font-size: 28px;
-
             }
-
             
-
             .services-grid {
-
                 grid-template-columns: 1fr;
-
             }
-
             
-
             .contact-info {
-
                 grid-template-columns: 1fr;
-
             }
-
             
-
             .contact-info .info-card.large {
-
                 grid-column: span 1;
-
             }
-
             
-
-            .social-contact {
-
-                grid-column: span 1;
-
-            }
-
-            
-
             .form-row {
-
                 grid-template-columns: 1fr;
-
             }
-
             
-
             .footer-grid {
-
                 grid-template-columns: 1fr;
-
             }
-
             
-
             .footer-bottom {
-
                 flex-direction: column;
-
                 text-align: center;
-
             }
-
             
-
             .footer-legal {
-
                 justify-content: center;
-
                 flex-wrap: wrap;
-
             }
-
             
-
             .blog-card.featured {
-
                 grid-column: span 1;
-
             }
-
             
-
             .blog-card.featured .blog-image {
-
                 height: 200px;
-
             }
-
             
-
             .chat-modal {
-
                 width: 300px;
-
                 left: 10px;
-
                 bottom: 80px;
-
             }
-
         }
-
         
-
         @media (max-width: 480px) {
-
             .stats-grid {
-
                 grid-template-columns: 1fr;
-
             }
-
             
-
             .hero-title {
-
                 font-size: 26px;
-
             }
-
             
-
             .hero-features {
-
                 flex-direction: column;
-
                 gap: 10px;
-
                 align-items: center;
-
             }
-
             
-
             .packages-grid {
-
                 grid-template-columns: 1fr;
-
             }
-
             
-
-            .certs-grid {
-
-                grid-template-columns: 1fr;
-
-            }
-
-            
-
             .courses-grid {
-
                 grid-template-columns: 1fr;
-
             }
-
             
-
             .academy-features {
-
                 grid-template-columns: 1fr;
-
             }
-
             
-
             .categories-grid {
-
                 grid-template-columns: 1fr 1fr;
-
             }
-
             
-
             .process-steps {
-
                 flex-direction: column;
-
                 align-items: center;
-
             }
-
             
-
             .step {
-
                 max-width: 100%;
-
                 width: 100%;
-
             }
-
         }
-
     </style>
-
 </head>
-
 <body>
-
     <!-- شريط التنقل -->
-
     <nav class="navbar">
-
         <div class="container">
-
             <a href="#home" class="logo">
-
                 <div class="logo-icon">
-
                     <i class="fas fa-shield-alt"></i>
-
                 </div>
-
                 <div class="logo-text">
-
                     <span class="logo-main">Rawan <span>Tash</span></span>
-
                     <span class="logo-sub">Cybersecurity Training</span>
-
                 </div>
-
             </a>
-
             
-
             <ul class="nav-links" id="navLinks">
-
                 <li><a href="#home" class="nav-link active"><i class="fas fa-home"></i> الرئيسية</a></li>
-
                 <li class="nav-dropdown">
-
-                    <a href="#services" class="nav-link"><i class="fas fa-concierge-bell"></i> خدماتنا <i class="fas fa-chevron-down"></i></a>
-
+                    <a href="#services" class="nav-link"><i class="fas fa-concierge-bell"></i> خدماتي <i class="fas fa-chevron-down"></i></a>
                     <div class="dropdown-menu">
-
                         <a href="#pentest"><i class="fas fa-bug"></i> اختبار الاختراق</a>
-
                         <a href="#consulting"><i class="fas fa-headset"></i> استشارات مخصصة</a>
-
                         <a href="#training"><i class="fas fa-user-friends"></i> تدريب شخص لشخص</a>
-
                         <a href="#compliance"><i class="fas fa-file-contract"></i> تدقيق PCI DSS</a>
-
                         <a href="#network"><i class="fas fa-network-wired"></i> اختراق الشبكات</a>
-
                         <a href="#web"><i class="fas fa-code"></i> اختراق الويب</a>
-
                         <a href="#car-services"><i class="fas fa-car"></i> خدمات السيارات</a>
-
                         <a href="#internet-services"><i class="fas fa-globe"></i> خدمات الإنترنت</a>
-
                         <a href="#mobile-services"><i class="fas fa-mobile-alt"></i> خدمات الجوالات</a>
-
                     </div>
-
                 </li>
-
                 <li class="nav-dropdown">
-
                     <a href="#courses" class="nav-link"><i class="fas fa-graduation-cap"></i> الدورات <i class="fas fa-chevron-down"></i></a>
-
                     <div class="dropdown-menu">
-
                         <a href="#cyber-security"><i class="fas fa-shield-alt"></i> الأمن السيبراني</a>
-
                         <a href="#ethical-hacking"><i class="fas fa-user-secret"></i> الاختراق الأخلاقي</a>
-
                         <a href="#kali-linux"><i class="fab fa-linux"></i> كالي لينكس</a>
-
                         <a href="#social-engineering"><i class="fas fa-brain"></i> الهندسة الاجتماعية</a>
-
                     </div>
-
                 </li>
-
                 <li><a href="#academy" class="nav-link"><i class="fas fa-university"></i> الأكاديمية</a></li>
-
                 <li><a href="#blog" class="nav-link"><i class="fas fa-blog"></i> المدونة</a></li>
-
-                <li><a href="#contact" class="nav-link"><i class="fas fa-phone"></i> اتصل بنا</a></li>
-
+                <li><a href="#contact" class="nav-link"><i class="fas fa-phone"></i> اتصل بي</a></li>
             </ul>
-
             
-
             <div class="nav-actions">
-
                 <a href="tel:+966549690896" class="nav-phone">
-
                     <i class="fas fa-phone"></i>
-
                     <span>+966 54 969 0896</span>
-
                 </a>
-
                 <a href="#contact" class="btn btn-primary btn-small">
-
                     <i class="fas fa-paper-plane"></i> اطلب خدمة
-
                 </a>
-
                 <button class="menu-toggle" aria-label="قائمة الهاتف" id="menuToggle">
-
                     <i class="fas fa-bars"></i>
-
                 </button>
-
             </div>
-
         </div>
-
     </nav>
 
-
-
     <!-- القسم الرئيسي -->
-
     <section id="home" class="hero">
-
         <div class="hero-background">
-
             <div class="cyber-grid"></div>
-
             <div class="hero-overlay"></div>
-
         </div>
-
         <div class="container">
-
             <div class="hero-content animate__animated animate__fadeInUp">
-
                 <div class="hero-badge">
-
                     <i class="fas fa-shield-check"></i>
-
-                    <span>Rawan Tash | Certified Cybersecurity Trainer</span>
-
+                    <span>Rawan Tash | مدربة أمن سيبراني متخصصة</span>
                 </div>
-
                 <h1 class="hero-title">
-
                     Rawan <span class="highlight">Tash</span> 
-
                     <br>للتدريب <span class="highlight">المتخصص</span>
-
                 </h1>
-
                 <p class="hero-description">
-
-                    أنا روان الحربي (Rawan Tash)، مدربة معتمدة في الأمن السيبراني، أقدم دورات تدريبية متخصصة في اختبار الاختراق، كالي لينكس، والهندسة الاجتماعية، مع شهادات تدريب معترف بها دولياً.
-
+                    أنا روان الحربي (Rawan Tash)، مدربة متخصصة في الأمن السيبراني، أقدم دورات تدريبية عملية في اختبار الاختراق، كالي لينكس، والهندسة الاجتماعية، بالإضافة إلى خدمات استشارية متكاملة.
                 </p>
-
                 <div class="hero-buttons">
-
                     <a href="#courses" class="btn btn-primary btn-lg">
-
                         <i class="fas fa-graduation-cap"></i> استكشف الدورات
-
                         <span class="btn-arrow"><i class="fas fa-arrow-left"></i></span>
-
                     </a>
-
                     <a href="#contact" class="btn btn-secondary btn-lg">
-
                         <i class="fas fa-comments"></i> تواصل معي مباشرة
-
                     </a>
-
                 </div>
-
                 
-
                 <div class="hero-features">
-
                     <div class="feature">
-
                         <i class="fas fa-bolt"></i>
-
                         <span>خبرة عملية 5+ سنوات</span>
-
                     </div>
-
                     <div class="feature">
-
                         <i class="fas fa-user-shield"></i>
-
-                        <span>شهادات تدريب معتمدة</span>
-
+                        <span>تدريب عملي مكثف</span>
                     </div>
-
                     <div class="feature">
-
                         <i class="fas fa-globe"></i>
-
                         <span>تدريب عن بعد وحضوري</span>
-
                     </div>
-
                 </div>
-
             </div>
-
             
-
             <div class="hero-image animate__animated animate__fadeIn">
-
                 <div class="cyber-terminal">
-
                     <div class="terminal-header">
-
                         <div class="terminal-dots">
-
                             <span class="dot red"></span>
-
                             <span class="dot yellow"></span>
-
                             <span class="dot green"></span>
-
                         </div>
-
                         <span class="terminal-title">Rawan Tash Terminal</span>
-
                     </div>
-
                     <div class="terminal-body">
-
                         <div class="terminal-line">
-
                             <span class="prompt">$</span>
-
                             <span class="command">whoami</span>
-
                         </div>
-
                         <div class="terminal-line">
-
                             <span class="output">Rawan Alharbi (Rawan Tash) - Cybersecurity Trainer</span>
-
                         </div>
-
                         <div class="terminal-line">
-
                             <span class="prompt">$</span>
-
-                            <span class="command">certifications --list</span>
-
+                            <span class="command">services --list</span>
                         </div>
-
                         <div class="terminal-line">
-
-                            <span class="output">✓ CEH | CSCP | CNSP</span>
-
+                            <span class="output">✓ تدريب اختبار الاختراق</span>
                         </div>
-
+                        <div class="terminal-line">
+                            <span class="output">✓ استشارات أمنية مخصصة</span>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="output">✓ تدريب كالي لينكس والهندسة الاجتماعية</span>
+                        </div>
                         <div class="terminal-line blink">
-
                             <span class="prompt">$</span>
-
                             <span class="cursor">_</span>
-
                         </div>
-
                     </div>
-
                 </div>
-
             </div>
-
         </div>
-
         
-
         <!-- إحصائيات -->
-
         <div class="hero-stats">
-
             <div class="container">
-
                 <div class="stats-grid">
-
                     <div class="stat-card">
-
                         <div class="stat-icon">
-
                             <i class="fas fa-user-graduate"></i>
-
                         </div>
-
                         <div class="stat-content">
-
                             <h3 class="stat-number" data-count="500">0</h3>
-
                             <p class="stat-text">متدرب معتمد</p>
-
                         </div>
-
                     </div>
-
                     <div class="stat-card">
-
                         <div class="stat-icon">
-
                             <i class="fas fa-project-diagram"></i>
-
                         </div>
-
                         <div class="stat-content">
-
                             <h3 class="stat-number" data-count="120">0</h3>
-
                             <p class="stat-text">مشروع ناجح</p>
-
                         </div>
-
                     </div>
-
                     <div class="stat-card">
-
                         <div class="stat-icon">
-
                             <i class="fas fa-shield-check"></i>
-
                         </div>
-
                         <div class="stat-content">
-
                             <h3 class="stat-number" data-count="99.9">0</h3>
-
                             <p class="stat-text">% رضا المتدربين</p>
-
                         </div>
-
                     </div>
-
                     <div class="stat-card">
-
                         <div class="stat-icon">
-
                             <i class="fas fa-certificate"></i>
-
                         </div>
-
                         <div class="stat-content">
-
                             <h3 class="stat-number" data-count="15">0</h3>
-
                             <p class="stat-text">شهادة تدريب معتمدة</p>
-
                         </div>
-
                     </div>
-
                 </div>
-
             </div>
-
         </div>
-
     </section>
-
-
 
     <!-- قسم الخدمات التفصيلي -->
-
     <section id="services" class="services">
-
         <div class="container">
-
             <div class="section-header">
-
                 <div class="section-badge">
-
                     <i class="fas fa-star"></i>
-
-                    خدمات تدريبية احترافية
-
+                    خدمات تدريبية واستشارية
                 </div>
-
-                <h2 class="section-title">خدمات <span class="highlight">Rawan Tash</span> التدريبية</h2>
-
-                <p class="section-subtitle">أقدم مجموعة متكاملة من الخدمات التدريبية المصممة خصيصاً لاحتياجاتك</p>
-
+                <h2 class="section-title">خدمات <span class="highlight">Rawan Tash</span> المتخصصة</h2>
+                <p class="section-subtitle">أقدم مجموعة متكاملة من الخدمات التدريبية والاستشارية المصممة خصيصاً لاحتياجاتك</p>
             </div>
-
             
-
             <!-- خدمات الاختراق الأخلاقي -->
-
             <div class="service-category" id="pentest">
-
                 <div class="category-header">
-
                     <div class="category-icon">
-
                         <i class="fas fa-user-secret"></i>
-
                     </div>
-
                     <h3>خدمات الاختراق الأخلاقي والتدريب</h3>
-
-                    <p>اكتشف نقاط الضعف في أنظمتك قبل المخترقين من خلال تدريباتي المتخصصة</p>
-
+                    <p>دورات تدريبية عملية لاكتشاف نقاط الضعف في أنظمتك قبل المخترقين</p>
                 </div>
-
                 <div class="services-grid">
-
                     <div class="service-card">
-
                         <div class="service-header">
-
                             <div class="service-icon">
-
                                 <i class="fas fa-network-wired"></i>
-
                             </div>
-
                             <span class="service-badge">الأكثر طلباً</span>
-
                         </div>
-
                         <h4>تدريب اختبار اختراق الشبكات</h4>
-
                         <p>دورة تدريبية شاملة في اختبار اختراق الشبكات، تشمل فحص الشبكات الداخلية والخارجية، اكتشاف الثغرات، وتقييم مستوى الحماية.</p>
-
                         <ul class="service-features">
-
                             <li><i class="fas fa-check"></i> مسح الشبكات الداخلية والخارجية</li>
-
                             <li><i class="fas fa-check"></i> اكتشاف الأجهزة والخدمات</li>
-
                             <li><i class="fas fa-check"></i> تقييم نقاط الضعف</li>
-
                             <li><i class="fas fa-check"></i> تقرير مفصل مع الحلول</li>
-
                         </ul>
-
                         <div class="service-footer">
-
                             <div class="service-price">
-
                                 <span class="price">تبدأ من 2,499 ر.س</span>
-
                             </div>
-
                             <a href="#contact" class="btn btn-service">
-
                                 <i class="fas fa-calendar-check"></i> احجز الآن
-
                             </a>
-
                         </div>
-
                     </div>
-
                     
-
                     <div class="service-card">
-
                         <div class="service-header">
-
                             <div class="service-icon">
-
                                 <i class="fas fa-code"></i>
-
                             </div>
-
                             <span class="service-badge new">جديد</span>
-
                         </div>
-
                         <h4>تدريب اختراق تطبيقات الويب</h4>
-
                         <p>دورة تدريبية متخصصة في اختبار اختراق تطبيقات الويب، تغطي ثغرات OWASP Top 10، اختبار صلاحيات المستخدمين، وحماية من الهجمات الشائعة.</p>
-
                         <ul class="service-features">
-
                             <li><i class="fas fa-check"></i> فحص ثغرات OWASP Top 10</li>
-
                             <li><i class="fas fa-check"></i> اختبار صلاحيات المستخدمين</li>
-
                             <li><i class="fas fa-check"></i> اكتشاف ثغرات SQL Injection</li>
-
                             <li><i class="fas fa-check"></i> حماية من هجمات XSS</li>
-
                         </ul>
-
                         <div class="service-footer">
-
                             <div class="service-price">
-
                                 <span class="price">تبدأ من 2,999 ر.س</span>
-
                             </div>
-
                             <a href="#contact" class="btn btn-service">
-
                                 <i class="fas fa-calendar-check"></i> احجز الآن
-
                             </a>
-
                         </div>
-
                     </div>
-
                     
-
                     <div class="service-card">
-
                         <div class="service-header">
-
                             <div class="service-icon">
-
                                 <i class="fas fa-mobile-alt"></i>
-
                             </div>
-
                         </div>
-
                         <h4>تدريب اختراق تطبيقات الجوال</h4>
-
                         <p>دورة تدريبية متخصصة في اختبار اختراق تطبيقات iOS و Android، تغطي اكتشاف الثغرات الأمنية، تحليل الثغرات في تخزين البيانات، وحماية من الهندسة العكسية.</p>
-
                         <ul class="service-features">
-
                             <li><i class="fas fa-check"></i> فحص تطبيقات iOS و Android</li>
-
                             <li><i class="fas fa-check"></i> اكتشاف ثغرات تخزين البيانات</li>
-
                             <li><i class="fas fa-check"></i> تحليل الثغرات في الاتصالات</li>
-
                             <li><i class="fas fa-check"></i> حماية من الهندسة العكسية</li>
-
                         </ul>
-
                         <div class="service-footer">
-
                             <div class="service-price">
-
                                 <span class="price">تبدأ من 4,499 ر.س</span>
-
                             </div>
-
                             <a href="#contact" class="btn btn-service">
-
                                 <i class="fas fa-calendar-check"></i> احجز الآن
-
                             </a>
-
                         </div>
-
                     </div>
-
                 </div>
-
             </div>
-
             
-
             <!-- الاستشارات الأمنية -->
-
             <div class="service-category" id="consulting">
-
                 <div class="category-header">
-
                     <div class="category-icon">
-
                         <i class="fas fa-headset"></i>
-
                     </div>
-
                     <h3>الاستشارات الأمنية المخصصة</h3>
-
                     <p>حلول أمنية مصممة خصيصاً لمؤسستك</p>
-
                 </div>
-
                 <div class="services-grid">
-
                     <div class="service-card">
-
                         <div class="service-header">
-
                             <div class="service-icon">
-
                                 <i class="fas fa-file-contract"></i>
-
                             </div>
-
                         </div>
-
                         <h4>تدقيق وامتثال PCI DSS</h4>
-
                         <p>تدقيق شامل لامتثال أنظمة الدفع لمعايير PCI DSS، إعداد التقارير المطلوبة، ودعم عملية الحصول على الشهادة.</p>
-
                         <ul class="service-features">
-
                             <li><i class="fas fa-check"></i> تقييم مستوى الامتثال الحالي</li>
-
                             <li><i class="fas fa-check"></i> تدقيق شامل لجميع المتطلبات</li>
-
                             <li><i class="fas fa-check"></i> إعداد تقارير ROC و AOC</li>
-
                             <li><i class="fas fa-check"></i> دعم الحصول على الشهادة</li>
-
                         </ul>
-
                         <div class="service-footer">
-
                             <div class="service-price">
-
                                 <span class="price">اسعار مخصصة</span>
-
                             </div>
-
                             <a href="#contact" class="btn btn-service">
-
                                 <i class="fas fa-comment-dots"></i> احصل على عرض
-
                             </a>
-
                         </div>
-
                     </div>
-
                     
-
                     <div class="service-card">
-
                         <div class="service-header">
-
                             <div class="service-icon">
-
                                 <i class="fas fa-shield-alt"></i>
-
                             </div>
-
                         </div>
-
                         <h4>تقييم المخاطر الأمنية</h4>
-
                         <p>تحليل شامل للمخاطر الأمنية لمؤسستك، تحديد نقاط الضعف، وتقديم خطة علاجية شاملة.</p>
-
                         <ul class="service-features">
-
                             <li><i class="fas fa-check"></i> تحليل شامل للمخاطر</li>
-
                             <li><i class="fas fa-check"></i> تحديد نقاط الضعف</li>
-
                             <li><i class="fas fa-check"></i> تقييم التأثير المالي</li>
-
                             <li><i class="fas fa-check"></i> خطة علاجية مفصلة</li>
-
                         </ul>
-
                         <div class="service-footer">
-
                             <div class="service-price">
-
                                 <span class="price">تبدأ من 5,499 ر.س</span>
-
                             </div>
-
                             <a href="#contact" class="btn btn-service">
-
                                 <i class="fas fa-comment-dots"></i> احصل على عرض
-
                             </a>
-
                         </div>
-
                     </div>
-
                     
-
                     <div class="service-card">
-
                         <div class="service-header">
-
                             <div class="service-icon">
-
                                 <i class="fas fa-user-shield"></i>
-
                             </div>
-
                         </div>
-
                         <h4>استشارات حوكمة الأمن</h4>
-
                         <p>بناء إطار عمل متكامل لحوكمة الأمن المعلوماتي، سياسات وإجراءات أمنية، وضمان الامتثال التنظيمي.</p>
-
                         <ul class="service-features">
-
                             <li><i class="fas fa-check"></i> بناء إطار حوكمة الأمن</li>
-
                             <li><i class="fas fa-check"></i> تطوير سياسات أمنية</li>
-
                             <li><i class="fas fa-check"></i> ضمان الامتثال التنظيمي</li>
-
                             <li><i class="fas fa-check"></i> تدريب فرق العمل</li>
-
                         </ul>
-
                         <div class="service-footer">
-
                             <div class="service-price">
-
                                 <span class="price">اسعار مخصصة</span>
-
                             </div>
-
                             <a href="#contact" class="btn btn-service">
-
                                 <i class="fas fa-comment-dots"></i> احصل على عرض
-
                             </a>
-
                         </div>
-
                     </div>
-
                 </div>
-
             </div>
-
             
-
             <!-- التدريب والتطوير -->
-
             <div class="service-category" id="training">
-
                 <div class="category-header">
-
                     <div class="category-icon">
-
                         <i class="fas fa-chalkboard-teacher"></i>
-
                     </div>
-
                     <h3>التدريب والتطوير مع Rawan Tash</h3>
-
-                    <p>برامج تدريبية احترافية لتطوير مهاراتك</p>
-
+                    <p>برامج تدريبية احترافية لتطوير مهاراتك في الأمن السيبراني</p>
                 </div>
-
                 <div class="services-grid">
-
                     <div class="service-card">
-
                         <div class="service-header">
-
                             <div class="service-icon">
-
                                 <i class="fas fa-user-friends"></i>
-
                             </div>
-
                             <span class="service-badge">شائع</span>
-
                         </div>
-
                         <h4>تدريب شخص لشخص</h4>
-
-                        <p>جلسات تدريبية فردية ومخصصة مع Rawan Tash، تركيز على المهارات العملية، ومشاريع واقعية.</p>
-
+                        <p>جلسات تدريبية فردية ومخصصة مع Rawan Tash، تركيز على المهارات العملية، ومشاريع واقعية لبناء خبرة حقيقية.</p>
                         <ul class="service-features">
-
                             <li><i class="fas fa-check"></i> تدريب فردي مكثف</li>
-
                             <li><i class="fas fa-check"></i> جلسات عملية مباشرة</li>
-
                             <li><i class="fas fa-check"></i> تركيز على المهارات العملية</li>
-
                             <li><i class="fas fa-check"></i> مشاريع تطبيقية واقعية</li>
-
                         </ul>
-
                         <div class="service-footer">
-
                             <div class="service-price">
-
                                 <span class="price">تبدأ من 249 ر.س/ساعة</span>
-
                             </div>
-
                             <a href="#contact" class="btn btn-service">
-
                                 <i class="fas fa-user-graduate"></i> سجل الآن
-
                             </a>
-
                         </div>
-
                     </div>
-
                     
-
                     <div class="service-card">
-
                         <div class="service-header">
-
                             <div class="service-icon">
-
                                 <i class="fas fa-users"></i>
-
                             </div>
-
                         </div>
-
                         <h4>تدريب فرق المؤسسات</h4>
-
                         <p>برامج تدريبية مخصصة لفرق العمل، تطوير مهارات الأمن السيبراني، ورفع مستوى الوعي الأمني في المؤسسة.</p>
-
                         <ul class="service-features">
-
                             <li><i class="fas fa-check"></i> برامج مخصصة للفرق</li>
-
                             <li><i class="fas fa-check"></i> تطوير مهارات متخصصة</li>
-
                             <li><i class="fas fa-check"></i> رفع مستوى الوعي الأمني</li>
-
                             <li><i class="fas fa-check"></i> تقييم ومتابعة مستمرة</li>
-
                         </ul>
-
                         <div class="service-footer">
-
                             <div class="service-price">
-
                                 <span class="price">اسعار مخصصة</span>
-
                             </div>
-
                             <a href="#contact" class="btn btn-service">
-
                                 <i class="fas fa-users"></i> اطلب عرضاً
-
                             </a>
-
                         </div>
-
                     </div>
-
                     
-
                     <div class="service-card">
-
                         <div class="service-header">
-
                             <div class="service-icon">
-
                                 <i class="fas fa-laptop-house"></i>
-
                             </div>
-
                             <span class="service-badge">متاح أونلاين</span>
-
                         </div>
-
                         <h4>ورش عمل افتراضية</h4>
-
                         <p>ورش عمل تفاعلية عبر الإنترنت مع Rawan Tash، تركيز على مواضيع محددة، تطبيقات عملية مباشرة، وشهادات مشاركة.</p>
-
                         <ul class="service-features">
-
                             <li><i class="fas fa-check"></i> ورش تفاعلية أونلاين</li>
-
                             <li><i class="fas fa-check"></i> تركيز على مواضيع محددة</li>
-
                             <li><i class="fas fa-check"></i> تطبيقات عملية مباشرة</li>
-
                             <li><i class="fas fa-check"></i> شهادات مشاركة معتمدة</li>
-
                         </ul>
-
                         <div class="service-footer">
-
                             <div class="service-price">
-
                                 <span class="price">تبدأ من 399 ر.س</span>
-
                             </div>
-
                             <a href="#contact" class="btn btn-service">
-
                                 <i class="fas fa-video"></i> انضم الآن
-
                             </a>
-
                         </div>
-
                     </div>
-
                 </div>
-
             </div>
-
             
-
             <!-- ===== قسم خدمات السيارات ===== -->
-
             <div class="service-category" id="car-services">
-
                 <div class="category-header">
-
                     <div class="category-icon">
-
                         <i class="fas fa-car"></i>
-
                     </div>
-
                     <h3>خدمات السيارات المتخصصة</h3>
-
                     <p>حلول تقنية متطورة لسيارتك</p>
-
                 </div>
-
                 <div class="services-grid">
-
                     <div class="service-card">
-
                         <div class="service-header">
-
                             <div class="service-icon">
-
                                 <i class="fas fa-microchip"></i>
-
                             </div>
-
                             <span class="service-badge">الأكثر طلباً</span>
-
                         </div>
-
                         <h4>برمجة شاشات السيارات وتحويلها ديجيتال</h4>
-
                         <p>تحويل شاشة سيارتك إلى نظام ديجيتال متطور، برمجة متقدمة، دعم كامل للماركات الحديثة، وتجربة قيادة متطورة.</p>
-
                         <ul class="service-features">
-
                             <li><i class="fas fa-check"></i> تحويل الشاشة إلى ديجيتال</li>
-
                             <li><i class="fas fa-check"></i> برمجة أنظمة المعلومات والترفيه</li>
-
                             <li><i class="fas fa-check"></i> دعم Apple CarPlay و Android Auto</li>
-
                             <li><i class="fas fa-check"></i> تحديث خرائط ونظام الملاحة</li>
-
                         </ul>
-
                         <div class="service-footer">
-
                             <div class="service-price">
-
                                 <span class="price">تبدأ من 1,499 ر.س</span>
-
                             </div>
-
                             <a href="#contact" class="btn btn-service">
-
                                 <i class="fas fa-calendar-check"></i> احجز الآن
-
                             </a>
-
                         </div>
-
                     </div>
-
                     
-
                     <div class="service-card">
-
                         <div class="service-header">
-
                             <div class="service-icon">
-
                                 <i class="fas fa-syringe"></i>
-
                             </div>
-
                             <span class="service-badge">جديد</span>
-
                         </div>
-
                         <h4>قراءة أعطال السيارات</h4>
-
                         <p>فحص شامل باستخدام أحدث أجهزة OBD، قراءة وتحليل الأعطال، مسح الأخطاء، وإعادة برمجة وحدات التحكم الإلكترونية.</p>
-
                         <ul class="service-features">
-
                             <li><i class="fas fa-check"></i> قراءة أكواد الأعطال</li>
-
                             <li><i class="fas fa-check"></i> تحليل بيانات المحرك</li>
-
                             <li><i class="fas fa-check"></i> مسح الأعطال وإعادة الضبط</li>
-
                             <li><i class="fas fa-check"></i> تقرير مفصل عن حالة السيارة</li>
-
                         </ul>
-
                         <div class="service-footer">
-
                             <div class="service-price">
-
                                 <span class="price">تبدأ من 399 ر.س</span>
-
                             </div>
-
                             <a href="#contact" class="btn btn-service">
-
                                 <i class="fas fa-calendar-check"></i> احجز الآن
-
                             </a>
-
                         </div>
-
                     </div>
-
                     
-
                     <div class="service-card">
-
                         <div class="service-header">
-
                             <div class="service-icon">
-
                                 <i class="fas fa-key"></i>
-
                             </div>
-
                         </div>
-
                         <h4>برمجة مفاتيح السيارات</h4>
-
                         <p>برمجة مفاتيح جديدة، نسخ مفاتيح ذكية، إصلاح مشاكل المفاتيح، وبرمجة أنظمة الدخول الذكي.</p>
-
                         <ul class="service-features">
-
                             <li><i class="fas fa-check"></i> برمجة مفاتيح جديدة</li>
-
                             <li><i class="fas fa-check"></i> نسخ مفاتيح ذكية</li>
-
                             <li><i class="fas fa-check"></i> إصلاح مشاكل المفاتيح</li>
-
                             <li><i class="fas fa-check"></i> برمجة أنظمة الدخول الذكي</li>
-
                         </ul>
-
                         <div class="service-footer">
-
                             <div class="service-price">
-
                                 <span class="price">تبدأ من 499 ر.س</span>
-
                             </div>
-
                             <a href="#contact" class="btn btn-service">
-
                                 <i class="fas fa-calendar-check"></i> احجز الآن
-
                             </a>
-
                         </div>
-
                     </div>
-
                 </div>
-
             </div>
-
             
-
             <!-- ===== قسم خدمات الإنترنت ===== -->
-
             <div class="service-category" id="internet-services">
-
                 <div class="category-header">
-
                     <div class="category-icon">
-
                         <i class="fas fa-globe"></i>
-
                     </div>
-
                     <h3>خدمات الإنترنت والتطوير الرقمي</h3>
-
                     <p>حلول رقمية متكاملة</p>
-
                 </div>
-
                 <div class="services-grid">
-
                     <div class="service-card">
-
                         <div class="service-header">
-
                             <div class="service-icon">
-
                                 <i class="fas fa-cubes"></i>
-
                             </div>
-
                             <span class="service-badge">شائع</span>
-
                         </div>
-
                         <h4>بناء منصات رقمية</h4>
-
                         <p>تصميم وتطوير منصات رقمية متكاملة، بوابات إلكترونية، أنظمة إدارة محتوى، وحلول تجارة إلكترونية متطورة.</p>
-
                         <ul class="service-features">
-
                             <li><i class="fas fa-check"></i> منصات إلكترونية متكاملة</li>
-
                             <li><i class="fas fa-check"></i> أنظمة إدارة محتوى مخصصة</li>
-
                             <li><i class="fas fa-check"></i> بوابات دفع وتجارة إلكترونية</li>
-
                             <li><i class="fas fa-check"></i> تحسين تجربة المستخدم</li>
-
                         </ul>
-
                         <div class="service-footer">
-
                             <div class="service-price">
-
                                 <span class="price">تبدأ من 4,999 ر.س</span>
-
                             </div>
-
                             <a href="#contact" class="btn btn-service">
-
                                 <i class="fas fa-cubes"></i> اطلب الآن
-
                             </a>
-
                         </div>
-
                     </div>
-
                     
-
                     <div class="service-card">
-
                         <div class="service-header">
-
                             <div class="service-icon">
-
                                 <i class="fas fa-code"></i>
-
                             </div>
-
                         </div>
-
                         <h4>تطوير المواقع والتطبيقات</h4>
-
                         <p>تصميم وتطوير مواقع وتطبيقات احترافية، واجهات مستخدم جذابة، وأداء عالي مع أفضل الممارسات.</p>
-
                         <ul class="service-features">
-
                             <li><i class="fas fa-check"></i> مواقع ويب احترافية</li>
-
                             <li><i class="fas fa-check"></i> تطبيقات موبايل</li>
-
                             <li><i class="fas fa-check"></i> واجهات مستخدم تفاعلية</li>
-
                             <li><i class="fas fa-check"></i> تحسين محركات البحث</li>
-
                         </ul>
-
                         <div class="service-footer">
-
                             <div class="service-price">
-
                                 <span class="price">تبدأ من 2,999 ر.س</span>
-
                             </div>
-
                             <a href="#contact" class="btn btn-service">
-
                                 <i class="fas fa-code"></i> اطلب الآن
-
                             </a>
-
                         </div>
-
                     </div>
-
                     
-
                     <div class="service-card">
-
                         <div class="service-header">
-
                             <div class="service-icon">
-
                                 <i class="fas fa-shield-alt"></i>
-
                             </div>
-
                             <span class="service-badge">حماية</span>
-
                         </div>
-
                         <h4>حماية الشبكات</h4>
-
                         <p>تأمين الشبكات والبنية التحتية، جدران حماية متقدمة، كشف التهديدات، وحماية من الهجمات السيبرانية.</p>
-
                         <ul class="service-features">
-
                             <li><i class="fas fa-check"></i> جدران حماية متقدمة</li>
-
                             <li><i class="fas fa-check"></i> كشف التهديدات</li>
-
                             <li><i class="fas fa-check"></i> حماية من الهجمات</li>
-
                             <li><i class="fas fa-check"></i> مراقبة أمنية 24/7</li>
-
                         </ul>
-
                         <div class="service-footer">
-
                             <div class="service-price">
-
                                 <span class="price">تبدأ من 3,499 ر.س</span>
-
                             </div>
-
                             <a href="#contact" class="btn btn-service">
-
                                 <i class="fas fa-shield-alt"></i> اطلب الآن
-
                             </a>
-
                         </div>
-
                     </div>
-
                 </div>
-
             </div>
-
             
-
             <!-- ===== قسم خدمات الجوالات ===== -->
-
             <div class="service-category" id="mobile-services">
-
                 <div class="category-header">
-
                     <div class="category-icon">
-
                         <i class="fas fa-mobile-alt"></i>
-
                     </div>
-
                     <h3>خدمات صيانة الجوالات والأجهزة</h3>
-
                     <p>تصليح متخصص لجميع الأجهزة الذكية</p>
-
                 </div>
-
                 <div class="services-grid">
-
                     <div class="service-card">
-
                         <div class="service-header">
-
                             <div class="service-icon">
-
                                 <i class="fas fa-phone-alt"></i>
-
                             </div>
-
                             <span class="service-badge">الأكثر طلباً</span>
-
                         </div>
-
                         <h4>تصليح الجوالات</h4>
-
                         <p>تصليح جميع أنواع الجوالات، استبدال شاشات وبطاريات، تصليح أعطال البرامج، وحل مشاكل الشحن والصوت.</p>
-
                         <ul class="service-features">
-
                             <li><i class="fas fa-check"></i> استبدال شاشات وبطاريات</li>
-
                             <li><i class="fas fa-check"></i> تصليح أعطال البرامج</li>
-
                             <li><i class="fas fa-check"></i> حل مشاكل الشحن والصوت</li>
-
                             <li><i class="fas fa-check"></i> فتح سماعات وقارئ بصمة</li>
-
                         </ul>
-
                         <div class="service-footer">
-
                             <div class="service-price">
-
                                 <span class="price">تبدأ من 199 ر.س</span>
-
                             </div>
-
                             <a href="#contact" class="btn btn-service">
-
                                 <i class="fas fa-tools"></i> احجز الآن
-
                             </a>
-
                         </div>
-
                     </div>
-
                     
-
                     <div class="service-card">
-
                         <div class="service-header">
-
                             <div class="service-icon">
-
                                 <i class="fas fa-gamepad"></i>
-
                             </div>
-
                             <span class="service-badge">جديد</span>
-
                         </div>
-
                         <h4>تصليح السوني والأجهزة المعدلة</h4>
-
                         <p>تصليح أجهزة السوني بجميع إصداراتها، تصليح الأجهزة المعدلة، تركيب أنظمة تشغيل، ومعالجة مشاكل الأداء.</p>
-
                         <ul class="service-features">
-
                             <li><i class="fas fa-check"></i> تصليح جميع إصدارات السوني</li>
-
                             <li><i class="fas fa-check"></i> تركيب أنظمة تشغيل</li>
-
                             <li><i class="fas fa-check"></i> معالجة مشاكل الأداء</li>
-
                             <li><i class="fas fa-check"></i> تصليح أجهزة معدلة</li>
-
                         </ul>
-
                         <div class="service-footer">
-
                             <div class="service-price">
-
                                 <span class="price">تبدأ من 299 ر.س</span>
-
                             </div>
-
                             <a href="#contact" class="btn btn-service">
-
                                 <i class="fas fa-gamepad"></i> احجز الآن
-
                             </a>
-
                         </div>
-
                     </div>
-
                     
-
                     <div class="service-card">
-
                         <div class="service-header">
-
                             <div class="service-icon">
-
                                 <i class="fas fa-laptop"></i>
-
                             </div>
-
                         </div>
-
                         <h4>تصليح أعطال اللابتوب</h4>
-
                         <p>تصليح جميع أعطال اللابتوب، استبدال قطع غيار، تصليح شاشات وكيبورد، ومعالجة مشاكل الأداء والبطارية.</p>
-
                         <ul class="service-features">
-
                             <li><i class="fas fa-check"></i> استبدال قطع غيار</li>
-
                             <li><i class="fas fa-check"></i> تصليح شاشات وكيبورد</li>
-
                             <li><i class="fas fa-check"></i> معالجة مشاكل الأداء</li>
-
                             <li><i class="fas fa-check"></i> تصليح البطارية والشحن</li>
-
                         </ul>
-
                         <div class="service-footer">
-
                             <div class="service-price">
-
                                 <span class="price">تبدأ من 249 ر.س</span>
-
                             </div>
-
                             <a href="#contact" class="btn btn-service">
-
                                 <i class="fas fa-laptop"></i> احجز الآن
-
                             </a>
-
                         </div>
-
                     </div>
-
                 </div>
-
             </div>
-
             
-
             <!-- حلول الأمن المتقدمة -->
-
             <div class="service-category">
-
                 <div class="category-header">
-
                     <div class="category-icon">
-
                         <i class="fas fa-tools"></i>
-
                     </div>
-
                     <h3>حلول الأمن المتقدمة</h3>
-
                     <p>تقنيات متطورة لحماية شاملة</p>
-
                 </div>
-
                 <div class="services-grid">
-
                     <div class="service-card">
-
                         <div class="service-header">
-
                             <div class="service-icon">
-
                                 <i class="fas fa-brain"></i>
-
                             </div>
-
                         </div>
-
                         <h4>الهندسة الاجتماعية</h4>
-
                         <p>اختبار وعي الموظفين ضد هجمات الهندسة الاجتماعية، محاكاة هجمات واقعية، وتدريب على كيفية الاكتشاف والوقاية.</p>
-
                         <ul class="service-features">
-
                             <li><i class="fas fa-check"></i> محاكاة هجمات واقعية</li>
-
                             <li><i class="fas fa-check"></i> اختبار وعي الموظفين</li>
-
                             <li><i class="fas fa-check"></i> تدريب على الاكتشاف والوقاية</li>
-
                             <li><i class="fas fa-check"></i> تقرير مفصل مع النتائج</li>
-
                         </ul>
-
                         <div class="service-footer">
-
                             <div class="service-price">
-
                                 <span class="price">تبدأ من 4,500 ر.س</span>
-
                             </div>
-
                             <a href="#contact" class="btn btn-service">
-
                                 <i class="fas fa-brain"></i> ابدأ الاختبار
-
                             </a>
-
                         </div>
-
                     </div>
-
                     
-
                     <div class="service-card">
-
                         <div class="service-header">
-
                             <div class="service-icon">
-
                                 <i class="fas fa-cloud"></i>
-
                             </div>
-
                         </div>
-
                         <h4>أمن الحوسبة السحابية</h4>
-
                         <p>تقييم أمن البنية السحابية، حماية بيانات AWS و Azure و Google Cloud، وضمان الامتثال لمعايير الأمن السحابي.</p>
-
                         <ul class="service-features">
-
                             <li><i class="fas fa-check"></i> تقييم أمن البنية السحابية</li>
-
                             <li><i class="fas fa-check"></i> حماية بيانات AWS و Azure</li>
-
                             <li><i class="fas fa-check"></i> ضمان الامتثال السحابي</li>
-
                             <li><i class="fas fa-check"></i> مراقبة وتنبيهات أمنية</li>
-
                         </ul>
-
                         <div class="service-footer">
-
                             <div class="service-price">
-
                                 <span class="price">تبدأ من 6,999 ر.س</span>
-
                             </div>
-
                             <a href="#contact" class="btn btn-service">
-
                                 <i class="fas fa-cloud"></i> احصل على تقييم
-
                             </a>
-
                         </div>
-
                     </div>
-
                     
-
                     <div class="service-card">
-
                         <div class="service-header">
-
                             <div class="service-icon">
-
                                 <i class="fas fa-first-aid"></i>
-
                             </div>
-
                             <span class="service-badge">طارئ</span>
-
                         </div>
-
                         <h4>استجابة للحوادث الأمنية</h4>
-
                         <p>استجابة سريعة للحوادث الأمنية، احتواء الهجمات، تحليل الأدلة الرقمية، واستعادة الأنظمة المتأثرة.</p>
-
                         <ul class="service-features">
-
                             <li><i class="fas fa-check"></i> استجابة فورية 24/7</li>
-
                             <li><i class="fas fa-check"></i> احتواء الهجمات الإلكترونية</li>
-
                             <li><i class="fas fa-check"></i> تحليل الأدلة الرقمية</li>
-
                             <li><i class="fas fa-check"></i> استعادة الأنظمة المتأثرة</li>
-
                         </ul>
-
                         <div class="service-footer">
-
                             <div class="service-price">
-
                                 <span class="price">اتصل فوراً</span>
-
                             </div>
-
                             <a href="tel:+966549690896" class="btn btn-service emergency">
-
                                 <i class="fas fa-phone-alt"></i> اتصل الآن
-
                             </a>
-
                         </div>
-
                     </div>
-
                 </div>
-
             </div>
-
         </div>
-
     </section>
-
-
 
     <!-- قسم الدورات المتخصصة -->
-
     <section id="courses" class="courses">
-
         <div class="container">
-
             <div class="section-header">
-
                 <div class="section-badge">
-
                     <i class="fas fa-graduation-cap"></i>
-
                     مسارات تعليمية
-
                 </div>
-
-                <h2 class="section-title">دورات <span class="highlight">معتمدة</span> مع Rawan Tash</h2>
-
+                <h2 class="section-title">دورات <span class="highlight">تدريبية</span> مع Rawan Tash</h2>
                 <p class="section-subtitle">اختر من بين مساراتنا التعليمية الشاملة لتبدأ رحلتك في عالم الأمن السيبراني</p>
-
             </div>
-
             
-
             <!-- مسارات التعلم -->
-
             <div class="learning-paths">
-
                 <div class="path-tabs">
-
                     <button class="path-tab active" data-path="beginner">مسار المبتدئين</button>
-
                     <button class="path-tab" data-path="intermediate">مسار المتوسطين</button>
-
                     <button class="path-tab" data-path="advanced">مسار المحترفين</button>
-
                 </div>
-
                 
-
                 <div class="path-content">
-
                     <!-- مسار المبتدئين -->
-
                     <div class="path-pane active" id="beginner-path">
-
                         <div class="courses-grid">
-
                             <div class="course-card">
-
                                 <div class="course-header">
-
                                     <div class="course-level beginner">مبتدئ</div>
-
                                     <div class="course-duration">
-
                                         <i class="far fa-clock"></i> 40 ساعة
-
                                     </div>
-
                                 </div>
-
                                 <h4>مقدمة في الأمن السيبراني</h4>
-
                                 <p>تعلم أساسيات الأمن السيبراني، مفاهيم الحماية، أنواع الهجمات، ومبادئ الأمن الأساسية.</p>
-
                                 <div class="course-meta">
-
                                     <span><i class="fas fa-video"></i> 25 فيديو تعليمي</span>
-
                                     <span><i class="fas fa-file-alt"></i> 10 تمارين عملية</span>
-
                                 </div>
-
                                 <div class="course-price">
-
                                     <span class="current-price">699 ر.س</span>
-
                                     <span class="original-price">1,199 ر.س</span>
-
                                 </div>
-
                                 <a href="#contact" class="btn btn-course">سجل في الدورة</a>
-
                             </div>
-
                             
-
                             <div class="course-card">
-
                                 <div class="course-header">
-
                                     <div class="course-level beginner">مبتدئ</div>
-
                                     <div class="course-duration">
-
                                         <i class="far fa-clock"></i> 35 ساعة
-
                                     </div>
-
                                 </div>
-
                                 <h4>أساسيات الشبكات للأمن</h4>
-
                                 <p>فهم أساسيات الشبكات، بروتوكولات الاتصال، وأمن الشبكات للمبتدئين.</p>
-
                                 <div class="course-meta">
-
                                     <span><i class="fas fa-video"></i> 20 فيديو تعليمي</span>
-
                                     <span><i class="fas fa-file-alt"></i> 8 تمارين عملية</span>
-
                                 </div>
-
                                 <div class="course-price">
-
                                     <span class="current-price">599 ر.س</span>
-
                                     <span class="original-price">999 ر.س</span>
-
                                 </div>
-
                                 <a href="#contact" class="btn btn-course">سجل في الدورة</a>
-
                             </div>
-
                             
-
                             <div class="course-card">
-
                                 <div class="course-header">
-
                                     <div class="course-level beginner">مبتدئ</div>
-
                                     <div class="course-duration">
-
                                         <i class="far fa-clock"></i> 30 ساعة
-
                                     </div>
-
                                 </div>
-
                                 <h4>مقدمة في كالي لينكس</h4>
-
                                 <p>تعلم أساسيات كالي لينكس، التثبيت، الأوامر الأساسية، وأدوات الأمن المتاحة.</p>
-
                                 <div class="course-meta">
-
                                     <span><i class="fas fa-video"></i> 18 فيديو تعليمي</span>
-
                                     <span><i class="fas fa-file-alt"></i> 12 تمرين عملي</span>
-
                                 </div>
-
                                 <div class="course-price">
-
                                     <span class="current-price">799 ر.س</span>
-
                                     <span class="original-price">1,399 ر.س</span>
-
                                 </div>
-
                                 <a href="#contact" class="btn btn-course">سجل في الدورة</a>
-
                             </div>
-
                         </div>
-
                     </div>
-
                     
-
                     <!-- مسار المتوسطين -->
-
                     <div class="path-pane" id="intermediate-path">
-
                         <div class="courses-grid">
-
                             <div class="course-card">
-
                                 <div class="course-header">
-
                                     <div class="course-level intermediate">متوسط</div>
-
                                     <div class="course-duration">
-
                                         <i class="far fa-clock"></i> 60 ساعة
-
                                     </div>
-
                                 </div>
-
                                 <h4>اختبار اختراق الشبكات</h4>
-
                                 <p>تعلم تقنيات اختبار اختراق الشبكات، أدوات NMAP و Metasploit، وتقييم الثغرات.</p>
-
                                 <div class="course-meta">
-
                                     <span><i class="fas fa-video"></i> 35 فيديو تعليمي</span>
-
                                     <span><i class="fas fa-file-alt"></i> 20 تمرين عملي</span>
-
                                 </div>
-
                                 <div class="course-price">
-
                                     <span class="current-price">1,399 ر.س</span>
-
                                     <span class="original-price">2,299 ر.س</span>
-
                                 </div>
-
                                 <a href="#contact" class="btn btn-course">سجل في الدورة</a>
-
                             </div>
-
                             
-
                             <div class="course-card">
-
                                 <div class="course-header">
-
                                     <div class="course-level intermediate">متوسط</div>
-
                                     <div class="course-duration">
-
                                         <i class="far fa-clock"></i> 50 ساعة
-
                                     </div>
-
                                 </div>
-
                                 <h4>أمن تطبيقات الويب</h4>
-
                                 <p>تعلم اكتشاف ثغرات الويب، OWASP Top 10، أدوات Burp Suite، وحماية التطبيقات.</p>
-
                                 <div class="course-meta">
-
                                     <span><i class="fas fa-video"></i> 30 فيديو تعليمي</span>
-
                                     <span><i class="fas fa-file-alt"></i> 15 تمرين عملي</span>
-
                                 </div>
-
                                 <div class="course-price">
-
                                     <span class="current-price">1,199 ر.س</span>
-
                                     <span class="original-price">1,999 ر.س</span>
-
                                 </div>
-
                                 <a href="#contact" class="btn btn-course">سجل في الدورة</a>
-
                             </div>
-
                             
-
                             <div class="course-card">
-
                                 <div class="course-header">
-
                                     <div class="course-level intermediate">متوسط</div>
-
                                     <div class="course-duration">
-
                                         <i class="far fa-clock"></i> 45 ساعة
-
                                     </div>
-
                                 </div>
-
                                 <h4>الهندسة الاجتماعية المتقدمة</h4>
-
                                 <p>تقنيات الهندسة الاجتماعية، أدوات SET، وكيفية الحماية من هذه الهجمات.</p>
-
                                 <div class="course-meta">
-
                                     <span><i class="fas fa-video"></i> 25 فيديو تعليمي</span>
-
                                     <span><i class="fas fa-file-alt"></i> 10 تمارين عملية</span>
-
                                 </div>
-
                                 <div class="course-price">
-
                                     <span class="current-price">899 ر.س</span>
-
                                     <span class="original-price">1,599 ر.س</span>
-
                                 </div>
-
                                 <a href="#contact" class="btn btn-course">سجل في الدورة</a>
-
                             </div>
-
                         </div>
-
                     </div>
-
                     
-
                     <!-- مسار المحترفين -->
-
                     <div class="path-pane" id="advanced-path">
-
                         <div class="courses-grid">
-
                             <div class="course-card">
-
                                 <div class="course-header">
-
                                     <div class="course-level advanced">متقدم</div>
-
                                     <div class="course-duration">
-
                                         <i class="far fa-clock"></i> 80 ساعة
-
                                     </div>
-
                                 </div>
-
                                 <h4>اختبار اختراق متقدم</h4>
-
-                                <p>تقنيات اختبار اختراق متقدمة، اختراق الأنظمة المعقدة، وتجاوس أنظمة الحماية.</p>
-
+                                <p>تقنيات اختبار اختراق متقدمة، اختراق الأنظمة المعقدة، وتجاوز أنظمة الحماية.</p>
                                 <div class="course-meta">
-
                                     <span><i class="fas fa-video"></i> 45 فيديو تعليمي</span>
-
                                     <span><i class="fas fa-file-alt"></i> 25 تمرين عملي</span>
-
                                 </div>
-
                                 <div class="course-price">
-
                                     <span class="current-price">2,799 ر.س</span>
-
                                     <span class="original-price">4,699 ر.س</span>
-
                                 </div>
-
                                 <a href="#contact" class="btn btn-course">سجل في الدورة</a>
-
                             </div>
-
                             
-
                             <div class="course-card">
-
                                 <div class="course-header">
-
                                     <div class="course-level advanced">متقدم</div>
-
                                     <div class="course-duration">
-
                                         <i class="far fa-clock"></i> 70 ساعة
-
                                     </div>
-
                                 </div>
-
                                 <h4>تحقيق الأدلة الرقمية</h4>
-
                                 <p>تقنيات جمع وتحليل الأدلة الرقمية، أدوات التحقيق، وإعداد التقارير القضائية.</p>
-
                                 <div class="course-meta">
-
                                     <span><i class="fas fa-video"></i> 40 فيديو تعليمي</span>
-
                                     <span><i class="fas fa-file-alt"></i> 20 تمرين عملي</span>
-
                                 </div>
-
                                 <div class="course-price">
-
                                     <span class="current-price">2,299 ر.س</span>
-
                                     <span class="original-price">3,799 ر.س</span>
-
                                 </div>
-
                                 <a href="#contact" class="btn btn-course">سجل في الدورة</a>
-
                             </div>
-
                             
-
                             <div class="course-card">
-
                                 <div class="course-header">
-
                                     <div class="course-level advanced">متقدم</div>
-
                                     <div class="course-duration">
-
                                         <i class="far fa-clock"></i> 90 ساعة
-
                                     </div>
-
                                 </div>
-
                                 <h4>أمن الحوسبة السحابية</h4>
-
                                 <p>تأمين البنية السحابية، أمن AWS و Azure، وحماية البيانات السحابية.</p>
-
                                 <div class="course-meta">
-
                                     <span><i class="fas fa-video"></i> 50 فيديو تعليمي</span>
-
                                     <span><i class="fas fa-file-alt"></i> 30 تمرين عملي</span>
-
                                 </div>
-
                                 <div class="course-price">
-
                                     <span class="current-price">3,299 ر.س</span>
-
                                     <span class="original-price">5,199 ر.س</span>
-
                                 </div>
-
                                 <a href="#contact" class="btn btn-course">سجل في الدورة</a>
-
                             </div>
-
                         </div>
-
                     </div>
-
                 </div>
-
             </div>
-
             
-
             <!-- باقات الدورات -->
-
             <div class="course-packages">
-
                 <h3 class="packages-title">باقات تدريبية <span class="highlight">مميزة</span> مع Rawan Tash</h3>
-
                 <div class="packages-grid">
-
                     <div class="package-card">
-
                         <div class="package-header">
-
                             <h4>الباقة الأساسية</h4>
-
                             <div class="package-price">
-
                                 <span class="price">2,499 ر.س</span>
-
                                 <span class="period">/ للباقة</span>
-
                             </div>
-
                         </div>
-
                         <ul class="package-features">
-
                             <li><i class="fas fa-check"></i> 3 دورات من مستوى مبتدئ</li>
-
                             <li><i class="fas fa-check"></i> مواد تعليمية شاملة</li>
-
                             <li><i class="fas fa-check"></i> شهادات إتمام</li>
-
                             <li><i class="fas fa-check"></i> دعم فني لمدة 3 أشهر</li>
-
                             <li><i class="fas fa-times"></i> جلسات إرشادية</li>
-
                             <li><i class="fas fa-times"></i> مشروع تخرج</li>
-
                         </ul>
-
                         <a href="#contact" class="btn btn-package">اختر الباقة</a>
-
                     </div>
-
                     
-
                     <div class="package-card featured">
-
                         <div class="package-badge">الأفضل مبيعاً</div>
-
                         <div class="package-header">
-
                             <h4>الباقة المتقدمة</h4>
-
                             <div class="package-price">
-
                                 <span class="price">5,499 ر.س</span>
-
                                 <span class="period">/ للباقة</span>
-
                             </div>
-
                         </div>
-
                         <ul class="package-features">
-
                             <li><i class="fas fa-check"></i> 5 دورات من جميع المستويات</li>
-
                             <li><i class="fas fa-check"></i> مواد تعليمية شاملة</li>
-
-                            <li><i class="fas fa-check"></i> شهادات معتمدة</li>
-
+                            <li><i class="fas fa-check"></i> شهادات إتمام معتمدة</li>
                             <li><i class="fas fa-check"></i> دعم فني لمدة 6 أشهر</li>
-
                             <li><i class="fas fa-check"></i> 4 جلسات إرشادية</li>
-
                             <li><i class="fas fa-check"></i> مشروع تخرج وتقييم</li>
-
                         </ul>
-
                         <a href="#contact" class="btn btn-package featured">اختر الباقة</a>
-
                     </div>
-
                     
-
                     <div class="package-card">
-
                         <div class="package-header">
-
                             <h4>الباقة المؤسسية</h4>
-
                             <div class="package-price">
-
                                 <span class="price">اتصل للاستفسار</span>
-
                                 <span class="period">/ مخصصة</span>
-
                             </div>
-
                         </div>
-
                         <ul class="package-features">
-
                             <li><i class="fas fa-check"></i> دورات مخصصة للمؤسسة</li>
-
                             <li><i class="fas fa-check"></i> تدريب مباشر للفرق</li>
-
-                            <li><i class="fas fa-check"></i> شهادات معتمدة للموظفين</li>
-
+                            <li><i class="fas fa-check"></i> شهادات إتمام للموظفين</li>
                             <li><i class="fas fa-check"></i> دعم فني لمدة سنة</li>
-
                             <li><i class="fas fa-check"></i> جلسات إرشادية أسبوعية</li>
-
                             <li><i class="fas fa-check"></i> تقارير تقدم مفصلة</li>
-
                         </ul>
-
-                        <a href="#contact" class="btn btn-package">اتصل بنا</a>
-
+                        <a href="#contact" class="btn btn-package">اتصل بي</a>
                     </div>
-
                 </div>
-
             </div>
-
         </div>
-
     </section>
-
-
 
     <!-- قسم الأكاديمية -->
-
     <section id="academy" class="academy">
-
         <div class="academy-background"></div>
-
         <div class="container">
-
             <div class="section-header">
-
                 <div class="section-badge">
-
                     <i class="fas fa-university"></i>
-
                     الأكاديمية المتخصصة
-
                 </div>
-
                 <h2 class="section-title">رحلتك نحو <span class="highlight">الاحتراف</span> مع Rawan Tash</h2>
-
                 <p class="section-subtitle">أقدم بيئة تعليمية متكاملة تجمع بين النظرية والتطبيق العملي</p>
-
             </div>
-
             
-
             <div class="academy-content">
-
                 <div class="academy-features">
-
                     <div class="feature-card">
-
                         <div class="feature-icon">
-
                             <i class="fas fa-chalkboard-teacher"></i>
-
                         </div>
-
-                        <h4>مدربة معتمدة</h4>
-
-                        <p>Rawan Tash مدربة معتمدة في الأمن السيبراني مع خبرة عملية واسعة وشهادات دولية.</p>
-
+                        <h4>مدربة متخصصة</h4>
+                        <p>Rawan Tash مدربة متخصصة في الأمن السيبراني مع خبرة عملية واسعة في التدريب والاستشارات.</p>
                     </div>
-
                     
-
                     <div class="feature-card">
-
                         <div class="feature-icon">
-
                             <i class="fas fa-laptop-code"></i>
-
                         </div>
-
                         <h4>معامل افتراضية</h4>
-
                         <p>معامل متطورة مجهزة بأحدث الأدوات والتقنيات للتدريب العملي في بيئة آمنة.</p>
-
                     </div>
-
                     
-
                     <div class="feature-card">
-
                         <div class="feature-icon">
-
                             <i class="fas fa-briefcase"></i>
-
                         </div>
-
                         <h4>توجيه مهني</h4>
-
                         <p>برامج توجيهية تساعدك في بناء مسارك الوظيفي والتواصل مع شركات الرعاية.</p>
-
                     </div>
-
                     
-
                     <div class="feature-card">
-
                         <div class="feature-icon">
-
                             <i class="fas fa-certificate"></i>
-
                         </div>
-
-                        <h4>شهادات معترف بها</h4>
-
+                        <h4>شهادات إتمام</h4>
                         <p>شهادات إتمام معتمدة من جهات دولية معترف بها في سوق العمل.</p>
-
                     </div>
-
                 </div>
-
                 
-
                 <div class="academy-process">
-
                     <h3>مراحل <span class="highlight">التعلم</span> مع Rawan Tash</h3>
-
                     <div class="process-steps">
-
                         <div class="step">
-
                             <div class="step-number">1</div>
-
                             <div class="step-content">
-
                                 <h5>التقييم المبدئي</h5>
-
                                 <p>تقييم مستوى المهارات الحالي وتحديد المسار المناسب</p>
-
                             </div>
-
                         </div>
-
                         
-
                         <div class="step">
-
                             <div class="step-number">2</div>
-
                             <div class="step-content">
-
                                 <h5>التعلم النظري</h5>
-
                                 <p>دراسة المواد النظرية مع أمثلة عملية واقعية</p>
-
                             </div>
-
                         </div>
-
                         
-
                         <div class="step">
-
                             <div class="step-number">3</div>
-
                             <div class="step-content">
-
                                 <h5>التطبيق العملي</h5>
-
                                 <p>تطبيق المهارات في معاملنا الافتراضية المتطورة</p>
-
                             </div>
-
                         </div>
-
                         
-
                         <div class="step">
-
                             <div class="step-number">4</div>
-
                             <div class="step-content">
-
                                 <h5>المشاريع والتقييم</h5>
-
                                 <p>تنفيذ مشاريع حقيقية وتقييم شامل للأداء</p>
-
                             </div>
-
                         </div>
-
                         
-
                         <div class="step">
-
                             <div class="step-number">5</div>
-
                             <div class="step-content">
-
-                                <h5>الشهادة والتوظيف</h5>
-
-                                <p>الحصول على الشهادة والدعم في البحث عن وظيفة</p>
-
+                                <h5>شهادة الإتمام والتوجيه المهني</h5>
+                                <p>الحصول على شهادة الإتمام والتوجيه لبناء مسارك المهني</p>
                             </div>
-
                         </div>
-
                     </div>
-
                 </div>
-
             </div>
-
             
-
             <!-- معرض الإنجازات -->
-
             <div class="achievements">
-
                 <h3>إنجازات <span class="highlight">خريجيني</span></h3>
-
                 <div class="achievements-slider">
-
                     <div class="achievement-card">
-
                         <div class="achievement-content">
-
                             <i class="fas fa-quote-right"></i>
-
                             <p>"بفضل التدريب مع Rawan Tash، حصلت على وظيفة في شركة أمن سيبراني كبرى خلال شهر من التخرج"</p>
-
                             <div class="achievement-author">
-
                                 <strong>أحمد محمد</strong>
-
                                 <span>مهندس أمن سيبراني</span>
-
                             </div>
-
                         </div>
-
                     </div>
-
                     
-
                     <div class="achievement-card">
-
                         <div class="achievement-content">
-
                             <i class="fas fa-quote-right"></i>
-
                             <p>"المشاريع العملية ساعدتني في فهم التحديات الواقعية وطريقة التعامل معها بشكل احترافي"</p>
-
                             <div class="achievement-author">
-
                                 <strong>سارة عبدالله</strong>
-
                                 <span>أخصائية اختبار اختراق</span>
-
                             </div>
-
                         </div>
-
                     </div>
-
                     
-
                     <div class="achievement-card">
-
                         <div class="achievement-content">
-
                             <i class="fas fa-quote-right"></i>
-
                             <p>"الشهادة المعتمدة فتحت لي أبواب العمل في مشاريع دولية مع شركات عالمية"</p>
-
                             <div class="achievement-author">
-
                                 <strong>خالد الزهراني</strong>
-
                                 <span>مستشار أمن معلومات</span>
-
                             </div>
-
                         </div>
-
                     </div>
-
                 </div>
-
             </div>
-
         </div>
-
     </section>
-
-
 
     <!-- قسم المدونة -->
-
     <section id="blog" class="blog">
-
         <div class="container">
-
             <div class="section-header">
-
                 <div class="section-badge">
-
                     <i class="fas fa-newspaper"></i>
-
                     المدونة التقنية
-
                 </div>
-
                 <h2 class="section-title">أحدث <span class="highlight">المقالات</span> والتحديثات</h2>
-
                 <p class="section-subtitle">ابق على اطلاع بأحدث الأخبار والتطورات في عالم الأمن السيبراني</p>
-
             </div>
-
             
-
             <div class="blog-grid">
-
                 <article class="blog-card featured">
-
                     <div class="blog-image">
-
                         <div class="image-overlay">
-
                             <span class="blog-category">شروحات</span>
-
                         </div>
-
                         <div class="blog-date">
-
                             <span class="day">27</span>
-
                             <span class="month">يناير</span>
-
                         </div>
-
                     </div>
-
                     <div class="blog-content">
-
                         <h4><a href="#">دليل شامل لاختبار اختراق الشبكات للمبتدئين</a></h4>
-
                         <p>تعلم خطوة بخطوة كيفية إجراء اختبار اختراق للشبكات باستخدام أدوات مجانية ومفتوحة المصدر.</p>
-
                         <div class="blog-meta">
-
                             <span><i class="fas fa-user"></i> Rawan Tash</span>
-
                             <span><i class="fas fa-eye"></i> 1,245 مشاهدة</span>
-
                             <span><i class="fas fa-comment"></i> 24 تعليق</span>
-
                         </div>
-
                         <a href="#" class="blog-read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
-
                     </div>
-
                 </article>
-
                 
-
                 <article class="blog-card">
-
                     <div class="blog-image">
-
                         <div class="image-overlay">
-
                             <span class="blog-category">أخبار</span>
-
                         </div>
-
                         <div class="blog-date">
-
                             <span class="day">25</span>
-
                             <span class="month">يناير</span>
-
                         </div>
-
                     </div>
-
                     <div class="blog-content">
-
                         <h4><a href="#">أحدث ثغرات OWASP Top 10 2026 وكيفية الحماية منها</a></h4>
-
                         <p>تعرف على أحدث الثغرات الأمنية في تطبيقات الويب وطرق الحماية منها في إصدار 2026.</p>
-
                         <div class="blog-meta">
-
                             <span><i class="fas fa-user"></i> Rawan Tash</span>
-
                             <span><i class="fas fa-eye"></i> 892 مشاهدة</span>
-
                             <span><i class="fas fa-comment"></i> 18 تعليق</span>
-
                         </div>
-
                         <a href="#" class="blog-read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
-
                     </div>
-
                 </article>
-
                 
-
                 <article class="blog-card">
-
                     <div class="blog-image">
-
                         <div class="image-overlay">
-
                             <span class="blog-category">توجيه مهني</span>
-
                         </div>
-
                         <div class="blog-date">
-
                             <span class="day">23</span>
-
                             <span class="month">يناير</span>
-
                         </div>
-
                     </div>
-
                     <div class="blog-content">
-
                         <h4><a href="#">كيف تبدأ مسيرتك في الأمن السيبراني بدون خبرة سابقة؟</a></h4>
-
                         <p>دليل عملي لبدء مسيرة مهنية ناجحة في مجال الأمن السيبراني من الصفر.</p>
-
                         <div class="blog-meta">
-
                             <span><i class="fas fa-user"></i> Rawan Tash</span>
-
                             <span><i class="fas fa-eye"></i> 1,543 مشاهدة</span>
-
                             <span><i class="fas fa-comment"></i> 32 تعليق</span>
-
                         </div>
-
                         <a href="#" class="blog-read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
-
                     </div>
-
                 </article>
-
                 
-
                 <article class="blog-card">
-
                     <div class="blog-image">
-
                         <div class="image-overlay">
-
                             <span class="blog-category">أدوات</span>
-
                         </div>
-
                         <div class="blog-date">
-
                             <span class="day">21</span>
-
                             <span class="month">يناير</span>
-
                         </div>
-
                     </div>
-
                     <div class="blog-content">
-
                         <h4><a href="#">أفضل 10 أدوات مجانية للهاكر الأخلاقي في 2026</a></h4>
-
                         <p>تعرف على أحدث الأدوات المجانية التي يستخدمها محترفو الأمن السيبراني حول العالم.</p>
-
                         <div class="blog-meta">
-
                             <span><i class="fas fa-user"></i> Rawan Tash</span>
-
                             <span><i class="fas fa-eye"></i> 2,100 مشاهدة</span>
-
                             <span><i class="fas fa-comment"></i> 45 تعليق</span>
-
                         </div>
-
                         <a href="#" class="blog-read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
-
                     </div>
-
                 </article>
-
             </div>
-
             
-
             <div class="blog-categories">
-
                 <h3>أقسام <span class="highlight">المدونة</span></h3>
-
                 <div class="categories-grid">
-
                     <a href="#" class="category-card">
-
                         <div class="category-icon">
-
                             <i class="fas fa-network-wired"></i>
-
                         </div>
-
                         <h5>اختراق الشبكات</h5>
-
                         <p>شروحات وأدوات اختراق الشبكات</p>
-
                     </a>
-
                     
-
                     <a href="#" class="category-card">
-
                         <div class="category-icon">
-
                             <i class="fas fa-code"></i>
-
                         </div>
-
                         <h5>اختراق الويب</h5>
-
                         <p>ثغرات وتقنيات أمن تطبيقات الويب</p>
-
                     </a>
-
                     
-
                     <a href="#" class="category-card">
-
                         <div class="category-icon">
-
                             <i class="fab fa-linux"></i>
-
                         </div>
-
                         <h5>كالي لينكس</h5>
-
                         <p>دروس وأدوات نظام كالي لينكس</p>
-
                     </a>
-
                     
-
                     <a href="#" class="category-card">
-
                         <div class="category-icon">
-
                             <i class="fas fa-brain"></i>
-
                         </div>
-
                         <h5>الهندسة الاجتماعية</h5>
-
                         <p>تقنيات الحماية من الهندسة الاجتماعية</p>
-
                     </a>
-
                     
-
                     <a href="#" class="category-card">
-
                         <div class="category-icon">
-
                             <i class="fas fa-newspaper"></i>
-
                         </div>
-
                         <h5>أخبار الأمن</h5>
-
                         <p>آخر أخبار التهديدات والثغرات</p>
-
                     </a>
-
                     
-
                     <a href="#" class="category-card">
-
                         <div class="category-icon">
-
                             <i class="fas fa-graduation-cap"></i>
-
                         </div>
-
                         <h5>توجيه مهني</h5>
-
                         <p>نصائح لتطوير المسيرة المهنية</p>
-
                     </a>
-
                 </div>
-
             </div>
-
         </div>
-
     </section>
-
-
 
     <!-- قسم الاتصال -->
-
     <section id="contact" class="contact">
-
         <div class="container">
-
             <div class="section-header">
-
                 <div class="section-badge">
-
                     <i class="fas fa-headset"></i>
-
                     تواصل مع Rawan Tash
-
                 </div>
-
-                <h2 class="section-title">كن على <span class="highlight">اتصال</span> معي</h2>
-
+                <h2 class="section-title">كن على <span class="highlight">اتصال</span> بي</h2>
                 <p class="section-subtitle">أنا هنا للإجابة على استفساراتك وتقديم الحلول المناسبة لاحتياجاتك التدريبية</p>
-
             </div>
-
             
-
             <div class="contact-content">
-
                 <div class="contact-info">
-
                     <div class="info-card large">
-
                         <div class="info-icon">
-
                             <i class="fas fa-user-tie"></i>
-
                         </div>
-
                         <div class="info-content">
-
                             <h4>Rawan Alharbi (Rawan Tash)</h4>
-
-                            <p>مدربة معتمدة في الأمن السيبراني<br>خبرة عملية تزيد عن 5 سنوات في التدريب والاستشارات الأمنية</p>
-
+                            <p>مدربة متخصصة في الأمن السيبراني<br>خبرة عملية تزيد عن 5 سنوات في التدريب والاستشارات الأمنية</p>
                             <span class="status online">
-
                                 <i class="fas fa-circle"></i> متاحة الآن للتواصل
-
                             </span>
-
                         </div>
-
                     </div>
-
                     
-
                     <div class="info-card">
-
                         <div class="info-icon">
-
                             <i class="fas fa-phone"></i>
-
                         </div>
-
                         <div class="info-content">
-
                             <h4>اتصل بي</h4>
-
                             <p>+966 54 969 0896</p>
-
                             <a href="tel:+966549690896" class="phone-link">
-
                                 <i class="fas fa-phone-alt"></i> اتصل الآن
-
                             </a>
-
                         </div>
-
                     </div>
-
                     
-
                     <div class="info-card">
-
                         <div class="info-icon">
-
                             <i class="fas fa-envelope"></i>
-
                         </div>
-
                         <div class="info-content">
-
                             <h4>البريد الإلكتروني</h4>
-
                             <p>Rrrawan764@gmail.com</p>
-
                             <a href="mailto:Rrrawan764@gmail.com" class="email-link">
-
                                 <i class="fas fa-paper-plane"></i> أرسل بريداً
-
                             </a>
-
                         </div>
-
                     </div>
-
                     
-
                     <div class="info-card">
-
                         <div class="info-icon">
-
                             <i class="fas fa-clock"></i>
-
                         </div>
-
                         <div class="info-content">
-
                             <h4>ساعات العمل</h4>
-
                             <p>الأحد - الخميس: 8 ص - 6 م<br>الجمعة - السبت: مغلق</p>
-
                             <span class="status online">
-
                                 <i class="fas fa-circle"></i> متاحة الآن
-
                             </span>
-
                         </div>
-
                     </div>
-
-                    
-
-                    <!-- وسائل التواصل الاجتماعي -->
-
-                    <div class="social-contact">
-
-                        <h4>تابع Rawan Tash على</h4>
-
-                        <div class="social-links">
-
-                            <a href="#" class="social-link twitter">
-
-                                <i class="fab fa-twitter"></i>
-
-                            </a>
-
-                            <a href="#" class="social-link linkedin">
-
-                                <i class="fab fa-linkedin-in"></i>
-
-                            </a>
-
-                            <a href="#" class="social-link youtube">
-
-                                <i class="fab fa-youtube"></i>
-
-                            </a>
-
-                            <a href="#" class="social-link telegram">
-
-                                <i class="fab fa-telegram"></i>
-
-                            </a>
-
-                            <a href="#" class="social-link github">
-
-                                <i class="fab fa-github"></i>
-
-                            </a>
-
-                        </div>
-
-                    </div>
-
                 </div>
-
                 
-
                 <div class="contact-form">
-
                     <div class="form-header">
-
                         <h3>أرسل لي رسالة</h3>
-
                         <p>سأرد عليك خلال 24 ساعة عمل</p>
-
                     </div>
-
                     
-
                     <form id="contactForm" class="contact-form-content">
-
                         <div class="form-row">
-
                             <div class="form-group">
-
                                 <label for="name"><i class="fas fa-user"></i> الاسم الكامل *</label>
-
                                 <input type="text" id="name" placeholder="أدخل اسمك الكامل" required>
-
                             </div>
-
                             <div class="form-group">
-
                                 <label for="email"><i class="fas fa-envelope"></i> البريد الإلكتروني *</label>
-
                                 <input type="email" id="email" placeholder="أدخل بريدك الإلكتروني" required>
-
                             </div>
-
                         </div>
-
                         
-
                         <div class="form-row">
-
                             <div class="form-group">
-
                                 <label for="phone"><i class="fas fa-phone"></i> رقم الهاتف</label>
-
                                 <input type="tel" id="phone" placeholder="رقم الهاتف (اختياري)">
-
                             </div>
-
                             <div class="form-group">
-
                                 <label for="company"><i class="fas fa-building"></i> المؤسسة</label>
-
                                 <input type="text" id="company" placeholder="اسم المؤسسة (اختياري)">
-
                             </div>
-
                         </div>
-
                         
-
                         <div class="form-group">
-
                             <label for="service"><i class="fas fa-concierge-bell"></i> نوع الخدمة المطلوبة *</label>
-
                             <select id="service" required>
-
                                 <option value="">اختر نوع الخدمة</option>
-
                                 <option value="pentest">تدريب اختبار اختراق</option>
-
                                 <option value="consulting">استشارات أمنية</option>
-
                                 <option value="training">تدريب وتطوير</option>
-
                                 <option value="compliance">تدقيق وامتثال</option>
-
                                 <option value="incident">استجابة للحوادث</option>
-
                                 <option value="car">خدمات السيارات</option>
-
                                 <option value="internet">خدمات الإنترنت</option>
-
                                 <option value="mobile">خدمات الجوالات</option>
-
                                 <option value="other">خدمة أخرى</option>
-
                             </select>
-
                         </div>
-
                         
-
                         <div class="form-group">
-
                             <label for="budget"><i class="fas fa-money-bill-wave"></i> الميزانية المقترحة</label>
-
                             <select id="budget">
-
                                 <option value="">اختر نطاق الميزانية</option>
-
                                 <option value="1000-5000">1,000 - 5,000 ر.س</option>
-
                                 <option value="5000-15000">5,000 - 15,000 ر.س</option>
-
                                 <option value="15000-30000">15,000 - 30,000 ر.س</option>
-
                                 <option value="30000+">أكثر من 30,000 ر.س</option>
-
                                 <option value="custom">مخصص - سأتصل لمناقشة</option>
-
                             </select>
-
                         </div>
-
                         
-
                         <div class="form-group">
-
                             <label for="message"><i class="fas fa-comment-dots"></i> تفاصيل الطلب *</label>
-
                             <textarea id="message" rows="6" placeholder="صف احتياجاتك بالتفصيل..." required></textarea>
-
                         </div>
-
                         
-
                         <div class="form-group">
-
                             <label class="checkbox-label">
-
                                 <input type="checkbox" required>
-
                                 <span>أوافق على سياسة الخصوصية وشروط الخدمة</span>
-
                             </label>
-
                         </div>
-
                         
-
                         <button type="submit" class="btn btn-primary btn-lg btn-block">
-
                             <i class="fas fa-paper-plane"></i> إرسال الطلب
-
                         </button>
-
                     </form>
-
                 </div>
-
             </div>
-
             
-
             <!-- خريطة -->
-
             <div class="contact-map">
-
                 <div class="map-placeholder">
-
                     <div class="map-overlay">
-
                         <h4>موقعي على الخريطة</h4>
-
                         <p>الرياض، المملكة العربية السعودية</p>
-
                         <a href="#" class="btn btn-secondary">
-
                             <i class="fas fa-directions"></i> احصل على الاتجاهات
-
                         </a>
-
                     </div>
-
                 </div>
-
             </div>
-
         </div>
-
     </section>
 
-
-
     <!-- التذييل -->
-
     <footer class="footer">
-
         <div class="container">
-
             <div class="footer-grid">
-
                 <div class="footer-col">
-
                     <a href="#home" class="footer-logo">
-
                         <div class="logo-icon">
-
                             <i class="fas fa-shield-alt"></i>
-
                         </div>
-
                         <div class="logo-text">
-
                             <span class="logo-main">Rawan <span>Tash</span></span>
-
                             <span class="logo-sub">Cybersecurity Training</span>
-
                         </div>
-
                     </a>
-
                     <p class="footer-about">
-
-                        أنا روان الحربي (Rawan Tash)، مدربة معتمدة في الأمن السيبراني، أقدم دورات تدريبية متخصصة في اختبار الاختراق، كالي لينكس، والهندسة الاجتماعية، مع شهادات تدريب معترف بها دولياً.
-
+                        أنا روان الحربي (Rawan Tash)، مدربة متخصصة في الأمن السيبراني، أقدم دورات تدريبية عملية في اختبار الاختراق، كالي لينكس، والهندسة الاجتماعية، بالإضافة إلى خدمات استشارية متكاملة.
                     </p>
-
                     <div class="footer-social">
-
                         <a href="#" class="social-icon">
-
                             <i class="fab fa-twitter"></i>
-
                         </a>
-
                         <a href="#" class="social-icon">
-
                             <i class="fab fa-linkedin-in"></i>
-
                         </a>
-
                         <a href="#" class="social-icon">
-
                             <i class="fab fa-youtube"></i>
-
                         </a>
-
                         <a href="#" class="social-icon">
-
                             <i class="fab fa-instagram"></i>
-
                         </a>
-
                         <a href="#" class="social-icon">
-
                             <i class="fab fa-github"></i>
-
                         </a>
-
                     </div>
-
                 </div>
-
                 
-
                 <div class="footer-col">
-
                     <h4>روابط سريعة</h4>
-
                     <ul class="footer-links">
-
                         <li><a href="#home"><i class="fas fa-chevron-left"></i> الرئيسية</a></li>
-
                         <li><a href="#services"><i class="fas fa-chevron-left"></i> خدماتي</a></li>
-
                         <li><a href="#courses"><i class="fas fa-chevron-left"></i> الدورات</a></li>
-
                         <li><a href="#academy"><i class="fas fa-chevron-left"></i> الأكاديمية</a></li>
-
                         <li><a href="#blog"><i class="fas fa-chevron-left"></i> المدونة</a></li>
-
                     </ul>
-
                 </div>
-
                 
-
                 <div class="footer-col">
-
                     <h4>خدماتي</h4>
-
                     <ul class="footer-links">
-
                         <li><a href="#pentest"><i class="fas fa-chevron-left"></i> اختبار الاختراق</a></li>
-
                         <li><a href="#consulting"><i class="fas fa-chevron-left"></i> استشارات أمنية</a></li>
-
                         <li><a href="#training"><i class="fas fa-chevron-left"></i> تدريب وتطوير</a></li>
-
                         <li><a href="#car-services"><i class="fas fa-chevron-left"></i> خدمات السيارات</a></li>
-
                         <li><a href="#internet-services"><i class="fas fa-chevron-left"></i> خدمات الإنترنت</a></li>
-
                         <li><a href="#mobile-services"><i class="fas fa-chevron-left"></i> خدمات الجوالات</a></li>
-
                     </ul>
-
                 </div>
-
                 
-
                 <div class="footer-col">
-
                     <h4>اشترك في النشرة البريدية</h4>
-
                     <p>ابق على اطلاع بأحدث الدورات والعروض والمقالات التقنية</p>
-
                     <form class="newsletter-form">
-
                         <div class="input-group">
-
                             <input type="email" placeholder="بريدك الإلكتروني" required>
-
                             <button type="submit">
-
                                 <i class="fas fa-paper-plane"></i>
-
                             </button>
-
                         </div>
-
                     </form>
-
                     <div class="footer-contact">
-
                         <p><i class="fas fa-phone"></i> +966 54 969 0896</p>
-
                         <p><i class="fas fa-envelope"></i> Rrrawan764@gmail.com</p>
-
                     </div>
-
                 </div>
-
             </div>
-
             
-
             <div class="footer-bottom">
-
                 <div class="footer-copyright">
-
                     <p>&copy; 2026 Rawan Tash (Rawan Alharbi). جميع الحقوق محفوظة.</p>
-
                     <p>تم التطوير بواسطة فريق UCYBERS التقني</p>
-
                 </div>
-
                 <div class="footer-legal">
-
                     <a href="#">سياسة الخصوصية</a>
-
                     <a href="#">شروط الاستخدام</a>
-
                     <a href="#">سياسة الاسترجاع</a>
-
                     <a href="#">خريطة الموقع</a>
-
                 </div>
-
             </div>
-
         </div>
-
     </footer>
 
-
-
     <!-- أزرار المساعدة -->
-
     <div class="help-buttons">
-
         <a href="tel:+966549690896" class="help-button phone">
-
             <i class="fas fa-phone"></i>
-
             <span class="help-text">اتصل بي</span>
-
         </a>
-
         
-
         <a href="https://wa.me/966549690896" class="help-button whatsapp" target="_blank">
-
             <i class="fab fa-whatsapp"></i>
-
             <span class="help-text">واتساب</span>
-
         </a>
-
         
-
         <button class="help-button chat" id="chatButton">
-
             <i class="fas fa-comment-dots"></i>
-
             <span class="help-text">الدردشة</span>
-
         </button>
-
         
-
         <button class="scroll-top" id="scrollTop">
-
             <i class="fas fa-chevron-up"></i>
-
         </button>
-
     </div>
-
-
 
     <!-- نموذج الدردشة -->
-
     <div class="chat-modal" id="chatModal">
-
         <div class="chat-header">
-
             <div class="chat-title">
-
                 <i class="fas fa-comments"></i>
-
                 <h4>الدردشة مع Rawan Tash</h4>
-
             </div>
-
             <button class="chat-close" id="chatClose">
-
                 <i class="fas fa-times"></i>
-
             </button>
-
         </div>
-
         <div class="chat-body">
-
             <div class="chat-messages">
-
                 <div class="message bot">
-
                     <div class="message-content">
-
                         <p>مرحباً! أنا Rawan Tash، كيف يمكنني مساعدتك اليوم؟</p>
-
                     </div>
-
                     <div class="message-time">الآن</div>
-
                 </div>
-
             </div>
-
             <div class="chat-input">
-
                 <input type="text" placeholder="اكتب رسالتك هنا..." id="chatInput">
-
                 <button id="chatSend">
-
                     <i class="fas fa-paper-plane"></i>
-
                 </button>
-
             </div>
-
         </div>
-
     </div>
 
-
-
     <script>
-
         // ===== جافا سكريبت =====
-
         (function() {
-
             'use strict';
-
             
-
             // --- قائمة الهاتف ---
-
             const menuToggle = document.getElementById('menuToggle');
-
             const navLinks = document.getElementById('navLinks');
-
             
-
             if (menuToggle && navLinks) {
-
                 menuToggle.addEventListener('click', function() {
-
                     navLinks.classList.toggle('open');
-
                 });
-
                 
-
                 // إغلاق القائمة عند النقر على رابط
-
                 document.querySelectorAll('.nav-link').forEach(link => {
-
                     link.addEventListener('click', () => {
-
                         navLinks.classList.remove('open');
-
                     });
-
                 });
-
             }
-
             
-
             // --- تبويبات المسارات ---
-
             const tabs = document.querySelectorAll('.path-tab');
-
             const panes = {
-
                 beginner: document.getElementById('beginner-path'),
-
                 intermediate: document.getElementById('intermediate-path'),
-
                 advanced: document.getElementById('advanced-path')
-
             };
-
             
-
             if (tabs.length) {
-
                 tabs.forEach(tab => {
-
                     tab.addEventListener('click', function() {
-
                         // إزالة active من جميع التبويبات
-
                         tabs.forEach(t => t.classList.remove('active'));
-
                         this.classList.add('active');
-
                         
-
                         // إخفاء جميع اللوحات
-
                         Object.values(panes).forEach(pane => {
-
                             if (pane) pane.classList.remove('active');
-
                         });
-
                         
-
                         // عرض اللوحة المختارة
-
                         const path = this.dataset.path;
-
                         if (panes[path]) {
-
                             panes[path].classList.add('active');
-
                         }
-
                     });
-
                 });
-
             }
-
             
-
             // --- عدادات الإحصائيات ---
-
             const statNumbers = document.querySelectorAll('.stat-number');
-
             
-
             function animateCounters() {
-
                 statNumbers.forEach(el => {
-
                     const target = parseFloat(el.dataset.count);
-
                     if (isNaN(target)) return;
-
                     
-
                     const duration = 2000;
-
                     const start = performance.now();
-
                     const isFloat = target % 1 !== 0;
-
                     
-
                     function update(currentTime) {
-
                         const elapsed = currentTime - start;
-
                         const progress = Math.min(elapsed / duration, 1);
-
                         const eased = 1 - Math.pow(1 - progress, 3);
-
                         const current = eased * target;
-
                         
-
                         if (isFloat) {
-
                             el.textContent = current.toFixed(1);
-
                         } else {
-
                             el.textContent = Math.floor(current);
-
                         }
-
                         
-
                         if (progress < 1) {
-
                             requestAnimationFrame(update);
-
                         } else {
-
                             el.textContent = isFloat ? target.toFixed(1) : Math.floor(target);
-
                         }
-
                     }
-
                     
-
                     requestAnimationFrame(update);
-
                 });
-
             }
-
             
-
             // تشغيل العدادات عند ظهور القسم
-
             const heroStats = document.querySelector('.hero-stats');
-
             if (heroStats) {
-
                 const observer = new IntersectionObserver((entries) => {
-
                     entries.forEach(entry => {
-
                         if (entry.isIntersecting) {
-
                             animateCounters();
-
                             observer.disconnect();
-
                         }
-
                     });
-
                 }, { threshold: 0.3 });
-
                 observer.observe(heroStats);
-
             }
-
             
-
             // --- زر العودة للأعلى ---
-
             const scrollBtn = document.getElementById('scrollTop');
-
             if (scrollBtn) {
-
                 window.addEventListener('scroll', () => {
-
                     if (window.scrollY > 400) {
-
                         scrollBtn.style.display = 'flex';
-
                     } else {
-
                         scrollBtn.style.display = 'none';
-
                     }
-
                 });
-
                 
-
                 scrollBtn.addEventListener('click', () => {
-
                     window.scrollTo({ top: 0, behavior: 'smooth' });
-
                 });
-
             }
-
             
-
             // --- الدردشة ---
-
             const chatButton = document.getElementById('chatButton');
-
             const chatModal = document.getElementById('chatModal');
-
             const chatClose = document.getElementById('chatClose');
-
             const chatInput = document.getElementById('chatInput');
-
             const chatSend = document.getElementById('chatSend');
-
             const chatMessages = document.querySelector('.chat-messages');
-
             
-
             if (chatButton && chatModal) {
-
                 chatButton.addEventListener('click', () => {
-
                     chatModal.classList.toggle('open');
-
                 });
-
                 
-
                 if (chatClose) {
-
                     chatClose.addEventListener('click', () => {
-
                         chatModal.classList.remove('open');
-
                     });
-
                 }
-
                 
-
                 // إرسال الرسائل
-
                 function sendMessage() {
-
                     if (!chatInput || !chatMessages) return;
-
                     const text = chatInput.value.trim();
-
                     if (!text) return;
-
                     
-
                     // إضافة رسالة المستخدم
-
                     const userMsg = document.createElement('div');
-
                     userMsg.className = 'message user';
-
                     userMsg.innerHTML = `
-
                         <div class="message-content"><p>${text}</p></div>
-
                         <div class="message-time">الآن</div>
-
                     `;
-
                     chatMessages.appendChild(userMsg);
-
                     chatInput.value = '';
-
                     chatMessages.scrollTop = chatMessages.scrollHeight;
-
                     
-
                     // رد آلي
-
                     setTimeout(() => {
-
                         const botMsg = document.createElement('div');
-
                         botMsg.className = 'message bot';
-
                         botMsg.innerHTML = `
-
                             <div class="message-content"><p>شكراً لتواصلك! سأرد عليك قريباً.</p></div>
-
                             <div class="message-time">الآن</div>
-
                         `;
-
                         chatMessages.appendChild(botMsg);
-
                         chatMessages.scrollTop = chatMessages.scrollHeight;
-
                     }, 1000);
-
                 }
-
                 
-
                 if (chatSend) {
-
                     chatSend.addEventListener('click', sendMessage);
-
                 }
-
                 
-
                 if (chatInput) {
-
                     chatInput.addEventListener('keypress', (e) => {
-
                         if (e.key === 'Enter') sendMessage();
-
                     });
-
                 }
-
             }
-
             
-
             // --- نموذج الاتصال ---
-
             const contactForm = document.getElementById('contactForm');
-
             if (contactForm) {
-
                 contactForm.addEventListener('submit', function(e) {
-
                     e.preventDefault();
-
                     alert('تم إرسال طلبك بنجاح! سأتواصل معك خلال 24 ساعة.');
-
                     this.reset();
-
                 });
-
             }
-
             
-
             // --- التنقل النشط ---
-
             const navLinksAll = document.querySelectorAll('.nav-link');
-
             const sections = document.querySelectorAll('section[id]');
-
             
-
             window.addEventListener('scroll', () => {
-
                 let current = '';
-
                 sections.forEach(section => {
-
                     const top = section.offsetTop - 120;
-
                     if (window.scrollY >= top) {
-
                         current = section.getAttribute('id');
-
                     }
-
                 });
-
                 
-
                 navLinksAll.forEach(link => {
-
                     link.classList.remove('active');
-
                     if (link.getAttribute('href') === `#${current}`) {
-
                         link.classList.add('active');
-
                     }
-
                 });
-
             });
-
             
-
         })();
-
     </script>
-
 </body>
-
 </html>
