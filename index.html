@@ -704,260 +704,6 @@
             background: #dc2626;
         }
         
-        /* ===== الدورات ===== */
-        .path-tabs {
-            display: flex;
-            gap: 12px;
-            flex-wrap: wrap;
-            justify-content: center;
-            margin-bottom: 30px;
-        }
-        
-        .path-tab {
-            padding: 10px 24px;
-            border: 1px solid var(--border);
-            border-radius: 50px;
-            background: transparent;
-            color: var(--text-light);
-            cursor: pointer;
-            transition: var(--transition);
-            font-family: inherit;
-            font-size: 14px;
-        }
-        
-        .path-tab:hover,
-        .path-tab.active {
-            background: rgba(0,212,255,0.1);
-            border-color: var(--primary);
-            color: #fff;
-        }
-        
-        .path-pane {
-            display: none;
-        }
-        
-        .path-pane.active {
-            display: block;
-        }
-        
-        .courses-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 24px;
-        }
-        
-        .course-card {
-            background: var(--card-bg);
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            padding: 24px;
-            transition: var(--transition);
-        }
-        
-        .course-card:hover {
-            transform: translateY(-4px);
-            border-color: var(--primary);
-        }
-        
-        .course-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 12px;
-        }
-        
-        .course-level {
-            padding: 4px 12px;
-            border-radius: 50px;
-            font-size: 12px;
-            font-weight: 600;
-        }
-        
-        .course-level.beginner {
-            background: rgba(34,197,94,0.2);
-            color: #4ade80;
-        }
-        
-        .course-level.intermediate {
-            background: rgba(251,191,36,0.2);
-            color: #fbbf24;
-        }
-        
-        .course-level.advanced {
-            background: rgba(239,68,68,0.2);
-            color: #f87171;
-        }
-        
-        .course-duration {
-            color: var(--text-light);
-            font-size: 13px;
-        }
-        
-        .course-card h4 {
-            font-size: 18px;
-            margin-bottom: 8px;
-        }
-        
-        .course-card p {
-            color: var(--text-light);
-            font-size: 14px;
-            margin-bottom: 12px;
-        }
-        
-        .course-meta {
-            display: flex;
-            gap: 16px;
-            font-size: 13px;
-            color: var(--text-light);
-            margin-bottom: 12px;
-        }
-        
-        .course-price {
-            display: flex;
-            gap: 12px;
-            align-items: center;
-            margin-bottom: 16px;
-        }
-        
-        .course-price .current-price {
-            font-size: 20px;
-            font-weight: 800;
-            color: #fff;
-        }
-        
-        .course-price .original-price {
-            font-size: 14px;
-            color: var(--text-light);
-            text-decoration: line-through;
-        }
-        
-        .btn-course {
-            display: inline-block;
-            background: rgba(0,212,255,0.1);
-            color: var(--primary);
-            padding: 8px 24px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: var(--transition);
-        }
-        
-        .btn-course:hover {
-            background: var(--primary);
-            color: #fff;
-        }
-        
-        /* ===== باقات الدورات ===== */
-        .packages-title {
-            font-size: 28px;
-            text-align: center;
-            margin-bottom: 30px;
-        }
-        
-        .packages-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 24px;
-        }
-        
-        .package-card {
-            background: var(--card-bg);
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            padding: 30px;
-            text-align: center;
-            transition: var(--transition);
-            position: relative;
-        }
-        
-        .package-card:hover {
-            transform: translateY(-6px);
-            border-color: var(--primary);
-        }
-        
-        .package-card.featured {
-            border-color: var(--primary);
-            background: rgba(0,212,255,0.05);
-        }
-        
-        .package-badge {
-            position: absolute;
-            top: -12px;
-            right: 50%;
-            transform: translateX(50%);
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            color: #fff;
-            padding: 4px 16px;
-            border-radius: 50px;
-            font-size: 12px;
-            font-weight: 600;
-        }
-        
-        .package-header h4 {
-            font-size: 20px;
-            margin-bottom: 8px;
-        }
-        
-        .package-price .price {
-            font-size: 28px;
-            font-weight: 900;
-            color: #fff;
-        }
-        
-        .package-price .period {
-            color: var(--text-light);
-            font-size: 14px;
-        }
-        
-        .package-features {
-            list-style: none;
-            margin: 20px 0;
-            text-align: right;
-        }
-        
-        .package-features li {
-            padding: 6px 0;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 14px;
-            color: var(--text-light);
-        }
-        
-        .package-features li i {
-            color: var(--primary);
-        }
-        
-        .package-features li .fa-times {
-            color: #ef4444;
-        }
-        
-        .btn-package {
-            display: inline-block;
-            background: rgba(255,255,255,0.05);
-            color: #fff;
-            padding: 10px 32px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            border: 1px solid var(--border);
-            transition: var(--transition);
-        }
-        
-        .btn-package:hover {
-            background: rgba(0,212,255,0.1);
-            border-color: var(--primary);
-        }
-        
-        .btn-package.featured {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            border: none;
-        }
-        
-        .btn-package.featured:hover {
-            transform: scale(1.05);
-        }
-        
         /* ===== الأكاديمية ===== */
         .academy {
             background: var(--darker);
@@ -2023,9 +1769,6 @@
                         <a href="#pentest"><i class="fas fa-bug"></i> اختبار الاختراق</a>
                         <a href="#consulting"><i class="fas fa-headset"></i> استشارات مخصصة</a>
                         <a href="#training"><i class="fas fa-user-friends"></i> تدريب شخص لشخص</a>
-                        <a href="#compliance"><i class="fas fa-file-contract"></i> تدقيق PCI DSS</a>
-                        <a href="#network"><i class="fas fa-network-wired"></i> اختراق الشبكات</a>
-                        <a href="#web"><i class="fas fa-code"></i> اختراق الويب</a>
                         <a href="#car-services"><i class="fas fa-car"></i> خدمات السيارات</a>
                         <a href="#internet-services"><i class="fas fa-globe"></i> خدمات الإنترنت</a>
                         <a href="#mobile-services"><i class="fas fa-mobile-alt"></i> خدمات الجوالات</a>
@@ -2056,6 +1799,9 @@
         <div class="hero-background">
             <div class="cyber-grid"></div>
             <div class="hero-overlay"></div>
+            <!-- خلفية متحركة جميلة -->
+            <div style="position:absolute;inset:0;z-index:0;background:radial-gradient(circle at 20% 50%, rgba(0,212,255,0.08) 0%, transparent 50%), radial-gradient(circle at 80% 50%, rgba(124,58,237,0.08) 0%, transparent 50%);"></div>
+            <div style="position:absolute;inset:0;z-index:0;background:url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2240%22 fill=%22none%22 stroke=%22rgba(0,212,255,0.03)%22 stroke-width=%220.5%22/><circle cx=%2250%22 cy=%2250%22 r=%2230%22 fill=%22none%22 stroke=%22rgba(124,58,237,0.03)%22 stroke-width=%220.5%22/><circle cx=%2250%22 cy=%2250%22 r=%2220%22 fill=%22none%22 stroke=%22rgba(0,212,255,0.03)%22 stroke-width=%220.5%22/><circle cx=%2250%22 cy=%2250%22 r=%2210%22 fill=%22none%22 stroke=%22rgba(124,58,237,0.03)%22 stroke-width=%220.5%22/></svg>') repeat;background-size:400px 400px;opacity:0.5;"></div>
         </div>
         <div class="container">
             <div class="hero-content animate__animated animate__fadeInUp">
@@ -3518,4 +3264,4 @@
         })();
     </script>
 </body>
-</html>s
+</html>
